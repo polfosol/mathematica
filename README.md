@@ -1,2 +1,2 @@
 # mathematica
-Some mathematica that was published elsewhere
+Some mathematica codes that was published elsewhere
