@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     33650,        749]
-NotebookOptionsPosition[     32608,        724]
-NotebookOutlinePosition[     33058,        741]
-CellTagsIndexPosition[     33015,        738]
+NotebookDataLength[     33655,        746]
+NotebookOptionsPosition[     32614,        721]
+NotebookOutlinePosition[     33064,        738]
+CellTagsIndexPosition[     33021,        735]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,25 +34,25 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{"\"\<Jerusalem\>\"", ",", " ", "\"\<Israel\>\""}], "}"}]}], 
   ";"}]}], "Input",
- CellLabel->"In[29]:=",ExpressionUUID->"4594013f-50d0-412e-912c-b672a554243d"],
+ CellLabel->"In[17]:=",ExpressionUUID->"4594013f-50d0-412e-912c-b672a554243d"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"direction", "[", 
-   RowBox[{"city_", ",", " ", "qibla_"}], "]"}], " ", ":=", " ", 
-  RowBox[{"GeoDirection", "@@", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"CityData", "[", 
-       RowBox[{"#", ",", " ", "\"\<Coordinates\>\""}], "]"}], "&"}], "/@", 
-     RowBox[{"{", 
-      RowBox[{"city", ",", "qibla"}], "}"}]}], ")"}]}]}]], "Input",
+  RowBox[{"direction", "=", 
+   RowBox[{
+    RowBox[{"GeoDirection", "@@", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "~", "CityData", "~", "\"\<Coordinates\>\""}], "&"}], 
+       ",", 
+       RowBox[{"{", "##", "}"}]}], "]"}]}], "&"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.8437221442828784`*^9, 3.843722197123809*^9}, {
    3.843722286645583*^9, 3.843722307387534*^9}, 3.843722633326769*^9, {
    3.8437260092469044`*^9, 3.843726074279989*^9}, {3.8437261045282726`*^9, 
-   3.843726116635337*^9}, {3.8437268206519346`*^9, 3.843726828135751*^9}},
- CellLabel->"In[32]:=",ExpressionUUID->"7fe55120-d5b6-4a16-a2a4-04f5afc3b267"],
+   3.843726116635337*^9}, {3.8437268206519346`*^9, 3.843726828135751*^9}, 
+   3.84460024547838*^9, 3.8446003023350687`*^9},
+ CellLabel->"In[20]:=",ExpressionUUID->"7fe55120-d5b6-4a16-a2a4-04f5afc3b267"],
 
 Cell[BoxData[
  RowBox[{
@@ -70,26 +70,23 @@ Cell[BoxData[
       RowBox[{"g", "=", 
        RowBox[{"{", 
         RowBox[{"Red", ",", "Green", ",", "Blue", ",", "Gray"}], "}"}]}], ",",
-       " ", "l"}], "}"}], ",", "\[IndentingNewLine]", 
+       " ", "q"}], "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"l", "=", 
-      RowBox[{"g", "~", "Riffle", "~", 
-       RowBox[{"{", 
-        RowBox[{
-        "\"\<Mecca\>\"", ",", "\"\<Petra\>\"", ",", "\"\<Jerusalem\>\""}], 
-        "}"}]}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"a", "=", 
       RowBox[{
        RowBox[{"Arrow", "@", 
+        RowBox[{"AnglePath", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\[Pi]", "/", "2"}], "-", "#"}], "}"}], "]"}]}], "&"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"q", "=", 
+      RowBox[{"Riffle", "[", 
+       RowBox[{"g", ",", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"{", 
-           RowBox[{"0", ",", "0"}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Sin", "[", "#", "]"}], ",", 
-            RowBox[{"Cos", "[", "#", "]"}]}], "}"}]}], "}"}]}], "&"}]}], ";", 
-     "\[IndentingNewLine]", 
+         "\"\<Mecca\>\"", ",", "\"\<Petra\>\"", ",", "\"\<Jerusalem\>\""}], 
+         "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"g", "=", 
       RowBox[{"Riffle", "[", 
        RowBox[{"g", ",", " ", 
@@ -107,9 +104,8 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"o", "=", 
          RowBox[{"a", "[", "orientation", "]"}]}], ";", 
-        RowBox[{"AppendTo", "[", 
-         RowBox[{"l", ",", "\"\<Mosque Orientation\>\""}], "]"}]}]}], "]"}], 
-     ";", "\[IndentingNewLine]", 
+        RowBox[{"q", "~", "AppendTo", "~", "\"\<Mosque Orientation\>\""}]}]}],
+       "]"}], ";", "\[IndentingNewLine]", 
      RowBox[{"g", "=", 
       RowBox[{"Graphics", "[", 
        RowBox[{
@@ -122,10 +118,7 @@ Cell[BoxData[
           "]"}]}], ",", "\[IndentingNewLine]", 
         RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
         RowBox[{"PlotLabel", "\[Rule]", 
-         RowBox[{
-          RowBox[{"ToString", "[", "city", "]"}], "~", "StringTrim", "~", 
-          RowBox[{"(", 
-           RowBox[{"\"\<{\>\"", " ", "|", " ", "\"\<}\>\""}], ")"}]}]}]}], 
+         RowBox[{"city", "~", "StringRiffle", "~", "\"\<, \>\""}]}]}], 
        "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"Row", "@", 
       RowBox[{"{", 
@@ -133,7 +126,7 @@ Cell[BoxData[
         RowBox[{"LineLegend", "@@", 
          RowBox[{"Transpose", "@", 
           RowBox[{"Partition", "[", 
-           RowBox[{"l", ",", "2"}], "]"}]}]}]}], "}"}]}]}]}], 
+           RowBox[{"q", ",", "2"}], "]"}]}]}]}], "}"}]}]}]}], 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.8437223984755263`*^9, 3.843722473736105*^9}, {
    3.8437226588718147`*^9, 3.843722810591332*^9}, {3.843722843221257*^9, 
@@ -156,8 +149,10 @@ Cell[BoxData[
    3.8437273113638763`*^9}, {3.8437275358696833`*^9, 3.843727550748562*^9}, {
    3.8437276323946967`*^9, 3.843727674864256*^9}, {3.8437279640470233`*^9, 
    3.843727970285262*^9}, {3.8437280096332273`*^9, 3.843728021416975*^9}, 
-   3.843728191609222*^9},
- CellLabel->"In[33]:=",ExpressionUUID->"e1f0f97a-c8ce-4c03-8a8c-1566abe4c485"],
+   3.843728191609222*^9, 3.8446002774742937`*^9, {3.844600522743845*^9, 
+   3.8446005263516564`*^9}, 3.8446010068155775`*^9, {3.8446016639405804`*^9, 
+   3.844601705374911*^9}, 3.8446852742522564`*^9},
+ CellLabel->"In[21]:=",ExpressionUUID->"e1f0f97a-c8ce-4c03-8a8c-1566abe4c485"],
 
 Cell[CellGroupData[{
 
@@ -165,7 +160,7 @@ Cell[BoxData[
  RowBox[{"compareQibla", "[", 
   RowBox[{"{", 
    RowBox[{"\"\<Tehran\>\"", ",", "\"\<Iran\>\""}], "}"}], "]"}]], "Input",
- CellLabel->"In[34]:=",ExpressionUUID->"4df22ac6-69a1-4718-915b-ecdfac206ecb"],
+ CellLabel->"In[22]:=",ExpressionUUID->"4df22ac6-69a1-4718-915b-ecdfac206ecb"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -406,8 +401,9 @@ Cell[BoxData[
    3.843724887638172*^9, 3.8437249139295197`*^9}, 3.843725090167782*^9, 
    3.8437252466848974`*^9, 3.843725358021865*^9, 3.843725910461274*^9, 
    3.8437261870309243`*^9, 3.843726375479515*^9, 3.8437270472612457`*^9, 
-   3.843727838020789*^9, 3.843728033972126*^9, 3.843728520468334*^9},
- CellLabel->"Out[34]=",ExpressionUUID->"9a799e8b-b4ec-4fef-82f5-4fdb275b3b7f"]
+   3.843727838020789*^9, 3.843728033972126*^9, 3.843728520468334*^9, 
+   3.8446017359313707`*^9, 3.8446852868082433`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"4518efa3-c2fc-40e8-ab85-6afe79e3aa92"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -418,7 +414,7 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"\"\<Baghdad\>\"", ",", "\"\<Iraq\>\""}], "}"}], ",", 
    RowBox[{"229.5", "\[Degree]"}]}], "]"}]], "Input",
- CellLabel->"In[35]:=",ExpressionUUID->"e1f6e3d5-6af4-44b1-b406-6a4414cd8388"],
+ CellLabel->"In[23]:=",ExpressionUUID->"e1f6e3d5-6af4-44b1-b406-6a4414cd8388"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -431,7 +427,7 @@ Cell[BoxData[
      RGBColor[0, 0, 1], 
      ArrowBox[{{0, 0}, {-0.9884448116947465, -0.15158118034154877`}}], 
      GrayLevel[0.5], 
-     ArrowBox[{{0, 0}, {-0.7604059656000312, -0.6494480483301834}}], 
+     ArrowBox[{{0., 0.}, {-0.7604059656000312, -0.6494480483301834}}], 
      Dashing[{Small, Small}], 
      Thickness[Tiny], 
      CircleBox[{0, 0}]}, ImageSize -> Medium, PlotLabel -> 
@@ -718,12 +714,13 @@ Cell[BoxData[
   3.8437245984517*^9, 3.8437249230556693`*^9, 3.8437250977858562`*^9, 
   3.843725270782981*^9, 3.843725382876435*^9, 3.843725917279278*^9, 
   3.843726193624013*^9, 3.843726375678781*^9, 3.8437271318794284`*^9, 
-  3.843727842188984*^9, 3.84372804135515*^9, 3.8437285252235003`*^9},
- CellLabel->"Out[35]=",ExpressionUUID->"63eb5991-9ade-466b-8f36-9cda1b7af739"]
+  3.843727842188984*^9, 3.84372804135515*^9, 3.8437285252235003`*^9, 
+  3.844601743821431*^9, 3.84468528959237*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"e28938c4-97a2-49bb-ba90-3953e2868fa9"]
 }, Open  ]]
 },
 WindowSize->{831, 645},
-WindowMargins->{{247, Automatic}, {Automatic, 78}},
+WindowMargins->{{156, Automatic}, {77, Automatic}},
 TaggingRules->Association["TryRealOnly" -> False],
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
 StyleDefinitions->"Default.nb",
@@ -741,15 +738,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 556, 16, 70, "Input",ExpressionUUID->"4594013f-50d0-412e-912c-b672a554243d"],
-Cell[1117, 38, 761, 16, 29, "Input",ExpressionUUID->"7fe55120-d5b6-4a16-a2a4-04f5afc3b267"],
-Cell[1881, 56, 4524, 103, 190, "Input",ExpressionUUID->"e1f0f97a-c8ce-4c03-8a8c-1566abe4c485"],
+Cell[1117, 38, 735, 16, 29, "Input",ExpressionUUID->"7fe55120-d5b6-4a16-a2a4-04f5afc3b267"],
+Cell[1855, 56, 4456, 98, 190, "Input",ExpressionUUID->"e1f0f97a-c8ce-4c03-8a8c-1566abe4c485"],
 Cell[CellGroupData[{
-Cell[6430, 163, 215, 4, 29, "Input",ExpressionUUID->"4df22ac6-69a1-4718-915b-ecdfac206ecb"],
-Cell[6648, 169, 11384, 240, 392, "Output",ExpressionUUID->"9a799e8b-b4ec-4fef-82f5-4fdb275b3b7f"]
+Cell[6336, 158, 215, 4, 29, "Input",ExpressionUUID->"4df22ac6-69a1-4718-915b-ecdfac206ecb"],
+Cell[6554, 164, 11436, 241, 392, "Output",ExpressionUUID->"4518efa3-c2fc-40e8-ab85-6afe79e3aa92"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18069, 414, 272, 6, 29, "Input",ExpressionUUID->"e1f6e3d5-6af4-44b1-b406-6a4414cd8388"],
-Cell[18344, 422, 14248, 299, 394, "Output",ExpressionUUID->"63eb5991-9ade-466b-8f36-9cda1b7af739"]
+Cell[18027, 410, 272, 6, 29, "Input",ExpressionUUID->"e1f6e3d5-6af4-44b1-b406-6a4414cd8388"],
+Cell[18302, 418, 14296, 300, 394, "Output",ExpressionUUID->"e28938c4-97a2-49bb-ba90-3953e2868fa9"]
 }, Open  ]]
 }
 ]
