@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    214421,       4522]
-NotebookOptionsPosition[    212861,       4488]
-NotebookOutlinePosition[    213315,       4505]
-CellTagsIndexPosition[    213272,       4502]
+NotebookDataLength[    223437,       4742]
+NotebookOptionsPosition[    221551,       4703]
+NotebookOutlinePosition[    222001,       4720]
+CellTagsIndexPosition[    221958,       4717]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -68,1083 +68,1298 @@ Cell[BoxData[
   ";"}]], "Input",
  CellChangeTimes->{{3.843734524227378*^9, 3.8437345378193226`*^9}, {
    3.8437345838366785`*^9, 3.843734780177355*^9}, 3.843737106200303*^9, 
-   3.843737636080493*^9, {3.843739034170458*^9, 
-   3.843739038606838*^9}},ExpressionUUID->"945a6ffc-87dc-4ae8-93ae-\
-5a3cff24ec95"],
+   3.843737636080493*^9, {3.843739034170458*^9, 3.843739038606838*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"945a6ffc-87dc-4ae8-93ae-5a3cff24ec95"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Outer", "[", 
+    RowBox[{"ChemicalData", ",", "list", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Name\>\"", ",", "None", ",", "\"\<Formula\>\""}], "}"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"display", "=", 
+   RowBox[{
+    RowBox[{"Column", "[", 
+     RowBox[{
+      RowBox[{"Map", "[", 
+       RowBox[{"Row", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "~", "Riffle", "~", 
+           RowBox[{"{", 
+            RowBox[{"\"\<\\t\>\"", ",", "\"\< \>\""}], "}"}]}], "&"}], "/@", 
+         "#"}]}], "]"}], ",", 
+      RowBox[{"Spacings", "\[Rule]", "1"}]}], "]"}], "&"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8446207767401648`*^9, 3.8446208002501917`*^9}, 
+   3.844620965556899*^9, {3.84462108164495*^9, 3.844621097702571*^9}, 
+   3.8446763377417126`*^9, {3.8446769383906045`*^9, 3.8446769540931754`*^9}, {
+   3.844677252122158*^9, 3.844677315165099*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"e9d67174-e1f3-466b-bcba-8914d7b315f6"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"Flatten", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"ChemicalData", "~", "MapThread", "~", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"#", ",", "#", ",", "#"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"\"\<Name\>\"", ",", "None", ",", "\"\<Formula\>\""}], 
-          "}"}]}], "}"}]}], "\[IndentingNewLine]", "&"}], "/@", "list"}], 
-    "]"}], "~", "Riffle", "~", 
-   RowBox[{"{", 
-    RowBox[{"\"\<\\t\>\"", ",", "\"\< \>\"", ",", "\"\<\\n\\n\>\""}], "}"}]}],
-   "//", "Row"}]], "Input",
- CellChangeTimes->{{3.84373667885448*^9, 3.8437367756212745`*^9}, {
-  3.8437368126402392`*^9, 3.843736829874971*^9}, {3.8437368846702023`*^9, 
-  3.843737012325573*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"cf76b820-d0d0-4707-a669-c5c9fc87b0c1"],
+ RowBox[{"display", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.8446773655434446`*^9, 3.8446773694663706`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"399a87cc-c992-4ca0-970a-5136521cf3a7"],
 
 Cell[BoxData[
- TemplateBox[{"\"acetic acid\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {373.21, 75.}], 
-        LineBox[{{354.7569893807842, 64.34706695576969}, {329.905, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{329.905, 50.}, {286.6, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {373.21, 75.}], 
-        LineBox[{{391.66230612104584`, 64.3458467172207}, {400.055, 59.5}}], 
-        RGBColor[
-        0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"H\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {426.90000000000003`, 
-         44.}], 
-        LineBox[{{400.055, 59.5}, {409.8471962486224, 
-         53.846096410741396`}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {286.6, -75.}], 
-        LineBox[{{{281.6, -53.69275749052112}, {281.6, -25.}}, {{
-         291.6, -53.69275749052112}, {291.6, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{281.6, -25.}, {281.6, 25.}}, {{291.6, -25.}, {291.6, 
-         25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{200., 75.}, {243.3, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{243.3, 50.}, {286.6, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 81.8564327613386}, {0., 65.59915931366523}}, 
-     PlotRange -> {{193.193, 444.52945136159883`}, {-104.38241893599798`, 
-      97.03681420199848}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], "\"C\"", 
-      SubscriptBox["\"O\"", "2"], "\"H\""}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"benzaldehyde\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.08086253369272238], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {175., 200.}], 
-        LineBox[{{{159.84476184214074`, 216.2493124894122}, {145.67, 
-         240.8}}, {{168.50476184214077`, 221.2493124894122}, {154.33, 
-         245.8}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{145.67, 240.8}, {120.67, 284.1}}, {{154.33, 245.8}, {
-         129.33, 289.1}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{20.669500000000003`, 284.1}, {-4.330499999999998, 
-         327.405}}, {{29.330499999999997`, 289.1}, {4.330499999999998, 
-         332.405}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-4.330499999999998, 327.405}, {-29.330499999999997`, 
-         370.71}}, {{4.330499999999998, 332.405}, {-20.669500000000003`, 
-         375.71}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{25., 286.6}, {0., 243.3}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{0., 243.3}, {-25., 200.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{25., 286.6}, {75., 286.6}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{75., 286.6}, {125., 286.6}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-25., 373.21}, {-75., 373.21}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-75., 373.21}, {-125., 373.21}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-25., 195.}, {-75., 195.}}, {{-25., 205.}, {-75., 205.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-75., 195.}, {-125., 195.}}, {{-75., 205.}, {-125., 
-         205.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-120.6695, 370.71}, {-145.6695, 327.405}}, {{-129.3305, 
-         375.71}, {-154.3305, 332.405}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-145.6695, 327.405}, {-170.6695, 284.1}}, {{-154.3305, 
-         332.405}, {-179.3305, 289.1}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-125., 200.}, {-150., 243.3}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-150., 243.3}, {-175., 286.6}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 129.8073151173812}, {0., 71.10140416460123}}, 
-     PlotRange -> {{-185.5, 194.98}, {170., 378.4063}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{
-      SubscriptBox["\"C\"", "6"], 
-      SubscriptBox["\"H\"", "5"], "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"diacetyl\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.10893301563624506`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {286.6, -125.}], 
-        LineBox[{{{281.6, -103.35}, {281.6, -75.}}, {{291.6, -103.35}, {
-         291.6, -75.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{281.6, -75.}, {281.6, -25.}}, {{291.6, -75.}, {
-         291.6, -25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.10893301563624506`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {373.21, 125.}], 
-        LineBox[{{{378.21, 103.35}, {378.21, 75.}}, {{368.21, 103.35}, {
-         368.21, 75.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{378.21, 75.}, {378.21, 25.}}, {{368.21, 75.}, {368.21, 
-         25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{286.6, -25.}, {329.905, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{329.905, 0.}, {373.21, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{286.6, -25.}, {243.3, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{243.3, 0.}, {200., 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{373.21, 25.}, {416.51, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{416.51, 0.}, {459.80999999999995`, -25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 91.79953333333334}, {0., 100.83333333333334`}}, 
-     PlotRange -> {{192.2057, 467.60429999999997`}, {-155., 147.5}}}], 
-   "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], "\"C\"", "\"O\"", "\"C\"", "\"O\"", "\"C\"", 
-      SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"1-butanol\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {253.69000000000003`, 
-         25.}], 
-        LineBox[{{272.1430106192158, 14.34706695576968}, {296.995, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 0.}, {340.3, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {253.69000000000003`, 
-         25.}], 
-        LineBox[{{235.2376938789542, 14.345846717220688`}, {
-         226.84500000000003`, 9.5}}], 
-        RGBColor[
-        0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"H\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {200., -6.}], 
-        LineBox[{{226.84500000000003`, 9.5}, {217.0528037513776, 
-         3.8460964107413904`}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {470.20000000000005`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 0.}, {513.5, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 0.}, {340.3, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, -25.}, {556.8, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 0.}, {600.1, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 173.2080674190124}, {0., 32.88266964463926}}, 
-     PlotRange -> {{177.96318579800152`, 
-      612.1030000000001}, {-35.38241893599796, 47.03681420199847}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], "\"O\"", 
-      "\"H\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"decanal\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.036610814834702174`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         253.69000000000003`, -75.}], 
-        LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
-         248.69000000000003`, -25.}}, {{
-         258.69000000000005`, -53.349999999999994`}, {
-         258.69000000000005`, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 25.}}, {{
-         258.69000000000005`, -25.}, {258.69000000000005`, 25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{686.7099999999999, 75.}, {643.405, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{643.405, 50.}, {600.1, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {556.8, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{859.91, 75.}, {903.21, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{903.21, 50.}, {946.51, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{946.51, 25.}, {989.815, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{989.815, 50.}, {1033.1200000000001`, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{340.3, 75.}, {296.995, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 50.}, {253.69000000000003`, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 327.772}, {0., 73.79999999999998}}, 
-     PlotRange -> {{233.69000000000003`, 1053.1200000000001`}, {-105., 
-      79.5}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "8"], "\"C\"", 
-      "\"H\"", "\"O\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"2,3-dihydrofuran\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.17491895421787904`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         280.90000000000003`, -76.94}], 
-        LineBox[{{298.41493897611605`, -64.21406535208777}, {
-         321.35, -47.55}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{321.35, -47.55}, {361.8, -18.16}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.17491895421787904`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         280.90000000000003`, -76.94}], 
-        LineBox[{{263.385061023884, -64.21406535208779}, {
-         240.45000000000002`, -47.55}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{240.45000000000002`, -47.55}, {200., -18.16}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{330.90000000000003`, 76.94}, {346.35, 29.39}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{346.35, 29.39}, {361.8, -18.16}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{330.90000000000003`, 76.94}, {280.90000000000003`, 76.94}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{280.90000000000003`, 76.94}, {230.9, 76.94}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{235.655, 75.395}, {220.20499999999998`, 27.845}}, {{
-         226.145, 78.485}, {210.695, 30.935000000000002`}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{220.20499999999998`, 27.845}, {
-         204.755, -19.705000000000002`}}, {{210.695, 30.935000000000002`}, {
-         195.245, -16.615}}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 57.169333333333334`}, {0., 62.83213333333333}}, 
-     PlotRange -> {{195.146, 366.654}, {-106.94, 81.5564}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{
-      SubscriptBox["\"C\"", "4"], 
-      SubscriptBox["\"H\"", "6"], "\"O\""}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"2-ethylhexanol\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {253.69000000000003`, 
-         50.}], 
-        LineBox[{{272.1430106192158, 60.65293304423032}, {296.995, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 75.}, {340.3, 100.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {253.69000000000003`, 
-         50.}], 
-        LineBox[{{235.2376938789542, 60.65415328277931}, {226.84500000000003`,
-          65.5}}], 
-        RGBColor[
-        0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"H\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {200., 81.}], 
-        LineBox[{{226.84500000000003`, 65.5}, {217.0528037513776, 
-         71.1539035892586}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 50.}, {470.20000000000005`, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 75.}, {513.5, 100.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 50.}, {426.90000000000003`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 0.}, {426.90000000000003`, -50.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 50.}, {383.6, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 75.}, {340.3, 100.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 100.}, {556.8, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 75.}, {600.1, 50.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 50.}, {643.405, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{643.405, 75.}, {686.7099999999999, 100.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, -50.}, {383.6, -75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, -75.}, {340.3, -100.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{686.7099999999999, 100.}, {730.01, 75.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{730.01, 75.}, {773.3100000000001, 50.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 236.354976104936}, {0., 82.45276590498543}}, 
-     PlotRange -> {{182.8007, 790.5093}, {-106., 106.}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], "\"C\"", 
-      "\"H\"", 
-      TemplateBox[{"\"(\"", 
-        SubscriptBox["\"C\"", "2"], 
-        SubscriptBox["\"H\"", "5"], "\")\""}, "RowDefault"], "\"C\"", 
-      SubscriptBox["\"H\"", "2"], "\"O\"", "\"H\""}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"furfural\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         280.90000000000003`, -60.56}], 
-        LineBox[{{298.41493897611605`, -47.834065352087784`}, {
-         321.35, -31.17}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{321.35, -31.17}, {361.8, -1.78}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         280.90000000000003`, -60.56}], 
-        LineBox[{{263.385061023884, -47.83406535208779}, {
-         240.45000000000002`, -31.17}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{240.45000000000002`, -31.17}, {200., -1.78}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {531.22, 34.23}], 
-        LineBox[{{{518.4765195504648, 16.02770573437754}, {
-         497.4105, -2.9405000000000046`}}, {{511.78551955046476`, 
-         23.45870573437755}, {490.7195, 4.490500000000002}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{497.4105, -2.9405000000000046`}, {
-         460.2555, -36.395500000000006`}}, {{490.7195, 4.490500000000002}, {
-         453.56449999999995`, -28.964499999999997`}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{357.0445, -3.3249999999999993`}, {341.59450000000004`, 
-         44.23}}, {{366.5555, -0.23500000000000099`}, {351.1055, 47.32}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{341.59450000000004`, 44.23}, {326.14450000000005`, 
-         91.785}}, {{351.1055, 47.32}, {335.6555, 94.875}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{361.8, -1.78}, {409.355, -17.23}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{409.355, -17.23}, {456.90999999999997`, -32.68}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{330.90000000000003`, 93.33}, {280.90000000000003`, 93.33}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{280.90000000000003`, 93.33}, {230.9, 93.33}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{235.65550000000002`, 91.785}, {220.2055, 44.23}}, {{
-         226.1445, 94.875}, {210.69449999999998`, 47.32}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{220.2055, 44.23}, {204.7555, -3.325}}, {{
-         210.69449999999998`, 47.32}, {
-         195.2445, -0.23499999999999965`}}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 126.31238817805225`}, {0., 65.93275637131113}}, 
-     PlotRange -> {{190.0634, 551.2}, {-90.56, 97.94669999999999}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{
-      SubscriptBox["\"C\"", "5"], 
-      SubscriptBox["\"H\"", "4"], 
-      SubscriptBox["\"O\"", "2"]}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"N-hexadecane\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{806.22, -25.}, {849.52, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{849.52, 0.}, {892.82, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{806.22, -25.}, {762.9200000000001, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{762.9200000000001, 0.}, {719.62, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{892.82, 25.}, {936.12, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{936.12, 0.}, {979.42, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{719.62, 25.}, {676.315, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{676.315, 0.}, {633.01, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{979.42, -25.}, {1022.7249999999999`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1022.7249999999999`, 0.}, {1066.03, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{633.01, -25.}, {589.71, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{589.71, 0.}, {546.41, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1066.03, 25.}, {1109.33, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1109.33, 0.}, {1152.63, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{546.41, 25.}, {503.10999999999996`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{503.10999999999996`, 0.}, {459.80999999999995`, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1152.63, -25.}, {1195.93, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1195.93, 0.}, {1239.23, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{459.80999999999995`, -25.}, {416.51, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{416.51, 0.}, {373.21, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1239.23, 25.}, {1282.53, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1282.53, 0.}, {1325.83, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{373.21, 25.}, {329.905, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{329.905, 0.}, {286.6, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1325.83, -25.}, {1369.135, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1369.135, 0.}, {1412.44, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{286.6, -25.}, {243.3, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{243.3, 0.}, {200., 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1412.44, 25.}, {1455.74, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1455.74, 0.}, {1499.04, -25.}}]}}}, {}, {}}, {
-    ImageSize -> Large}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "14"], "\"C\"", 
-      SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"caproic aldehyde\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.06535930625017976], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         253.69000000000003`, -75.}], 
-        LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
-         248.69000000000003`, -25.}}, {{
-         258.69000000000005`, -53.349999999999994`}, {
-         258.69000000000005`, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 25.}}, {{
-         258.69000000000005`, -25.}, {258.69000000000005`, 25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {556.8, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 50.}, {600.1, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {643.405, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{340.3, 75.}, {296.995, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 50.}, {253.69000000000003`, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 178.28402889253178`}, {0., 69.83950959577558}}, 
-     PlotRange -> {{228.71500000000003`, 699.7005999999999}, {-105., 79.5}}}],
-    "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "4"], "\"C\"", 
-      "\"H\"", "\"O\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"N-(hydroxymethyl)benzamide\"", 
-   "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {69., 200.}], 
-        LineBox[{{{54.015737167620344`, 215.95318322568158`}, {39.67, 
-         240.8}}, {{62.67573716762034, 220.95318322568158`}, {48.33, 
-         245.8}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{39.67, 240.8}, {14.669999999999998`, 284.1}}, {{48.33, 
-         245.8}, {23.330000000000002`, 289.1}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {219., 
-         459.80999999999995`}], 
-        LineBox[{{208.34573716762034`, 441.35681677431836`}, {194., 416.51}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{194., 416.51}, {169., 373.21}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {219., 
-         459.80999999999995`}], 
-        LineBox[{{240.30805687203792`, 459.80999999999995`}, {250., 
-         459.80999999999995`}}], 
-        RGBColor[
-        0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"H\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {281., 
-         459.80999999999995`}], 
-        LineBox[{{250., 459.80999999999995`}, {261.3080568720379, 
-         459.80999999999995`}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.291989, 0.437977, 0.888609], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {69., 373.21}], 
-        LineBox[{{59.154664473375725`, 356.1559098007814}, {44., 329.905}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{44., 329.905}, {19., 286.6}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.291989, 0.437977, 0.888609], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {69., 373.21}], 
-        LineBox[{{88.69194312796208, 373.21}, {119., 373.21}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{119., 373.21}, {169., 373.21}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.291989, 0.437977, 0.888609], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {69., 373.21}], 
-        LineBox[{{59.153536740958046`, 390.2634391089665}, {53.5, 400.055}}], 
-        RGBColor[
-        0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"H\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {38., 
-         426.90000000000003`}], 
-        LineBox[{{53.5, 400.055}, {47.846463259041954`, 
-         409.8465608910335}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-81., 286.6}, {-31., 286.6}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-31., 286.6}, {19., 286.6}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-85.3305, 284.1}, {-110.3305, 327.405}}, {{-76.6695, 
-         289.1}, {-101.6695, 332.405}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-110.3305, 327.405}, {-135.3305, 370.71}}, {{-101.6695, 
-         332.405}, {-126.6695, 375.71}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-81., 286.6}, {-106., 243.3}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-106., 243.3}, {-131., 200.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-131., 373.21}, {-181., 373.21}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-181., 373.21}, {-231., 373.21}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-131., 195.}, {-181., 195.}}, {{-131., 205.}, {-181., 
-         205.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-181., 195.}, {-231., 195.}}, {{-181., 205.}, {-231., 
-         205.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-226.6695, 370.71}, {-251.6695, 327.405}}, {{-235.3305, 
-         375.71}, {-260.3305, 332.405}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{-251.6695, 327.405}, {-276.6695, 284.1}}, {{-260.3305, 
-         332.405}, {-285.3305, 289.1}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-231., 200.}, {-256., 243.3}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{-256., 243.3}, {-281., 286.6}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 205.6131324338248}, {0., 107.42185171877999`}}, 
-     PlotRange -> {{-297.86, 297.86}, {170.61611374407585`, 
-      481.84791469194306`}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{
-      SubscriptBox["\"C\"", "8"], 
-      SubscriptBox["\"H\"", "9"], "\"N\"", 
-      SubscriptBox["\"O\"", "2"]}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False], "\"\\n\\n\"",
-    "\"nonanal\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.04093774733222347], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         253.69000000000003`, -75.}], 
-        LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
-         248.69000000000003`, -25.}}, {{
-         258.69000000000005`, -53.349999999999994`}, {
-         258.69000000000005`, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 25.}}, {{
-         258.69000000000005`, -25.}, {258.69000000000005`, 25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {643.405, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {556.8, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{859.91, 75.}, {903.21, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{903.21, 50.}, {946.51, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{340.3, 75.}, {296.995, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 50.}, {253.69000000000003`, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 293.12800000000004`}, {0., 73.80000000000001}}, 
-     PlotRange -> {{233.69000000000003`, 966.51}, {-105., 79.5}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "7"], "\"C\"", 
-      "\"H\"", "\"O\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"octanal\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.0466858348329861], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         253.69000000000003`, -75.}], 
-        LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
-         248.69000000000003`, -25.}}, {{
-         258.69000000000005`, -53.349999999999994`}, {
-         258.69000000000005`, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 25.}}, {{
-         258.69000000000005`, -25.}, {258.69000000000005`, 25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {556.8, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{600.1, 25.}, {643.405, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{340.3, 75.}, {296.995, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 50.}, {253.69000000000003`, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 257.03727999999995`}, {0., 73.8}}, 
-     PlotRange -> {{235.50340000000003`, 878.0966}, {-105., 79.5}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "6"], "\"C\"", 
-      "\"H\"", "\"O\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"valeraldehyde\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.800498, 0.201504, 0.192061], 
-        InsetBox[
-         FormBox[
-          StyleBox[
-          "\"O\"", FontSize -> Scaled[0.08170054788387411], FontWeight -> 
-           Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
-           StripOnInput -> False], TraditionalForm], {
-         253.69000000000003`, -75.}], 
-        LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
-         248.69000000000003`, -25.}}, {{
-         258.69000000000005`, -53.349999999999994`}, {
-         258.69000000000005`, -25.}}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 25.}}, {{
-         258.69000000000005`, -25.}, {258.69000000000005`, 25.}}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {470.20000000000005`, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{470.20000000000005`, 50.}, {513.5, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{513.5, 75.}, {556.8, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{556.8, 50.}, {600.1, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{340.3, 75.}, {296.995, 50.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{296.995, 50.}, {253.69000000000003`, 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 136.7353125540224}, {0., 66.07953161756117}}, 
-     PlotRange -> {{228.71500000000003`, 610.4923}, {-105., 79.5}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], "\"C\"", 
-      "\"H\"", "\"O\""}, "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, 
-    StripOnInput -> False], "\"\\n\\n\"", "\"undecane\"", "\"\\t\"", 
-   GraphicsBox[{{{{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{633.01, -25.}, {676.315, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{676.315, 0.}, {719.62, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{633.01, -25.}, {589.71, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{589.71, 0.}, {546.41, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{719.62, 25.}, {762.9200000000001, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{762.9200000000001, 0.}, {806.22, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{546.41, 25.}, {503.10999999999996`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{503.10999999999996`, 0.}, {459.80999999999995`, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{806.22, -25.}, {849.52, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{849.52, 0.}, {892.82, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{459.80999999999995`, -25.}, {416.51, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{416.51, 0.}, {373.21, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{892.82, 25.}, {936.12, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{936.12, 0.}, {979.42, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{373.21, 25.}, {329.905, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{329.905, 0.}, {286.6, -25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{979.42, -25.}, {1022.7249999999999`, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{1022.7249999999999`, 0.}, {1066.03, 25.}}]}}, {{
-        AbsoluteThickness[0.55], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{286.6, -25.}, {243.3, 0.}}], 
-        RGBColor[0.4, 0.4, 0.4], 
-        LineBox[{{243.3, 0.}, {200., 25.}}]}}}, {}, {}}, {
-    ImageSize -> {{0., 362.41200000000003`}, {0., 21.2}}}], "\" \"", 
-   StyleBox[
-    TemplateBox[{"\"C\"", 
-      SubscriptBox["\"H\"", "3"], 
-      SubscriptBox[
-       TemplateBox[{"\"(\"", "\"C\"", 
-         SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "9"], "\"C\"", 
-      SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
-    ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
-  "RowDefault"]], "Output",
- CellChangeTimes->{
-  3.8437367790976057`*^9, {3.8437368206373854`*^9, 3.843736830584217*^9}, {
-   3.8437369270934477`*^9, 3.8437369432739716`*^9}, 3.843736977068847*^9, 
-   3.8437370170945616`*^9, 3.8437371626694975`*^9, 3.843737651878135*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"58a8a776-d522-4c01-9cc4-d5fce40b63d8"]
+ TagBox[GridBox[{
+    {
+     TemplateBox[{"\"acetic acid\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {373.21, 75.}], 
+            LineBox[{{354.7569893807842, 64.34706695576969}, {329.905, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{329.905, 50.}, {286.6, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {373.21, 75.}], 
+            
+            LineBox[{{391.66230612104584`, 64.3458467172207}, {400.055, 
+             59.5}}], 
+            RGBColor[
+            0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"H\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {426.90000000000003`,
+              44.}], 
+            
+            LineBox[{{400.055, 59.5}, {409.8471962486224, 
+             53.846096410741396`}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {286.6, -75.}], 
+            LineBox[{{{281.6, -53.69275749052112}, {281.6, -25.}}, {{
+             291.6, -53.69275749052112}, {291.6, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{281.6, -25.}, {281.6, 25.}}, {{291.6, -25.}, {291.6, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{200., 75.}, {243.3, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{243.3, 50.}, {286.6, 25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 81.8564327613386}, {0., 65.59915931366523}}, 
+         PlotRange -> {{193.193, 444.52945136159883`}, {-104.38241893599798`, 
+          97.03681420199848}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], "\"C\"", 
+          SubscriptBox["\"O\"", "2"], "\"H\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"benzaldehyde\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.08086253369272238], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {175., 200.}], 
+            
+            LineBox[{{{159.84476184214074`, 216.2493124894122}, {145.67, 
+             240.8}}, {{168.50476184214077`, 221.2493124894122}, {154.33, 
+             245.8}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{145.67, 240.8}, {120.67, 284.1}}, {{154.33, 245.8}, {
+             129.33, 289.1}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{20.669500000000003`, 284.1}, {-4.330499999999998, 
+             327.405}}, {{29.330499999999997`, 289.1}, {4.330499999999998, 
+             332.405}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{{-4.330499999999998, 327.405}, {-29.330499999999997`, 
+             370.71}}, {{4.330499999999998, 332.405}, {-20.669500000000003`, 
+             375.71}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{25., 286.6}, {0., 243.3}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{0., 243.3}, {-25., 200.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{25., 286.6}, {75., 286.6}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{75., 286.6}, {125., 286.6}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-25., 373.21}, {-75., 373.21}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-75., 373.21}, {-125., 373.21}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-25., 195.}, {-75., 195.}}, {{-25., 205.}, {-75., 
+             205.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-75., 195.}, {-125., 195.}}, {{-75., 205.}, {-125., 
+             205.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-120.6695, 370.71}, {-145.6695, 327.405}}, {{-129.3305,
+              375.71}, {-154.3305, 332.405}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-145.6695, 327.405}, {-170.6695, 284.1}}, {{-154.3305, 
+             332.405}, {-179.3305, 289.1}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-125., 200.}, {-150., 243.3}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-150., 243.3}, {-175., 286.6}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 129.8073151173812}, {0., 71.10140416460123}}, 
+         PlotRange -> {{-185.5, 194.98}, {170., 378.4063}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{
+          SubscriptBox["\"C\"", "6"], 
+          SubscriptBox["\"H\"", "5"], "\"C\"", "\"H\"", "\"O\""}, 
+         "RowDefault"], ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> 
+        False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"diacetyl\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.10893301563624506`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {286.6, -125.}], 
+            
+            LineBox[{{{281.6, -103.35}, {281.6, -75.}}, {{291.6, -103.35}, {
+             291.6, -75.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{281.6, -75.}, {281.6, -25.}}, {{291.6, -75.}, {
+             291.6, -25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.10893301563624506`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {373.21, 125.}], 
+            
+            LineBox[{{{378.21, 103.35}, {378.21, 75.}}, {{368.21, 103.35}, {
+             368.21, 75.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{378.21, 75.}, {378.21, 25.}}, {{368.21, 75.}, {368.21, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{286.6, -25.}, {329.905, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{329.905, 0.}, {373.21, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{286.6, -25.}, {243.3, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{243.3, 0.}, {200., 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{373.21, 25.}, {416.51, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{416.51, 0.}, {
+             459.80999999999995`, -25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 91.79953333333334}, {0., 100.83333333333334`}}, 
+         PlotRange -> {{192.2057, 467.60429999999997`}, {-155., 147.5}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], "\"C\"", "\"O\"", "\"C\"", "\"O\"", 
+          "\"C\"", 
+          SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"1-butanol\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {253.69000000000003`,
+              25.}], 
+            LineBox[{{272.1430106192158, 14.34706695576968}, {296.995, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{296.995, 0.}, {340.3, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {253.69000000000003`,
+              25.}], 
+            
+            LineBox[{{235.2376938789542, 14.345846717220688`}, {
+             226.84500000000003`, 9.5}}], 
+            RGBColor[
+            0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"H\"", FontSize -> Scaled[0.06928083765850508], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {200., -6.}], 
+            
+            LineBox[{{226.84500000000003`, 9.5}, {217.0528037513776, 
+             3.8460964107413904`}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {470.20000000000005`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{470.20000000000005`, 0.}, {513.5, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 0.}, {340.3, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, -25.}, {556.8, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 0.}, {600.1, 25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 173.2080674190124}, {0., 32.88266964463926}}, 
+         PlotRange -> {{177.96318579800152`, 
+          612.1030000000001}, {-35.38241893599796, 47.03681420199847}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], 
+          "\"O\"", "\"H\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"decanal\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.036610814834702174`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             253.69000000000003`, -75.}], 
+            
+            LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
+             248.69000000000003`, -25.}}, {{
+             258.69000000000005`, -53.349999999999994`}, {
+             258.69000000000005`, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 
+             25.}}, {{258.69000000000005`, -25.}, {258.69000000000005`, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{686.7099999999999, 75.}, {643.405, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{643.405, 50.}, {600.1, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {556.8, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 
+             25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{859.91, 75.}, {903.21, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{903.21, 50.}, {946.51, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{946.51, 25.}, {989.815, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{989.815, 50.}, {1033.1200000000001`, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{340.3, 75.}, {296.995, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{296.995, 50.}, {253.69000000000003`, 
+             25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 327.772}, {0., 73.79999999999998}}, 
+         PlotRange -> {{233.69000000000003`, 1053.1200000000001`}, {-105., 
+          79.5}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "8"], 
+          "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"2,3-dihydrofuran\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.17491895421787904`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             280.90000000000003`, -76.94}], 
+            
+            LineBox[{{298.41493897611605`, -64.21406535208777}, {
+             321.35, -47.55}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{321.35, -47.55}, {361.8, -18.16}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.17491895421787904`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             280.90000000000003`, -76.94}], 
+            
+            LineBox[{{263.385061023884, -64.21406535208779}, {
+             240.45000000000002`, -47.55}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{240.45000000000002`, -47.55}, {200., -18.16}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{330.90000000000003`, 76.94}, {346.35, 29.39}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{346.35, 29.39}, {361.8, -18.16}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{330.90000000000003`, 76.94}, {280.90000000000003`, 
+             76.94}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{280.90000000000003`, 76.94}, {230.9, 76.94}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{235.655, 75.395}, {220.20499999999998`, 27.845}}, {{
+             226.145, 78.485}, {210.695, 30.935000000000002`}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{220.20499999999998`, 27.845}, {
+             204.755, -19.705000000000002`}}, {{210.695, 
+             30.935000000000002`}, {195.245, -16.615}}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 57.169333333333334`}, {0., 62.83213333333333}}, 
+         PlotRange -> {{195.146, 366.654}, {-106.94, 81.5564}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{
+          SubscriptBox["\"C\"", "4"], 
+          SubscriptBox["\"H\"", "6"], "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"2-ethylhexanol\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {253.69000000000003`,
+              50.}], 
+            LineBox[{{272.1430106192158, 60.65293304423032}, {296.995, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{296.995, 75.}, {340.3, 100.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {253.69000000000003`,
+              50.}], 
+            
+            LineBox[{{235.2376938789542, 60.65415328277931}, {
+             226.84500000000003`, 65.5}}], 
+            RGBColor[
+            0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"H\"", FontSize -> Scaled[0.04834951971388583], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {200., 81.}], 
+            
+            LineBox[{{226.84500000000003`, 65.5}, {217.0528037513776, 
+             71.1539035892586}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 50.}, {470.20000000000005`, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{470.20000000000005`, 75.}, {513.5, 100.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 50.}, {426.90000000000003`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{426.90000000000003`, 0.}, {
+             426.90000000000003`, -50.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 50.}, {383.6, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 75.}, {340.3, 100.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 100.}, {556.8, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 75.}, {600.1, 50.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 50.}, {643.405, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{643.405, 75.}, {686.7099999999999, 100.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, -50.}, {383.6, -75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, -75.}, {340.3, -100.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{686.7099999999999, 100.}, {730.01, 75.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{730.01, 75.}, {773.3100000000001, 50.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 236.354976104936}, {0., 82.45276590498543}}, 
+         PlotRange -> {{182.8007, 790.5093}, {-106., 106.}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], 
+          "\"C\"", "\"H\"", 
+          TemplateBox[{"\"(\"", 
+            SubscriptBox["\"C\"", "2"], 
+            SubscriptBox["\"H\"", "5"], "\")\""}, "RowDefault"], "\"C\"", 
+          SubscriptBox["\"H\"", "2"], "\"O\"", "\"H\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"furfural\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             280.90000000000003`, -60.56}], 
+            
+            LineBox[{{298.41493897611605`, -47.834065352087784`}, {
+             321.35, -31.17}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{321.35, -31.17}, {361.8, -1.78}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             280.90000000000003`, -60.56}], 
+            
+            LineBox[{{263.385061023884, -47.83406535208779}, {
+             240.45000000000002`, -31.17}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{240.45000000000002`, -31.17}, {200., -1.78}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.08544739687353671], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {531.22, 34.23}], 
+            LineBox[{{{518.4765195504648, 16.02770573437754}, {
+             497.4105, -2.9405000000000046`}}, {{511.78551955046476`, 
+             23.45870573437755}, {490.7195, 4.490500000000002}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{497.4105, -2.9405000000000046`}, {
+             460.2555, -36.395500000000006`}}, {{490.7195, 
+             4.490500000000002}, {
+             453.56449999999995`, -28.964499999999997`}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{357.0445, -3.3249999999999993`}, {341.59450000000004`, 
+             44.23}}, {{366.5555, -0.23500000000000099`}, {351.1055, 
+             47.32}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{341.59450000000004`, 44.23}, {326.14450000000005`, 
+             91.785}}, {{351.1055, 47.32}, {335.6555, 94.875}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{361.8, -1.78}, {409.355, -17.23}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{409.355, -17.23}, {456.90999999999997`, -32.68}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{330.90000000000003`, 93.33}, {280.90000000000003`, 
+             93.33}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{280.90000000000003`, 93.33}, {230.9, 93.33}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{235.65550000000002`, 91.785}, {220.2055, 44.23}}, {{
+             226.1445, 94.875}, {210.69449999999998`, 47.32}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{220.2055, 44.23}, {204.7555, -3.325}}, {{
+             210.69449999999998`, 47.32}, {
+             195.2445, -0.23499999999999965`}}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 126.31238817805225`}, {0., 65.93275637131113}}, 
+         PlotRange -> {{190.0634, 551.2}, {-90.56, 97.94669999999999}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{
+          SubscriptBox["\"C\"", "5"], 
+          SubscriptBox["\"H\"", "4"], 
+          SubscriptBox["\"O\"", "2"]}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"N-hexadecane\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{806.22, -25.}, {849.52, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{849.52, 0.}, {892.82, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{806.22, -25.}, {762.9200000000001, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{762.9200000000001, 0.}, {719.62, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{892.82, 25.}, {936.12, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{936.12, 0.}, {979.42, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{719.62, 25.}, {676.315, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{676.315, 0.}, {633.01, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{979.42, -25.}, {1022.7249999999999`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1022.7249999999999`, 0.}, {1066.03, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{633.01, -25.}, {589.71, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{589.71, 0.}, {546.41, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1066.03, 25.}, {1109.33, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1109.33, 0.}, {1152.63, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{546.41, 25.}, {503.10999999999996`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{503.10999999999996`, 0.}, {
+             459.80999999999995`, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1152.63, -25.}, {1195.93, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1195.93, 0.}, {1239.23, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{459.80999999999995`, -25.}, {416.51, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{416.51, 0.}, {373.21, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1239.23, 25.}, {1282.53, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1282.53, 0.}, {1325.83, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{373.21, 25.}, {329.905, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{329.905, 0.}, {286.6, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1325.83, -25.}, {1369.135, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1369.135, 0.}, {1412.44, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{286.6, -25.}, {243.3, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{243.3, 0.}, {200., 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1412.44, 25.}, {1455.74, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1455.74, 0.}, {1499.04, -25.}}]}}}, {}, {}}, {
+        ImageSize -> Large}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "14"], 
+          "\"C\"", 
+          SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"caproic aldehyde\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.06535930625017976], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             253.69000000000003`, -75.}], 
+            
+            LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
+             248.69000000000003`, -25.}}, {{
+             258.69000000000005`, -53.349999999999994`}, {
+             258.69000000000005`, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 
+             25.}}, {{258.69000000000005`, -25.}, {258.69000000000005`, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 
+             25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {556.8, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 50.}, {600.1, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {643.405, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{340.3, 75.}, {296.995, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{296.995, 50.}, {253.69000000000003`, 
+             25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 178.28402889253178`}, {0., 69.83950959577558}}, 
+         PlotRange -> {{228.71500000000003`, 699.7005999999999}, {-105., 
+          79.5}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "4"], 
+          "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"N-(hydroxymethyl)benzamide\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {69., 200.}], 
+            
+            LineBox[{{{54.015737167620344`, 215.95318322568158`}, {39.67, 
+             240.8}}, {{62.67573716762034, 220.95318322568158`}, {48.33, 
+             245.8}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{39.67, 240.8}, {14.669999999999998`, 284.1}}, {{48.33, 
+             245.8}, {23.330000000000002`, 289.1}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {219., 
+             459.80999999999995`}], 
+            
+            LineBox[{{208.34573716762034`, 441.35681677431836`}, {194., 
+             416.51}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{194., 416.51}, {169., 373.21}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {219., 
+             459.80999999999995`}], 
+            
+            LineBox[{{240.30805687203792`, 459.80999999999995`}, {250., 
+             459.80999999999995`}}], 
+            RGBColor[
+            0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"H\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {281., 
+             459.80999999999995`}], 
+            
+            LineBox[{{250., 459.80999999999995`}, {261.3080568720379, 
+             459.80999999999995`}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.291989, 0.437977, 0.888609], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {69., 373.21}], 
+            
+            LineBox[{{59.154664473375725`, 356.1559098007814}, {44., 
+             329.905}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{44., 329.905}, {19., 286.6}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.291989, 0.437977, 0.888609], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {69., 373.21}], 
+            LineBox[{{88.69194312796208, 373.21}, {119., 373.21}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{119., 373.21}, {169., 373.21}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.291989, 0.437977, 0.888609], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"N\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {69., 373.21}], 
+            
+            LineBox[{{59.153536740958046`, 390.2634391089665}, {53.5, 
+             400.055}}], 
+            RGBColor[
+            0.43333333333333335`, 0.4666666666666667, 0.4666666666666667], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"H\"", FontSize -> Scaled[0.049324995393681875`], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {38., 
+             426.90000000000003`}], 
+            
+            LineBox[{{53.5, 400.055}, {47.846463259041954`, 
+             409.8465608910335}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-81., 286.6}, {-31., 286.6}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-31., 286.6}, {19., 286.6}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-85.3305, 284.1}, {-110.3305, 327.405}}, {{-76.6695, 
+             289.1}, {-101.6695, 332.405}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-110.3305, 327.405}, {-135.3305, 370.71}}, {{-101.6695,
+              332.405}, {-126.6695, 375.71}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-81., 286.6}, {-106., 243.3}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-106., 243.3}, {-131., 200.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-131., 373.21}, {-181., 373.21}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-181., 373.21}, {-231., 373.21}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-131., 195.}, {-181., 195.}}, {{-131., 205.}, {-181., 
+             205.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-181., 195.}, {-231., 195.}}, {{-181., 205.}, {-231., 
+             205.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-226.6695, 370.71}, {-251.6695, 327.405}}, {{-235.3305,
+              375.71}, {-260.3305, 332.405}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{-251.6695, 327.405}, {-276.6695, 284.1}}, {{-260.3305, 
+             332.405}, {-285.3305, 289.1}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-231., 200.}, {-256., 243.3}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{-256., 243.3}, {-281., 286.6}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 205.6131324338248}, {0., 107.42185171877999`}}, 
+         PlotRange -> {{-297.86, 297.86}, {170.61611374407585`, 
+          481.84791469194306`}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{
+          SubscriptBox["\"C\"", "8"], 
+          SubscriptBox["\"H\"", "9"], "\"N\"", 
+          SubscriptBox["\"O\"", "2"]}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"nonanal\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.04093774733222347], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             253.69000000000003`, -75.}], 
+            
+            LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
+             248.69000000000003`, -25.}}, {{
+             258.69000000000005`, -53.349999999999994`}, {
+             258.69000000000005`, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 
+             25.}}, {{258.69000000000005`, -25.}, {258.69000000000005`, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {643.405, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {556.8, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 
+             25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{859.91, 75.}, {903.21, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{903.21, 50.}, {946.51, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{340.3, 75.}, {296.995, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{296.995, 50.}, {253.69000000000003`, 
+             25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 293.12800000000004`}, {0., 73.80000000000001}}, 
+         PlotRange -> {{233.69000000000003`, 966.51}, {-105., 79.5}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "7"], 
+          "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"octanal\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.0466858348329861], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             253.69000000000003`, -75.}], 
+            
+            LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
+             248.69000000000003`, -25.}}, {{
+             258.69000000000005`, -53.349999999999994`}, {
+             258.69000000000005`, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 
+             25.}}, {{258.69000000000005`, -25.}, {258.69000000000005`, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {556.8, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 50.}, {513.5, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{600.1, 25.}, {643.405, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{643.405, 50.}, {686.7099999999999, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {470.20000000000005`, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{470.20000000000005`, 50.}, {426.90000000000003`, 
+             25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{686.7099999999999, 75.}, {730.01, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{730.01, 50.}, {773.3100000000001, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{773.3100000000001, 25.}, {816.61, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{816.61, 50.}, {859.91, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{340.3, 75.}, {296.995, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{296.995, 50.}, {253.69000000000003`, 
+             25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 257.03727999999995`}, {0., 73.8}}, 
+         PlotRange -> {{235.50340000000003`, 878.0966}, {-105., 79.5}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "6"], 
+          "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"valeraldehyde\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.800498, 0.201504, 0.192061], 
+            InsetBox[
+             FormBox[
+              StyleBox[
+              "\"O\"", FontSize -> Scaled[0.08170054788387411], FontWeight -> 
+               Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
+               StripOnInput -> False], TraditionalForm], {
+             253.69000000000003`, -75.}], 
+            
+            LineBox[{{{248.69000000000003`, -53.349999999999994`}, {
+             248.69000000000003`, -25.}}, {{
+             258.69000000000005`, -53.349999999999994`}, {
+             258.69000000000005`, -25.}}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{{248.69000000000003`, -25.}, {248.69000000000003`, 
+             25.}}, {{258.69000000000005`, -25.}, {258.69000000000005`, 
+             25.}}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {470.20000000000005`, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{470.20000000000005`, 50.}, {513.5, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{426.90000000000003`, 25.}, {383.6, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{383.6, 50.}, {340.3, 75.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{513.5, 75.}, {556.8, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{556.8, 50.}, {600.1, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{340.3, 75.}, {296.995, 50.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{296.995, 50.}, {253.69000000000003`, 
+             25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 136.7353125540224}, {0., 66.07953161756117}}, 
+         PlotRange -> {{228.71500000000003`, 610.4923}, {-105., 79.5}}}], 
+       "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "3"], 
+          "\"C\"", "\"H\"", "\"O\""}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"\"undecane\"", "\"\\t\"", 
+       GraphicsBox[{{{{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{633.01, -25.}, {676.315, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{676.315, 0.}, {719.62, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{633.01, -25.}, {589.71, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{589.71, 0.}, {546.41, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{719.62, 25.}, {762.9200000000001, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{762.9200000000001, 0.}, {806.22, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{546.41, 25.}, {503.10999999999996`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            
+            LineBox[{{503.10999999999996`, 0.}, {
+             459.80999999999995`, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{806.22, -25.}, {849.52, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{849.52, 0.}, {892.82, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{459.80999999999995`, -25.}, {416.51, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{416.51, 0.}, {373.21, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{892.82, 25.}, {936.12, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{936.12, 0.}, {979.42, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{373.21, 25.}, {329.905, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{329.905, 0.}, {286.6, -25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{979.42, -25.}, {1022.7249999999999`, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{1022.7249999999999`, 0.}, {1066.03, 25.}}]}}, {{
+            AbsoluteThickness[0.55], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{286.6, -25.}, {243.3, 0.}}], 
+            RGBColor[0.4, 0.4, 0.4], 
+            LineBox[{{243.3, 0.}, {200., 25.}}]}}}, {}, {}}, {
+        ImageSize -> {{0., 362.41200000000003`}, {0., 21.2}}}], "\" \"", 
+       StyleBox[
+        TemplateBox[{"\"C\"", 
+          SubscriptBox["\"H\"", "3"], 
+          SubscriptBox[
+           TemplateBox[{"\"(\"", "\"C\"", 
+             SubscriptBox["\"H\"", "2"], "\")\""}, "RowDefault"], "9"], 
+          "\"C\"", 
+          SubscriptBox["\"H\"", "3"]}, "RowDefault"], 
+        ScriptBaselineShifts -> {0.5, 0.75}, StripOnInput -> False]},
+      "RowDefault"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.844677372142058*^9, 3.8446775059261084`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"b584f9b1-d93f-4221-a669-501dad779945"]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A little bit of image processing", "Subsubsection",
+ CellChangeTimes->{{3.8446770367143717`*^9, 
+  3.8446770452071342`*^9}},ExpressionUUID->"c3ab7842-6629-4574-9765-\
+14b9d36d8cf2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"split", "=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"pic", "=", 
+        RowBox[{"display", "/@", 
+         RowBox[{"Partition", "[", 
+          RowBox[{"data", ",", 
+           RowBox[{"UpTo", "@", 
+            RowBox[{"Ceiling", "[", 
+             RowBox[{
+              RowBox[{"Length", "@", "list"}], "/", "2"}], "]"}]}]}], 
+          "]"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Import", "/@", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Export", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToString", "@", 
+              RowBox[{"First", "[", "#2", "]"}]}], "<>", "\"\<.png\>\""}], 
+            ",", "#1"}], "]"}], "&"}], ",", "pic"}], "]"}]}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MapIndexed", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ToString", "@", 
+         RowBox[{"First", "[", "#2", "]"}]}], "<>", "\"\<.png\>\""}], ",", 
+       "#1"}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ImageCrop", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"Ceiling", "[", 
+         RowBox[{
+          RowBox[{"Max", "/@", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"ImageDimensions", "/@", "split"}], "]"}]}], ",", "20"}], 
+         "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Padding", "\[Rule]", "White"}]}], "]"}], "&"}], "/@", 
+     "split"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Directory", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.844676508715331*^9, 3.844676509602516*^9}, {
+  3.8446765862941995`*^9, 3.84467659492231*^9}, {3.844676744343937*^9, 
+  3.844676755991165*^9}, {3.8446768228170624`*^9, 3.844676878995099*^9}, {
+  3.844677401407919*^9, 3.8446774394154096`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"efc2c3ee-c03a-48c5-b42b-84cd74295f9b"],
 
 Cell["", "PageBreak",
  PageBreakBelow->True,ExpressionUUID->"6c6cf5fa-d152-4896-b75d-004302a06480"],
@@ -4486,11 +4701,11 @@ H]\"", ImageSize -> {{1, 300}, Automatic}, BaselinePosition -> Baseline,
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{921, 645},
-WindowMargins->{{90, Automatic}, {Automatic, 78}},
+WindowSize->{800, 645},
+WindowMargins->{{330, Automatic}, {Automatic, 18}},
 TaggingRules->Association["TryRealOnly" -> False],
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
-StyleDefinitions->"ReverseColor.nb",
+StyleDefinitions->"Default.nb",
 ExpressionUUID->"519c57b1-c88f-4744-9870-2521db123fe1"
 ]
 (* End of Notebook Content *)
@@ -4506,22 +4721,27 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 107, 0, 45, "Subsubsection",ExpressionUUID->"e0bd5d67-05e5-47b5-825c-5c910cbd08c3"],
-Cell[690, 24, 452, 9, 70, "Input",ExpressionUUID->"22e3d9d6-e7af-40ab-bd6b-f6a18ba82b2c"],
-Cell[1145, 35, 1828, 37, 190, "Input",ExpressionUUID->"945a6ffc-87dc-4ae8-93ae-5a3cff24ec95"],
+Cell[690, 24, 452, 9, 90, "Input",ExpressionUUID->"22e3d9d6-e7af-40ab-bd6b-f6a18ba82b2c"],
+Cell[1145, 35, 1845, 36, 190, "Input",ExpressionUUID->"945a6ffc-87dc-4ae8-93ae-5a3cff24ec95"],
+Cell[2993, 73, 1049, 26, 50, "Input",ExpressionUUID->"e9d67174-e1f3-466b-bcba-8914d7b315f6"],
 Cell[CellGroupData[{
-Cell[2998, 76, 837, 21, 50, "Input",ExpressionUUID->"cf76b820-d0d0-4707-a669-c5c9fc87b0c1"],
-Cell[3838, 99, 47377, 1046, 1556, "Output",ExpressionUUID->"58a8a776-d522-4c01-9cc4-d5fce40b63d8"]
+Cell[4067, 103, 211, 3, 29, "Input",ExpressionUUID->"399a87cc-c992-4ca0-970a-5136521cf3a7"],
+Cell[4281, 108, 53363, 1188, 1249, "Output",ExpressionUUID->"b584f9b1-d93f-4221-a669-501dad779945"]
+}, Open  ]]
 }, Open  ]],
-Cell[51230, 1148, 99, 1, 4, "PageBreak",ExpressionUUID->"6c6cf5fa-d152-4896-b75d-004302a06480",
+Cell[CellGroupData[{
+Cell[57693, 1302, 187, 3, 45, "Subsubsection",ExpressionUUID->"c3ab7842-6629-4574-9765-14b9d36d8cf2"],
+Cell[57883, 1307, 2034, 54, 150, "Input",ExpressionUUID->"efc2c3ee-c03a-48c5-b42b-84cd74295f9b"],
+Cell[59920, 1363, 99, 1, 4, "PageBreak",ExpressionUUID->"6c6cf5fa-d152-4896-b75d-004302a06480",
  PageBreakBelow->True],
 Cell[CellGroupData[{
-Cell[51354, 1153, 129587, 2625, 66, "WolframAlphaShortInput",ExpressionUUID->"6d89034e-638d-4112-82b8-a80528f8a23d"],
-Cell[180944, 3780, 3451, 88, 106, "Output",ExpressionUUID->"d60a1520-37fa-42ee-8150-7aa7f2f0b16f"]
+Cell[60044, 1368, 129587, 2625, 66, "WolframAlphaShortInput",ExpressionUUID->"6d89034e-638d-4112-82b8-a80528f8a23d"],
+Cell[189634, 3995, 3451, 88, 106, "Output",ExpressionUUID->"d60a1520-37fa-42ee-8150-7aa7f2f0b16f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[184432, 3873, 2143, 44, 40, "Input",ExpressionUUID->"839a94f6-2899-4707-bfba-92b16fc5aef0"],
-Cell[186578, 3919, 1999, 32, 85, "Message",ExpressionUUID->"2607e5c6-9f40-4fe9-95a3-2122cfba8d78"],
-Cell[188580, 3953, 24253, 531, 66, "Output",ExpressionUUID->"790ff8f7-bdf7-446d-bee3-6e9dd1c79890"]
+Cell[193122, 4088, 2143, 44, 40, "Input",ExpressionUUID->"839a94f6-2899-4707-bfba-92b16fc5aef0"],
+Cell[195268, 4134, 1999, 32, 104, "Message",ExpressionUUID->"2607e5c6-9f40-4fe9-95a3-2122cfba8d78"],
+Cell[197270, 4168, 24253, 531, 66, "Output",ExpressionUUID->"790ff8f7-bdf7-446d-bee3-6e9dd1c79890"]
 }, Open  ]]
 }, Open  ]]
 }
