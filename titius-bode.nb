@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     52990,       1208]
-NotebookOptionsPosition[     51396,       1174]
-NotebookOutlinePosition[     51839,       1191]
-CellTagsIndexPosition[     51796,       1188]
+NotebookDataLength[     53036,       1211]
+NotebookOptionsPosition[     51441,       1177]
+NotebookOutlinePosition[     51885,       1194]
+CellTagsIndexPosition[     51842,       1191]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -79,6 +79,74 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Since", " ", "Pluto", " ", "is", " ", "not", " ", "a", " ", "planet", 
+     " ", "anymore"}], ",", " ", 
+    RowBox[{
+    "its", " ", "data", " ", "is", " ", "added", " ", "separately"}]}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"AppendTo", "[", 
+     RowBox[{"data", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"MinorPlanetData", "[", 
+         RowBox[{"\"\<Pluto\>\"", ",", "#"}], "]"}], "&"}], "/@", 
+       RowBox[{"{", 
+        RowBox[{"\"\<SemimajorAxis\>\"", ",", "\"\<Name\>\""}], "}"}]}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Also", " ", "the", " ", "mean"}], "-", 
+     RowBox[{
+     "distance", " ", "of", " ", "asteroid", " ", "belt", " ", "is", " ", 
+      "needed", " ", "as", " ", 
+      RowBox[{"well", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"data", "=", 
+     RowBox[{"Insert", "[", 
+      RowBox[{"data", ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"EntityClass", "[", 
+              RowBox[{"\"\<MinorPlanet\>\"", ",", "#"}], "]"}], "@", 
+             "\"\<SemimajorAxis\>\""}], "//", "Mean"}], ",", "#"}], "}"}], 
+         "&"}], "[", "\"\<AsteroidBelt\>\"", "]"}], ",", 
+       "\[IndentingNewLine]", "5"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.8447641957076015`*^9, 3.8447643799756126`*^9}, 
+   3.844764565195475*^9, {3.844764670594134*^9, 3.8447646817495832`*^9}, {
+   3.8460532415509367`*^9, 
+   3.846053244082006*^9}},ExpressionUUID->"5ec25d04-21b7-4736-adc5-\
+be3e560e9a42"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"prediction", "=", 
+   RowBox[{"titiusbode", "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "8"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"names", "=", 
+   RowBox[{"Last", "/@", "data"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"distance", "=", 
+   RowBox[{"First", "/@", "data"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8437334527013693`*^9, 3.843733452772478*^9}, {
+   3.843733492548298*^9, 3.843733493071048*^9}, {3.843733532577793*^9, 
+   3.843733533494443*^9}, 3.8437336016092663`*^9, {3.84476454896227*^9, 
+   3.8447645500402827`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"1ef9fe6e-71d6-4a66-87ba-166088166bab"],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{"belt", "=", 
    RowBox[{"{", 
     RowBox[{"\"\<Asteroid Belt\>\"", ",", "\[IndentingNewLine]", 
@@ -108,7 +176,7 @@ Cell[BoxData[
            Dynamic[Typeset`assumptions$$], 
            Dynamic[Typeset`open$$], 
            Dynamic[Typeset`querystate$$]], StandardForm],
-         ImageSizeCache->{396., {14.5, 19.5}},
+         ImageSizeCache->{391., {14.5, 18.5}},
          TrackedSymbols:>{
           Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
            Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
@@ -121,71 +189,6 @@ Cell[BoxData[
  CellChangeTimes->{{3.843731731119875*^9, 3.8437317513810124`*^9}, {
   3.8437317983310127`*^9, 3.843731807659618*^9}},
  CellLabel->"In[2]:=",ExpressionUUID->"25f08b48-c6b7-471b-a855-d5fb024c461c"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{
-    "Since", " ", "Pluto", " ", "is", " ", "not", " ", "a", " ", "planet", 
-     " ", "anymore"}], ",", " ", 
-    RowBox[{
-    "its", " ", "data", " ", "is", " ", "added", " ", "separately"}]}], " ", 
-   "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{"Also", " ", "the", " ", "mean"}], "-", 
-    RowBox[{
-    "distance", " ", "of", " ", "asteroid", " ", "belt", " ", "is", " ", 
-     "needed", " ", "as", " ", 
-     RowBox[{"well", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"data", "=", 
-     RowBox[{"Insert", "[", 
-      RowBox[{"data", ",", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{"EntityClass", "[", 
-              RowBox[{"\"\<MinorPlanet\>\"", ",", "#"}], "]"}], "@", 
-             "\"\<SemimajorAxis\>\""}], "//", "Mean"}], ",", "#"}], "}"}], 
-         "&"}], "[", "\"\<AsteroidBelt\>\"", "]"}], ",", 
-       "\[IndentingNewLine]", "5"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"AppendTo", "[", 
-     RowBox[{"data", ",", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"MinorPlanetData", "[", 
-         RowBox[{"\"\<Pluto\>\"", ",", "#"}], "]"}], "&"}], "/@", 
-       RowBox[{"{", 
-        RowBox[{"\"\<SemimajorAxis\>\"", ",", "\"\<Name\>\""}], "}"}]}]}], 
-     "]"}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
- CellChangeTimes->{{3.8447641957076015`*^9, 3.8447643799756126`*^9}, 
-   3.844764565195475*^9, {3.844764670594134*^9, 3.8447646817495832`*^9}},
- CellLabel->"In[39]:=",ExpressionUUID->"5ec25d04-21b7-4736-adc5-be3e560e9a42"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"prediction", "=", 
-   RowBox[{"titiusbode", "/@", 
-    RowBox[{"Range", "[", 
-     RowBox[{"0", ",", "8"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"names", "=", 
-   RowBox[{"Last", "/@", "data"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"distance", "=", 
-   RowBox[{"First", "/@", "data"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.8437334527013693`*^9, 3.843733452772478*^9}, {
-   3.843733492548298*^9, 3.843733493071048*^9}, {3.843733532577793*^9, 
-   3.843733533494443*^9}, 3.8437336016092663`*^9, {3.84476454896227*^9, 
-   3.8447645500402827`*^9}},
- CellLabel->"In[41]:=",ExpressionUUID->"1ef9fe6e-71d6-4a66-87ba-166088166bab"],
 
 Cell[CellGroupData[{
 
@@ -1175,7 +1178,7 @@ Cell[BoxData[
 WindowSize->{919, 645},
 WindowMargins->{{120, Automatic}, {Automatic, 10}},
 TaggingRules->{"TryRealOnly" -> False},
-FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
 StyleDefinitions->"ReverseColor.nb",
 ExpressionUUID->"2c6ec42d-0d18-44ba-883f-36313ce7c076"
 ]
@@ -1190,24 +1193,24 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1622, 35, 67, "Input",ExpressionUUID->"27501ee1-f6fc-4e46-b2f6-389409058678"],
-Cell[2183, 57, 744, 20, 48, "Input",ExpressionUUID->"e8161157-77c0-4243-8752-a12e12a60103"],
-Cell[2930, 79, 2168, 43, 80, "Input",ExpressionUUID->"25f08b48-c6b7-471b-a855-d5fb024c461c"],
-Cell[5101, 124, 1733, 45, 143, "Input",ExpressionUUID->"5ec25d04-21b7-4736-adc5-be3e560e9a42"],
-Cell[6837, 171, 704, 16, 67, "Input",ExpressionUUID->"1ef9fe6e-71d6-4a66-87ba-166088166bab"],
+Cell[558, 20, 1622, 35, 70, "Input",ExpressionUUID->"27501ee1-f6fc-4e46-b2f6-389409058678"],
+Cell[2183, 57, 744, 20, 50, "Input",ExpressionUUID->"e8161157-77c0-4243-8752-a12e12a60103"],
+Cell[2930, 79, 1778, 48, 150, "Input",ExpressionUUID->"5ec25d04-21b7-4736-adc5-be3e560e9a42"],
+Cell[4711, 129, 704, 16, 70, "Input",ExpressionUUID->"1ef9fe6e-71d6-4a66-87ba-166088166bab"],
+Cell[5418, 147, 2168, 43, 78, "Input",ExpressionUUID->"25f08b48-c6b7-471b-a855-d5fb024c461c"],
 Cell[CellGroupData[{
-Cell[7566, 191, 120, 0, 44, "Subsubsection",ExpressionUUID->"161e0b82-668b-4041-b048-12f8280a2394"],
+Cell[7611, 194, 120, 0, 45, "Subsubsection",ExpressionUUID->"161e0b82-668b-4041-b048-12f8280a2394"],
 Cell[CellGroupData[{
-Cell[7711, 195, 1387, 33, 105, "Input",ExpressionUUID->"9944f0fa-7055-4979-becf-817c6275bcd1"],
-Cell[9101, 230, 19981, 438, 379, "Output",ExpressionUUID->"ea7918c5-8f40-489a-988d-4d1234cb509e"]
+Cell[7756, 198, 1387, 33, 110, "Input",ExpressionUUID->"9944f0fa-7055-4979-becf-817c6275bcd1"],
+Cell[9146, 233, 19981, 438, 383, "Output",ExpressionUUID->"ea7918c5-8f40-489a-988d-4d1234cb509e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29131, 674, 163, 2, 44, "Subsubsection",ExpressionUUID->"44c0eaf5-bfd5-45e7-b201-9fecca6aa592"],
-Cell[29297, 678, 612, 14, 28, "Input",ExpressionUUID->"a495c70d-3fb5-485f-8ca3-d6c752115531"],
+Cell[29176, 677, 163, 2, 45, "Subsubsection",ExpressionUUID->"44c0eaf5-bfd5-45e7-b201-9fecca6aa592"],
+Cell[29342, 681, 612, 14, 29, "Input",ExpressionUUID->"a495c70d-3fb5-485f-8ca3-d6c752115531"],
 Cell[CellGroupData[{
-Cell[29934, 696, 1284, 32, 105, "Input",ExpressionUUID->"cc97ce14-8eb8-4204-83cb-b68ea8aae824"],
-Cell[31221, 730, 20147, 440, 379, "Output",ExpressionUUID->"1bc1ab68-088e-4277-9918-88c464e73052"]
+Cell[29979, 699, 1284, 32, 110, "Input",ExpressionUUID->"cc97ce14-8eb8-4204-83cb-b68ea8aae824"],
+Cell[31266, 733, 20147, 440, 379, "Output",ExpressionUUID->"1bc1ab68-088e-4277-9918-88c464e73052"]
 }, Open  ]]
 }, Open  ]]
 }
