@@ -1,0 +1,353 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13528,        343]
+NotebookOptionsPosition[     12669,        322]
+NotebookOutlinePosition[     13073,        338]
+CellTagsIndexPosition[     13030,        335]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Declare", " ", "the", " ", "minimum", " ", "length", " ", "of", " ", "a", 
+    " ", "word"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"minWordLength", " ", "=", " ", "3"}], ";"}]}]], "Input",
+ CellLabel->"In[3]:= ",ExpressionUUID->"cb2fb996-7e08-4518-b1b6-8decf9b20e19"],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{"substrings", "[", 
+    RowBox[{"str_String", ",", 
+     RowBox[{"len_", ":", "minWordLength"}]}], " ", "]"}], " ", ":=", " ", 
+   RowBox[{"Join", "@@", "\n", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"StringTake", "[", 
+       RowBox[{"str", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", " ", "j"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", " ", 
+        RowBox[{
+         RowBox[{"StringLength", "@", "str"}], " ", "+", " ", "1"}]}], "}"}], 
+      ",", "\n", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", " ", 
+        RowBox[{"i", " ", "+", " ", "len", "-", " ", "1"}], ",", " ", 
+        RowBox[{"StringLength", "@", "str"}]}], "}"}]}], "]"}]}]}]}]], "Input",
+ CellLabel->"In[2]:= ",ExpressionUUID->"e175789d-8cad-4c2e-a6ab-e4ae004c55f2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"highlights", "[", "str_String", "]"}], " ", ":=", " ", 
+  RowBox[{"With", "[", "\n", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"pos", "=", 
+      RowBox[{"Union", "@@", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Range", "@@", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Flatten", "[", 
+               RowBox[{"#", ",", "1"}], "]"}], "&"}], ")"}], "@", 
+            RowBox[{"StringPosition", "[", 
+             RowBox[{"str", ",", "#"}], "]"}]}]}], "&"}], "/@", "\n", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"substrings", "[", "str", "]"}], ",", 
+           RowBox[{
+            RowBox[{"DictionaryWordQ", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{"IgnoreCase", " ", "\[Rule]", " ", "True"}]}], "]"}], 
+            "&"}]}], "]"}]}], ")"}]}]}], "}"}], ",", "\n", 
+    RowBox[{"MapIndexed", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"MemberQ", "[", 
+          RowBox[{"pos", ",", 
+           RowBox[{"First", "@", "#2"}]}], "]"}], ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"#", ",", "Red"}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+      RowBox[{"Characters", "@", "str"}]}], "]"}]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:= ",ExpressionUUID->"c990b703-7f4c-4258-ac2a-027a08b456af"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findwords", "[", 
+   RowBox[{"table_", ",", 
+    RowBox[{"grid_", ":", "True"}]}], "]"}], " ", ":=", " ", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"list", " ", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"StringQ", "@", "table"}], ",", "\n", 
+        RowBox[{"StringPartition", "[", 
+         RowBox[{
+          RowBox[{"ToUpperCase", "@", "table"}], ",", 
+          RowBox[{"Sqrt", "@", 
+           RowBox[{"StringLength", "@", "table"}]}]}], "]"}], ",", "\n", 
+        RowBox[{"ToUpperCase", "/@", "table"}]}], "]"}]}], "}"}], ",", "\n", 
+    RowBox[{"If", "[", 
+     RowBox[{"grid", ",", 
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"highlights", "/@", "list"}], ",", 
+        RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"highlights", "/@", "list"}], "//", "TableForm"}]}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->
+  "In[12]:= ",ExpressionUUID->"0ef283d4-771d-4000-8994-0a365b9b7176"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"CharacterRange", "[", 
+       RowBox[{"\"\<a\>\"", ",", " ", "\"\<z\>\""}], "]"}], ",", " ", "256"}],
+      "]"}]}]}], ";"}], "\n", 
+ RowBox[{"findwords", "[", "str", "]"}]}], "Input",ExpressionUUID->"0842bf20-\
+eb4c-4f27-9c35-debf2ab1ac94"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"C\"\>", "\<\"T\"\>", "\<\"J\"\>", "\<\"H\"\>", "\<\"L\"\>", \
+"\<\"Z\"\>", "\<\"W\"\>", "\<\"E\"\>", "\<\"L\"\>", "\<\"Z\"\>", "\<\"W\"\>", \
+"\<\"X\"\>", "\<\"T\"\>", "\<\"I\"\>", "\<\"W\"\>", "\<\"A\"\>"},
+    {"\<\"S\"\>", "\<\"J\"\>", "\<\"Y\"\>", "\<\"O\"\>", "\<\"Z\"\>", \
+"\<\"F\"\>", "\<\"W\"\>", "\<\"Q\"\>", "\<\"E\"\>", "\<\"Y\"\>", "\<\"D\"\>", \
+"\<\"U\"\>", "\<\"Z\"\>", "\<\"N\"\>", "\<\"N\"\>", "\<\"Z\"\>"},
+    {"\<\"R\"\>", "\<\"W\"\>", "\<\"C\"\>", "\<\"W\"\>", "\<\"M\"\>", \
+"\<\"K\"\>", "\<\"W\"\>", "\<\"R\"\>", "\<\"C\"\>", "\<\"Q\"\>", "\<\"Z\"\>", 
+     StyleBox["\<\"F\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"E\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"T\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"C\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"H\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]]},
+    {"\<\"Y\"\>", "\<\"M\"\>", "\<\"F\"\>", "\<\"X\"\>", "\<\"Z\"\>", \
+"\<\"X\"\>", "\<\"U\"\>", "\<\"M\"\>", "\<\"O\"\>", "\<\"S\"\>", "\<\"B\"\>", \
+"\<\"V\"\>", "\<\"S\"\>", "\<\"D\"\>", "\<\"T\"\>", "\<\"A\"\>"},
+    {"\<\"L\"\>", "\<\"C\"\>", "\<\"H\"\>", "\<\"M\"\>", "\<\"D\"\>", \
+"\<\"X\"\>", "\<\"T\"\>", "\<\"E\"\>", "\<\"W\"\>", "\<\"W\"\>", "\<\"A\"\>", \
+"\<\"C\"\>", "\<\"V\"\>", "\<\"J\"\>", "\<\"Z\"\>", "\<\"H\"\>"},
+    {"\<\"M\"\>", "\<\"F\"\>", "\<\"Y\"\>", "\<\"N\"\>", "\<\"T\"\>", \
+"\<\"U\"\>", "\<\"R\"\>", "\<\"C\"\>", "\<\"H\"\>", "\<\"S\"\>", "\<\"B\"\>", \
+"\<\"F\"\>", "\<\"I\"\>", "\<\"Y\"\>", "\<\"R\"\>", "\<\"X\"\>"},
+    {"\<\"R\"\>", "\<\"Q\"\>", "\<\"A\"\>", "\<\"X\"\>", "\<\"Y\"\>", \
+"\<\"Q\"\>", "\<\"L\"\>", "\<\"H\"\>", "\<\"F\"\>", "\<\"S\"\>", "\<\"J\"\>", \
+"\<\"Q\"\>", "\<\"J\"\>", "\<\"H\"\>", "\<\"K\"\>", "\<\"T\"\>"},
+    {"\<\"B\"\>", "\<\"M\"\>", "\<\"E\"\>", "\<\"K\"\>", "\<\"P\"\>", \
+"\<\"H\"\>", "\<\"L\"\>", "\<\"J\"\>", "\<\"I\"\>", "\<\"S\"\>", "\<\"U\"\>", \
+"\<\"G\"\>", "\<\"Z\"\>", "\<\"P\"\>", "\<\"G\"\>", "\<\"V\"\>"},
+    {"\<\"V\"\>", "\<\"W\"\>", "\<\"W\"\>", "\<\"H\"\>", "\<\"H\"\>", \
+"\<\"K\"\>", "\<\"K\"\>", "\<\"Y\"\>", "\<\"W\"\>", "\<\"M\"\>", "\<\"M\"\>", \
+"\<\"N\"\>", "\<\"S\"\>", "\<\"O\"\>", "\<\"Q\"\>", "\<\"S\"\>"},
+    {"\<\"T\"\>", "\<\"R\"\>", "\<\"Q\"\>", "\<\"Z\"\>", "\<\"V\"\>", \
+"\<\"K\"\>", "\<\"W\"\>", "\<\"T\"\>", "\<\"W\"\>", "\<\"O\"\>", "\<\"G\"\>", \
+"\<\"N\"\>", "\<\"U\"\>", "\<\"N\"\>", "\<\"G\"\>", "\<\"Q\"\>"},
+    {"\<\"Q\"\>", 
+     StyleBox["\<\"E\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"T\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"N\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"A\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[
+       1, 0, 0]], "\<\"A\"\>", "\<\"E\"\>", "\<\"A\"\>", "\<\"Q\"\>", \
+"\<\"H\"\>", "\<\"Q\"\>", "\<\"C\"\>", "\<\"I\"\>", "\<\"D\"\>", "\<\"B\"\>", \
+"\<\"H\"\>"},
+    {"\<\"L\"\>", "\<\"V\"\>", "\<\"C\"\>", "\<\"H\"\>", "\<\"Q\"\>", \
+"\<\"C\"\>", "\<\"M\"\>", "\<\"X\"\>", "\<\"N\"\>", "\<\"B\"\>", "\<\"N\"\>", \
+"\<\"J\"\>", "\<\"N\"\>", "\<\"B\"\>", "\<\"O\"\>", "\<\"Y\"\>"},
+    {"\<\"O\"\>", "\<\"J\"\>", "\<\"O\"\>", "\<\"K\"\>", "\<\"B\"\>", 
+     StyleBox["\<\"F\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"I\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"N\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"S\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[
+       1, 0, 0]], "\<\"G\"\>", "\<\"T\"\>", "\<\"W\"\>", "\<\"O\"\>", \
+"\<\"B\"\>", "\<\"E\"\>", "\<\"Z\"\>"},
+    {"\<\"P\"\>", "\<\"W\"\>", "\<\"U\"\>", "\<\"R\"\>", "\<\"V\"\>", \
+"\<\"T\"\>", "\<\"G\"\>", "\<\"H\"\>", "\<\"A\"\>", "\<\"V\"\>", "\<\"S\"\>", \
+"\<\"D\"\>", "\<\"R\"\>", "\<\"M\"\>", "\<\"Q\"\>", "\<\"X\"\>"},
+    {"\<\"E\"\>", "\<\"B\"\>", "\<\"Q\"\>", "\<\"S\"\>", "\<\"O\"\>", \
+"\<\"A\"\>", "\<\"F\"\>", "\<\"E\"\>", 
+     StyleBox["\<\"V\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"O\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"U\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"G\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["\<\"E\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontColor->RGBColor[1, 0, 0]], "\<\"I\"\>", "\<\"I\"\>", "\<\"I\"\>"},
+    {"\<\"J\"\>", "\<\"F\"\>", "\<\"E\"\>", "\<\"Z\"\>", "\<\"W\"\>", \
+"\<\"F\"\>", "\<\"P\"\>", "\<\"V\"\>", "\<\"A\"\>", "\<\"Z\"\>", "\<\"Y\"\>", \
+"\<\"N\"\>", "\<\"A\"\>", "\<\"C\"\>", "\<\"F\"\>", "\<\"A\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellLabel->
+  "Out[54]= ",ExpressionUUID->"e8265f93-51df-49df-aad9-cc86091bef22"]
+}, Open  ]]
+},
+WindowSize->{816, 645},
+WindowMargins->{{262, Automatic}, {Automatic, 78}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
+StyleDefinitions->"ReverseColor.nb",
+ExpressionUUID->"e6e4bd8c-7145-4b06-aa01-3aa2bd360388"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 334, 8, 50, "Input",ExpressionUUID->"cb2fb996-7e08-4518-b1b6-8decf9b20e19"],
+Cell[895, 30, 853, 22, 90, "Input",ExpressionUUID->"e175789d-8cad-4c2e-a6ab-e4ae004c55f2"],
+Cell[1751, 54, 1414, 38, 90, "Input",ExpressionUUID->"c990b703-7f4c-4258-ac2a-027a08b456af"],
+Cell[3168, 94, 1027, 28, 90, "Input",ExpressionUUID->"0ef283d4-771d-4000-8994-0a365b9b7176"],
+Cell[CellGroupData[{
+Cell[4220, 126, 383, 10, 50, "Input",ExpressionUUID->"0842bf20-eb4c-4f27-9c35-debf2ab1ac94"],
+Cell[4606, 138, 8047, 181, 311, "Output",ExpressionUUID->"e8265f93-51df-49df-aad9-cc86091bef22"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

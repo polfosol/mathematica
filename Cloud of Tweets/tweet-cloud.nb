@@ -1,0 +1,106 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3104,         96]
+NotebookOptionsPosition[      2526,         78]
+NotebookOutlinePosition[      2934,         94]
+CellTagsIndexPosition[      2891,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+This code doesn\[CloseCurlyQuote]t work anymore due to changes in twitter\
+\[CloseCurlyQuote]s API\
+\>", "Section",
+ CellChangeTimes->{{3.908788197985276*^9, 
+  3.9087882499859147`*^9}},ExpressionUUID->"2f40d0fb-ec47-4e69-95d6-\
+f16f5cce1349"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"twitter", "=", 
+   RowBox[{"ServiceConnect", "[", 
+    RowBox[{"\"\<Twitter\>\"", ",", "\"\<New\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"result", "=", 
+   RowBox[{"twitter", "[", 
+    RowBox[{"\"\<TweetSearch\>\"", ",", 
+     RowBox[{"\"\<Query\>\"", "->", "\"\<from:polfosol\>\""}], ",", 
+     RowBox[{"MaxItems", "->", "5000"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", "=", 
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Normal", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringSplit", "[", 
+           RowBox[{"#", "[", "\"\<Text\>\"", "]"}], "]"}], "&"}], "/@", 
+         "result"}], "]"}], "]"}], ",", 
+      RowBox[{"x_", "/;", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringLength", "[", "x", "]"}], "<", "4"}], "||", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"x", ",", "\"\<@\>\""}], "]"}]}]}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mask", "=", 
+   RowBox[{"Binarize", "[", 
+    RowBox[{
+    "Import", "[", 
+     "\"\<http://pngimg.com/uploads/twitter/twitter_PNG35.png\>\"", "]"}], 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.908788034944955*^9, 3.908788120923947*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"9251e8bf-81b4-4075-bac6-7eb98c9d16f3"],
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"data", ",", "mask", ",", 
+   RowBox[{"ImageSize", "->", "Large"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9087881397072935`*^9, 3.9087881566393056`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"9ce91dc8-a124-4878-b3b8-751643ade9c9"]
+}, Open  ]]
+},
+WindowSize->{569.25, 534.75},
+WindowMargins->{{309, Automatic}, {18, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ab9b05ec-50ab-47fa-bcd2-b0441e716aba"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 253, 6, 78, "Section",ExpressionUUID->"2f40d0fb-ec47-4e69-95d6-f16f5cce1349"],
+Cell[836, 30, 1385, 38, 94, "Input",ExpressionUUID->"9251e8bf-81b4-4075-bac6-7eb98c9d16f3"],
+Cell[2224, 70, 286, 5, 21, "Input",ExpressionUUID->"9ce91dc8-a124-4878-b3b8-751643ade9c9"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
