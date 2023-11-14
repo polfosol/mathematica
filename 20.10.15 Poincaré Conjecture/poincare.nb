@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6317,        163]
+NotebookOptionsPosition[      5573,        141]
+NotebookOutlinePosition[      6015,        158]
+CellTagsIndexPosition[      5972,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ring", "[", "\[Alpha]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", "95", ",", "\"\<\[Theta]\>\""}], "}"}], ",", 
+     "0", ",", "180"}], "}"}], ",", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"ring", "[", "\[Alpha]_", "]"}], ":=", "\[IndentingNewLine]", 
+      RowBox[{"Show", "[", 
+       RowBox[{
+        RowBox[{"Graphics3D", "[", 
+         RowBox[{
+          RowBox[{"Sphere", "[", "]"}], ",", 
+          RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+          RowBox[{"ViewPoint", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\[Pi]", "/", "2"}], ",", 
+             RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}]}]}], "]"}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"ParametricPlot3D", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Sin", "[", 
+              RowBox[{"\[Alpha]", " ", "\[Degree]"}], "]"}], 
+             RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"Sin", "[", 
+              RowBox[{"\[Alpha]", " ", "\[Degree]"}], "]"}], 
+             RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"\[Alpha]", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", 
+            RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"Directive", "@", 
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Red"}], "}"}]}]}]}], "]"}]}], "]"}]}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9089434182572613`*^9, 3.9089434557243147`*^9}, {
+  3.909022291078903*^9, 3.9090223569163413`*^9}, {3.9090225030892687`*^9, 
+  3.909022506180133*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"7ac25882-749e-4e95-9896-8f64d1968af7"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Alpha]$$ = 95, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Alpha]$$], 95, "\[Theta]"}, 0, 180}}, 
+    Typeset`size$$ = {270., {133., 137.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Alpha]$$ = 95}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> $CellContext`ring[$CellContext`\[Alpha]$$], 
+      "Specifications" :> {{{$CellContext`\[Alpha]$$, 95, "\[Theta]"}, 0, 
+         180}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{308., {167.85052490234375`, 172.14947509765625`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`ring[
+         Pattern[$CellContext`\[Alpha], 
+          Blank[]]] := Show[
+         Graphics3D[
+          Sphere[], Boxed -> False, ViewPoint -> {Pi/2, Pi/2, Pi}], 
+         ParametricPlot3D[{
+          Sin[$CellContext`\[Alpha] Degree] Cos[$CellContext`t], 
+           Sin[$CellContext`\[Alpha] Degree] Sin[$CellContext`t], 
+           Cos[$CellContext`\[Alpha] Degree]}, {$CellContext`t, -20, 20}, 
+          PlotStyle -> Directive[{Thick, Red}]]]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9089434585209894`*^9, 3.909022363464381*^9, 
+  3.9090225408126535`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"216f4317-ee4c-485e-99de-b8873de9a468"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<ex.gif\>\"", ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ring", "[", "a", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "90", ",", "0", ",", 
+       RowBox[{"-", "5"}]}], "}"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.811673923686228*^9, 3.8116739475215197`*^9}, {
+   3.9089433664279737`*^9, 3.9089433868171835`*^9}, 3.908943485220537*^9},
+ CellLabel->"In[13]:=",ExpressionUUID->"6696cf57-46ba-4cba-8724-9777b9eb8e43"],
+
+Cell[BoxData["\<\"ex.gif\"\>"], "Output",
+ CellChangeTimes->{3.811673951104472*^9, 3.908943504422328*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"339fc329-0da9-4e31-ad0a-5fd418f38d3d"]
+}, Open  ]]
+},
+WindowSize->{760, 733},
+WindowMargins->{{412, Automatic}, {24, Automatic}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6f293656-23b8-4e67-b816-fcc873c50469"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2003, 50, 51, "Input",ExpressionUUID->"7ac25882-749e-4e95-9896-8f64d1968af7"],
+Cell[2586, 74, 2240, 44, 354, "Output",ExpressionUUID->"216f4317-ee4c-485e-99de-b8873de9a468"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4863, 123, 507, 11, 21, "Input",ExpressionUUID->"6696cf57-46ba-4cba-8724-9777b9eb8e43"],
+Cell[5373, 136, 184, 2, 24, "Output",ExpressionUUID->"339fc329-0da9-4e31-ad0a-5fd418f38d3d"]
+}, Open  ]]
+}
+]
+*)
+

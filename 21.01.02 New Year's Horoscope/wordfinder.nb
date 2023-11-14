@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13528,        343]
-NotebookOptionsPosition[     12669,        322]
-NotebookOutlinePosition[     13073,        338]
-CellTagsIndexPosition[     13030,        335]
+NotebookDataLength[     53455,       1436]
+NotebookOptionsPosition[     51906,       1403]
+NotebookOutlinePosition[     52319,       1419]
+CellTagsIndexPosition[     52276,       1416]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -318,11 +318,1092 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellLabel->
   "Out[54]= ",ExpressionUUID->"e8265f93-51df-49df-aad9-cc86091bef22"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+A heavily modified version of the code can find vertical and diagonal words \
+too\
+\>", "Section",
+ CellChangeTimes->{{3.9090242279965234`*^9, 
+  3.9090242745994606`*^9}},ExpressionUUID->"beef4f05-0ddf-4ef8-bddc-\
+65bdd9f8de15"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Declare", " ", "the", " ", "minimum", " ", "length", " ", "of", " ", "a", 
+    " ", "word"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"minWordLength", "=", "3"}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "substrings", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"substrings", "[", 
+      RowBox[{"str_String", ",", 
+       RowBox[{"len_", ":", "minWordLength"}]}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"r", "=", 
+         RowBox[{"StringLength", "[", "str", "]"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Join", "@@", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"str", ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "j"}], "}"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"r", "+", "1"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", 
+            RowBox[{"i", "+", "len", "-", "1"}], ",", "r"}], "}"}]}], 
+         "]"}]}]}], "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "wordsFinder", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"wordsFinder", "[", 
+      RowBox[{"str_String", ",", 
+       RowBox[{"dictWordFunc_", ":", "DictionaryWordQ"}], ",", 
+       RowBox[{"highlighterFunc_", ":", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Red"}], "]"}], "&"}], ")"}]}]}], "]"}], ":=", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"pos", ",", "res"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"pos", "=", 
+         RowBox[{"Union", "@@", "\[IndentingNewLine]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Range", "@@", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Flatten", "[", 
+                  RowBox[{"#", ",", "1"}], "]"}], "&"}], ")"}], "@", 
+               RowBox[{"StringPosition", "[", 
+                RowBox[{"str", ",", "#"}], "]"}]}]}], "&"}], "/@", 
+            RowBox[{"Select", "[", 
+             RowBox[{
+              RowBox[{"substrings", "[", "str", "]"}], ",", 
+              RowBox[{
+               RowBox[{"dictWordFunc", "[", 
+                RowBox[{"#", ",", 
+                 RowBox[{"IgnoreCase", "->", "True"}]}], "]"}], "&"}]}], 
+             "]"}]}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"MemberQ", "[", 
+              RowBox[{"pos", ",", 
+               RowBox[{"First", "@", "#2"}]}], "]"}], ",", 
+             RowBox[{"highlighterFunc", "[", "#", "]"}], ",", "#"}], "]"}], 
+           "&"}], ",", 
+          RowBox[{"Characters", "@", "str"}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "highlightsDiag", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"highlightsDiag", "[", 
+      RowBox[{"str_String", ",", 
+       RowBox[{"dictWordFunc_", ":", "DictionaryWordQ"}], ",", 
+       RowBox[{"highlighterFunc_", ":", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Red"}], "]"}], "&"}], ")"}]}]}], "]"}], ":=", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"matChars", ",", "n", ",", "matInds", ",", "res"}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"matChars", "=", 
+         RowBox[{"Partition", "[", 
+          RowBox[{
+           RowBox[{"Characters", "@", "str"}], ",", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{"StringLength", "[", "str", "]"}], "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"n", "=", 
+         RowBox[{"Length", "[", "matChars", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"matInds", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"i", ",", "j"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "n"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "n"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"res", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"AssociationThread", "[", 
+            RowBox[{
+             RowBox[{"Diagonal", "[", 
+              RowBox[{"matInds", ",", "i"}], "]"}], ",", 
+             RowBox[{"wordsFinder", "[", 
+              RowBox[{
+               RowBox[{"StringJoin", "@@", 
+                RowBox[{"Diagonal", "[", 
+                 RowBox[{"matChars", ",", "i"}], "]"}]}], ",", "dictWordFunc",
+                ",", "highlighterFunc"}], "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{
+              RowBox[{"-", "n"}], "+", "1"}], ",", 
+             RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Normal", "[", 
+         RowBox[{"SparseArray", "[", 
+          RowBox[{"Normal", "[", 
+           RowBox[{"Join", "@@", "res"}], "]"}], "]"}], "]"}]}]}], "]"}]}], 
+    ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "highlights", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"highlights", "[", 
+      RowBox[{"str_String", ",", "dir_", ",", 
+       RowBox[{"dictWordFunc_", ":", "DictionaryWordQ"}], ",", 
+       RowBox[{"highlighterFunc_", ":", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Red"}], "]"}], "&"}], ")"}]}]}], "]"}], ":=", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Block", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"matChars", ",", "n", ",", "matInds", ",", "res"}], "}"}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"matChars", "=", 
+          RowBox[{"Partition", "[", 
+           RowBox[{
+            RowBox[{"Characters", "@", "str"}], ",", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"StringLength", "[", "str", "]"}], "]"}]}], "]"}]}], ";",
+          "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"TrueQ", "[", 
+            RowBox[{"dir", "===", "Vertical"}], "]"}], ",", 
+           RowBox[{"matChars", "=", 
+            RowBox[{"Transpose", "[", "matChars", "]"}]}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"n", "=", 
+          RowBox[{"Length", "[", "matChars", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"matInds", "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"i", ",", "j"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "n"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "n"}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"res", "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"AssociationThread", "[", 
+             RowBox[{
+              RowBox[{"matInds", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"wordsFinder", "[", 
+               RowBox[{
+                RowBox[{"StringJoin", "@@", 
+                 RowBox[{"matChars", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}], ",", "dictWordFunc", ",", 
+                "highlighterFunc"}], "]"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"res", "=", 
+          RowBox[{"Normal", "[", 
+           RowBox[{"SparseArray", "[", 
+            RowBox[{"Normal", "[", 
+             RowBox[{"Join", "@@", "res"}], "]"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"TrueQ", "[", 
+            RowBox[{"dir", "===", "Vertical"}], "]"}], ",", 
+           RowBox[{"Transpose", "[", "res", "]"}], ",", 
+           RowBox[{"(*", "ELSE", "*)"}], "res"}], "]"}]}]}], "]"}], "/;", 
+      RowBox[{"MemberQ", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Vertical", ",", "Horizontal"}], "}"}], ",", "dir"}], 
+       "]"}]}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "findwords", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"findwords", "[", 
+      RowBox[{"table_", ",", 
+       RowBox[{"dictWordFunc_", ":", "DictionaryWordQ"}], ",", 
+       RowBox[{"highlighterFunc_", ":", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Red"}], "]"}], "&"}], ")"}]}], ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Block", "[", 
+       RowBox[{
+        RowBox[{"{", "str", "}"}], ",", 
+        RowBox[{
+         RowBox[{"str", "=", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"MatrixQ", "[", "table", "]"}], ",", 
+            RowBox[{"StringJoin", "@@", 
+             RowBox[{"Flatten", "[", "table", "]"}]}], ",", "table"}], 
+           "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"str", "=", 
+          RowBox[{"ToUpperCase", "[", "str", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<Horizontal\>\"", "->", 
+            RowBox[{"highlights", "[", 
+             RowBox[{"str", ",", "Horizontal", ",", "dictWordFunc", ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"AssociationQ", "[", "highlighterFunc", "]"}], ",", 
+                RowBox[{"highlighterFunc", "[", "Horizontal", "]"}], ",", 
+                "highlighterFunc"}], "]"}]}], "]"}]}], ",", 
+           RowBox[{"\"\<Vertical\>\"", "->", 
+            RowBox[{"highlights", "[", 
+             RowBox[{"str", ",", "Vertical", ",", "dictWordFunc", ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"AssociationQ", "[", "highlighterFunc", "]"}], ",", 
+                RowBox[{"highlighterFunc", "[", "Vertical", "]"}], ",", 
+                "highlighterFunc"}], "]"}]}], "]"}]}], ",", 
+           RowBox[{"\"\<Diagonal\>\"", "->", 
+            RowBox[{"highlightsDiag", "[", 
+             RowBox[{"str", ",", "dictWordFunc", ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"AssociationQ", "[", "highlighterFunc", "]"}], ",", 
+                RowBox[{"highlighterFunc", "[", "Diagonal", "]"}], ",", 
+                "highlighterFunc"}], "]"}]}], "]"}]}]}], "|>"}]}]}], "]"}], "/;", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"SquareMatrixQ", "[", "table", "]"}], "||", 
+        RowBox[{"StringQ", "[", "table", "]"}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"Clear", "[", "CombineHighlights", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"CombineHighlights", "[", "aTbls_Association", "]"}], ":=", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"VectorQ", "[", 
+           RowBox[{"#", ",", "StringQ"}], "]"}], ",", 
+          RowBox[{"First", "[", "#", "]"}], ",", 
+          RowBox[{"Last", "@", 
+           RowBox[{"Select", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"Not", "@*", "StringQ"}]}], "]"}]}]}], "]"}], "&"}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{
+         RowBox[{"Values", "[", "aTbls", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "1", ",", "2"}], "}"}]}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"Clear", "[", "CommonWordQ", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"aCommonWords", "=", 
+     RowBox[{"AssociationThread", "[", 
+      RowBox[{
+       RowBox[{"ToLowerCase", "@", 
+        RowBox[{"Union", "[", 
+         RowBox[{"RandomWord", "[", 
+          RowBox[{"\"\<CommonWords\>\"", ",", 
+           RowBox[{"10", "^", "6"}]}], "]"}], "]"}]}], ",", "True"}], "]"}]}],
+     ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"CommonWordQ", "[", 
+      RowBox[{"w_String", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"Lookup", "[", 
+      RowBox[{"aCommonWords", ",", 
+       RowBox[{"ToLowerCase", "@", "w"}], ",", "False"}], "]"}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.909024063619792*^9, 3.909024131056548*^9}, {
+  3.909024180247921*^9, 3.9090242122876167`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"2b6e6898-a14d-42e6-a03a-0aaf0b84a4af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Testing the result:", "Section",
+ CellChangeTimes->{{3.9090243533753605`*^9, 
+  3.9090243648614626`*^9}},ExpressionUUID->"605245fc-62eb-4155-ae8f-\
+26dec413c9b8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"CharacterRange", "[", 
+       RowBox[{"\"\<a\>\"", ",", " ", "\"\<z\>\""}], "]"}], ",", " ", "256"}],
+      "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"horoscope", "=", 
+   RowBox[{"findwords", "[", 
+    RowBox[{"str", ",", "CommonWordQ", ",", "\[IndentingNewLine]", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"Horizontal", "->", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Framed", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", "Blue", ",", "Bold"}], "]"}], ",", 
+            RowBox[{"Background", "->", "Yellow"}]}], "]"}], "&"}], ")"}]}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"Vertical", "->", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Framed", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", "Red"}], "]"}], ",", 
+            RowBox[{"Background", "->", "LightBlue"}]}], "]"}], "&"}], 
+         ")"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Diagonal", "->", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Framed", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", "Purple", ",", "Bold"}], "]"}], ",", 
+            RowBox[{"Background", "->", 
+             RowBox[{"GrayLevel", "[", "0.9", "]"}]}]}], "]"}], "&"}], 
+         ")"}]}]}], "|>"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9090244668123927`*^9, 3.9090245048263807`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"4b6ab3aa-d0a1-4db9-986c-7b8142cc4b58"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{"CombineHighlights", "[", "horoscope", "]"}], ",", 
+   RowBox[{"Dividers", "->", "All"}], ",", 
+   RowBox[{"ItemSize", "->", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9090245177160573`*^9, 3.90902452152132*^9}, {
+  3.909024611829362*^9, 3.909024642540298*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"c957aad5-9914-4bca-8d2b-291bed614b35"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"O\"\>", "\<\"W\"\>", "\<\"C\"\>", "\<\"J\"\>", "\<\"N\"\>", \
+"\<\"G\"\>", "\<\"Y\"\>", 
+     FrameBox[
+      StyleBox["\<\"V\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"P\"\>", "\<\"T\"\>", "\<\"Y\"\>", "\<\"J\"\>", \
+"\<\"X\"\>", "\<\"Q\"\>", "\<\"T\"\>", "\<\"R\"\>"},
+    {
+     FrameBox[
+      StyleBox["\<\"C\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"A\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->
+       False], "\<\"M\"\>", "\<\"R\"\>", "\<\"K\"\>", "\<\"D\"\>", 
+     FrameBox[
+      StyleBox["\<\"O\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"I\"\>", "\<\"T\"\>", "\<\"P\"\>", "\<\"E\"\>", \
+"\<\"Q\"\>", "\<\"D\"\>", "\<\"O\"\>", "\<\"D\"\>"},
+    {"\<\"P\"\>", 
+     FrameBox[
+      StyleBox["\<\"H\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"Y\"\>", "\<\"V\"\>", "\<\"M\"\>", "\<\"T\"\>", \
+"\<\"E\"\>", 
+     FrameBox[
+      StyleBox["\<\"W\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"J\"\>", "\<\"K\"\>", "\<\"H\"\>", "\<\"I\"\>", \
+"\<\"Y\"\>", "\<\"B\"\>", "\<\"D\"\>", "\<\"V\"\>"},
+    {"\<\"S\"\>", "\<\"I\"\>", 
+     FrameBox[
+      StyleBox["\<\"I\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"M\"\>", "\<\"V\"\>", "\<\"X\"\>", "\<\"A\"\>", \
+"\<\"X\"\>", "\<\"L\"\>", 
+     FrameBox[
+      StyleBox["\<\"M\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"O\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], "\<\"F\"\>", "\<\"J\"\>", 
+     FrameBox[
+      StyleBox["\<\"B\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"V\"\>"},
+    {"\<\"G\"\>", "\<\"Z\"\>", "\<\"H\"\>", 
+     FrameBox[
+      StyleBox["\<\"P\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"L\"\>", "\<\"O\"\>", "\<\"Q\"\>", "\<\"Q\"\>", 
+     FrameBox[
+      StyleBox["\<\"M\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"Q\"\>", "\<\"H\"\>", "\<\"G\"\>", "\<\"C\"\>", \
+"\<\"M\"\>", 
+     FrameBox[
+      StyleBox["\<\"I\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"Y\"\>"},
+    {"\<\"A\"\>", "\<\"J\"\>", "\<\"P\"\>", "\<\"J\"\>", "\<\"V\"\>", \
+"\<\"Z\"\>", "\<\"Q\"\>", "\<\"E\"\>", "\<\"K\"\>", 
+     FrameBox[
+      StyleBox["\<\"A\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], "\<\"I\"\>", "\<\"K\"\>", "\<\"A\"\>", 
+     FrameBox[
+      StyleBox["\<\"F\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"N\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"W\"\>"},
+    {"\<\"K\"\>", "\<\"B\"\>", "\<\"X\"\>", 
+     FrameBox[
+      StyleBox["\<\"R\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"P\"\>", "\<\"Y\"\>", "\<\"S\"\>", "\<\"V\"\>", \
+"\<\"Y\"\>", "\<\"K\"\>", 
+     FrameBox[
+      StyleBox["\<\"W\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], "\<\"Q\"\>", "\<\"Z\"\>", 
+     FrameBox[
+      StyleBox["\<\"I\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"E\"\>", "\<\"H\"\>"},
+    {
+     FrameBox[
+      StyleBox["\<\"P\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"Y\"\>", "\<\"A\"\>", "\<\"Y\"\>", 
+     FrameBox[
+      StyleBox["\<\"A\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"U\"\>", "\<\"M\"\>", "\<\"L\"\>", "\<\"C\"\>", \
+"\<\"L\"\>", "\<\"D\"\>", "\<\"U\"\>", "\<\"V\"\>", 
+     FrameBox[
+      StyleBox["\<\"R\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"C\"\>", "\<\"B\"\>"},
+    {
+     FrameBox[
+      StyleBox["\<\"A\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"G\"\>", "\<\"Z\"\>", "\<\"Z\"\>", "\<\"A\"\>", 
+     FrameBox[
+      StyleBox["\<\"S\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"W\"\>", "\<\"K\"\>", "\<\"N\"\>", "\<\"V\"\>", \
+"\<\"S\"\>", "\<\"F\"\>", "\<\"O\"\>", "\<\"I\"\>", "\<\"J\"\>", "\<\"D\"\>"},
+    {
+     FrameBox[
+      StyleBox["\<\"W\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"W\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"S\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"K\"\>", 
+     FrameBox[
+      StyleBox["\<\"P\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"I\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"P\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"I\"\>", "\<\"U\"\>", "\<\"M\"\>", "\<\"Y\"\>", \
+"\<\"J\"\>", "\<\"C\"\>", "\<\"H\"\>", "\<\"Q\"\>", "\<\"K\"\>"},
+    {"\<\"O\"\>", 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"M\"\>", "\<\"L\"\>", "\<\"W\"\>", 
+     FrameBox[
+      StyleBox["\<\"C\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"B\"\>", "\<\"W\"\>", "\<\"Z\"\>", "\<\"E\"\>", \
+"\<\"G\"\>", "\<\"U\"\>", "\<\"S\"\>", "\<\"L\"\>", "\<\"L\"\>"},
+    {"\<\"Z\"\>", 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"Y\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"B\"\>", "\<\"X\"\>", "\<\"Y\"\>", "\<\"Y\"\>", 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->
+       False], "\<\"F\"\>", "\<\"Q\"\>", "\<\"R\"\>", "\<\"C\"\>", \
+"\<\"U\"\>", "\<\"N\"\>", "\<\"D\"\>", "\<\"G\"\>"},
+    {"\<\"Q\"\>", "\<\"F\"\>", 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"G\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"G\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->
+       False], "\<\"X\"\>", "\<\"J\"\>", "\<\"H\"\>", "\<\"Z\"\>", \
+"\<\"U\"\>", "\<\"S\"\>", "\<\"X\"\>", "\<\"R\"\>", "\<\"B\"\>", "\<\"L\"\>", \
+"\<\"I\"\>"},
+    {"\<\"Z\"\>", "\<\"Y\"\>", "\<\"L\"\>", "\<\"B\"\>", "\<\"D\"\>", \
+"\<\"Z\"\>", 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], "\<\"S\"\>", 
+     FrameBox[
+      StyleBox["\<\"D\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"N\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"A\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->
+       False], "\<\"T\"\>", "\<\"K\"\>", "\<\"R\"\>", "\<\"S\"\>"},
+    {"\<\"U\"\>", "\<\"W\"\>", "\<\"V\"\>", 
+     FrameBox[
+      StyleBox["\<\"B\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"N\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"C\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"H\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], "\<\"B\"\>", "\<\"V\"\>", 
+     FrameBox[
+      StyleBox["\<\"V\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], 
+     FrameBox[
+      StyleBox["\<\"T\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]],
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], "\<\"B\"\>", "\<\"X\"\>", "\<\"B\"\>"},
+    {"\<\"H\"\>", "\<\"J\"\>", "\<\"N\"\>", "\<\"B\"\>", "\<\"S\"\>", \
+"\<\"C\"\>", "\<\"H\"\>", "\<\"B\"\>", 
+     FrameBox[
+      StyleBox["\<\"O\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0.5, 0, 0.5],
+       FrontFaceColor->RGBColor[0.5, 0, 0.5],
+       BackFaceColor->RGBColor[0.5, 0, 0.5],
+       GraphicsColor->RGBColor[0.5, 0, 0.5],
+       FontWeight->Bold,
+       FontColor->RGBColor[0.5, 0, 0.5]],
+      Background->GrayLevel[0.9],
+      StripOnInput->False], "\<\"I\"\>", "\<\"X\"\>", 
+     FrameBox[
+      StyleBox["\<\"E\"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[1, 0, 0],
+       FrontFaceColor->RGBColor[1, 0, 0],
+       BackFaceColor->RGBColor[1, 0, 0],
+       GraphicsColor->RGBColor[1, 0, 0],
+       FontColor->RGBColor[1, 0, 0]],
+      Background->RGBColor[0.87, 0.94, 1],
+      StripOnInput->False], "\<\"E\"\>", "\<\"H\"\>", "\<\"T\"\>", "\<\"T\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{2}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.9090245225293536`*^9, {3.9090246239016027`*^9, 3.9090246436524844`*^9}, {
+   3.909024679198735*^9, 3.909024688726368*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"fd58d3d6-88fc-4b44-8164-6485e239b106"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{816, 645},
-WindowMargins->{{262, Automatic}, {Automatic, 78}},
-FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
+WindowSize->{816., 600.75},
+WindowMargins->{{Automatic, 110.25}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
 StyleDefinitions->"ReverseColor.nb",
 ExpressionUUID->"e6e4bd8c-7145-4b06-aa01-3aa2bd360388"
 ]
@@ -337,17 +1418,27 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 334, 8, 50, "Input",ExpressionUUID->"cb2fb996-7e08-4518-b1b6-8decf9b20e19"],
-Cell[895, 30, 853, 22, 90, "Input",ExpressionUUID->"e175789d-8cad-4c2e-a6ab-e4ae004c55f2"],
-Cell[1751, 54, 1414, 38, 90, "Input",ExpressionUUID->"c990b703-7f4c-4258-ac2a-027a08b456af"],
-Cell[3168, 94, 1027, 28, 90, "Input",ExpressionUUID->"0ef283d4-771d-4000-8994-0a365b9b7176"],
+Cell[558, 20, 334, 8, 36, "Input",ExpressionUUID->"cb2fb996-7e08-4518-b1b6-8decf9b20e19"],
+Cell[895, 30, 853, 22, 65, "Input",ExpressionUUID->"e175789d-8cad-4c2e-a6ab-e4ae004c55f2"],
+Cell[1751, 54, 1414, 38, 65, "Input",ExpressionUUID->"c990b703-7f4c-4258-ac2a-027a08b456af"],
+Cell[3168, 94, 1027, 28, 65, "Input",ExpressionUUID->"0ef283d4-771d-4000-8994-0a365b9b7176"],
 Cell[CellGroupData[{
-Cell[4220, 126, 383, 10, 50, "Input",ExpressionUUID->"0842bf20-eb4c-4f27-9c35-debf2ab1ac94"],
-Cell[4606, 138, 8047, 181, 311, "Output",ExpressionUUID->"e8265f93-51df-49df-aad9-cc86091bef22"]
+Cell[4220, 126, 383, 10, 36, "Input",ExpressionUUID->"0842bf20-eb4c-4f27-9c35-debf2ab1ac94"],
+Cell[4606, 138, 8047, 181, 233, "Output",ExpressionUUID->"e8265f93-51df-49df-aad9-cc86091bef22"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12690, 324, 238, 6, 50, "Section",ExpressionUUID->"beef4f05-0ddf-4ef8-bddc-65bdd9f8de15"],
+Cell[12931, 332, 13148, 340, 768, "Input",ExpressionUUID->"2b6e6898-a14d-42e6-a03a-0aaf0b84a4af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26116, 677, 168, 3, 50, "Section",ExpressionUUID->"605245fc-62eb-4155-ae8f-26dec413c9b8"],
+Cell[26287, 682, 1695, 44, 79, "Input",ExpressionUUID->"4b6ab3aa-d0a1-4db9-986c-7b8142cc4b58"],
+Cell[CellGroupData[{
+Cell[28007, 730, 455, 10, 21, "Input",ExpressionUUID->"c957aad5-9914-4bca-8d2b-291bed614b35"],
+Cell[28465, 742, 23413, 657, 441, "Output",ExpressionUUID->"fd58d3d6-88fc-4b44-8164-6485e239b106"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
