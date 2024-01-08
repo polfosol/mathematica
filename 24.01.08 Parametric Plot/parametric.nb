@@ -1,0 +1,176 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6337,        166]
+NotebookOptionsPosition[      5847,        149]
+NotebookOutlinePosition[      6255,        165]
+CellTagsIndexPosition[      6212,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ParametricPlot", "[", "\n", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"a", " ", "t"}], "]"}], "+", 
+        FractionBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"b", " ", "t"}], "]"}], "2"], "+", 
+        FractionBox[
+         RowBox[{" ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"c", " ", "t"}], "]"}]}], "3"]}], ",", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"a", " ", "t"}], "]"}], "+", 
+        FractionBox[
+         RowBox[{" ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"b", " ", "t"}], "]"}]}], "2"], "+", 
+        FractionBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"c", " ", "t"}], "]"}], "3"]}]}], "}"}], ",", "\n", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"AbsoluteThickness", "[", "2", "]"}]}], ",", 
+     RowBox[{"PlotPoints", "->", "150"}], ",", "\n", 
+     RowBox[{"ColorFunction", "\[Rule]", "Hue"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "480"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   "\n", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", " ", "1"}], "}"}], ",", ".5", ",", "2", ",", 
+     RowBox[{"Appearance", "\[Rule]", " ", 
+      RowBox[{"{", "\"\<Open\>\"", "}"}]}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "150"}]}], "}"}], ",", "\n", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", " ", "1"}], "}"}], ",", "0", ",", "60", ",", 
+     RowBox[{"Appearance", "\[Rule]", " ", 
+      RowBox[{"{", "\"\<Open\>\"", "}"}]}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "450"}]}], "}"}], ",", "\n", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", " ", "0"}], "}"}], ",", "0", ",", "25", ",", 
+     RowBox[{"Appearance", "\[Rule]", " ", 
+      RowBox[{"{", "\"\<Open\>\"", "}"}]}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "350"}]}], "}"}], ",", "\n", 
+   RowBox[{"LabelStyle", "\[Rule]", "Medium"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.913702840780884*^9, 3.913702997170622*^9}, {
+  3.913703050268134*^9, 3.9137030868757296`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"a49c6a25-b572-4896-bbdb-29f32408f97b"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 
+    1, $CellContext`c$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 1}, 0.5, 2}, {{
+       Hold[$CellContext`b$$], 1}, 0, 60}, {{
+       Hold[$CellContext`c$$], 0}, 0, 25}}, Typeset`size$$ = {
+    360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
+        1, $CellContext`c$$ = 0}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      ParametricPlot[{
+        Cos[$CellContext`a$$ $CellContext`t] + 
+         Cos[$CellContext`b$$ $CellContext`t]/2 + 
+         Sin[$CellContext`c$$ $CellContext`t]/3, 
+         Sin[$CellContext`a$$ $CellContext`t] + 
+         Sin[$CellContext`b$$ $CellContext`t]/2 + 
+         Cos[$CellContext`c$$ $CellContext`t]/3}, {$CellContext`t, 0, 2 Pi}, 
+        Axes -> False, PlotStyle -> AbsoluteThickness[2], PlotPoints -> 150, 
+        ColorFunction -> Hue, ImageSize -> 480, 
+        PlotRange -> {{-2, 2}, {-2, 2}}], 
+      "Specifications" :> {{{$CellContext`a$$, 1}, 0.5, 2, 
+         Appearance -> {"Open"}, ImageSize -> 150}, {{$CellContext`b$$, 1}, 0,
+          60, Appearance -> {"Open"}, ImageSize -> 
+         450}, {{$CellContext`c$$, 0}, 0, 25, Appearance -> {"Open"}, 
+         ImageSize -> 350}}, "Options" :> {LabelStyle -> Medium}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{398., {252.85052490234375`, 257.14947509765625`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.913703003926937*^9, {3.9137030586236753`*^9, 3.913703087307928*^9}, 
+   3.9137031483687563`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"3644c8ee-b471-4e17-83d5-764e949cae1a"]
+}, Open  ]]
+},
+WindowSize->{630.75, 549.75},
+WindowMargins->{{Automatic, 248.25}, {18, Automatic}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8d232a01-6eb2-44b1-84ee-213623bf92f9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2643, 70, 157, "Input",ExpressionUUID->"a49c6a25-b572-4896-bbdb-29f32408f97b"],
+Cell[3226, 94, 2605, 52, 524, "Output",ExpressionUUID->"3644c8ee-b471-4e17-83d5-764e949cae1a"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

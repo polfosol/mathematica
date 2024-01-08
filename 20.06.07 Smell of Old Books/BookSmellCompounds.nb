@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    364257,       7506]
-NotebookOptionsPosition[    361307,       7448]
-NotebookOutlinePosition[    361755,       7465]
-CellTagsIndexPosition[    361712,       7462]
+NotebookDataLength[    364396,       7513]
+NotebookOptionsPosition[    361448,       7455]
+NotebookOutlinePosition[    361896,       7472]
+CellTagsIndexPosition[    361853,       7469]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -216,6 +216,7 @@ Cell[BoxData[
               "\"O\"", FontSize -> Scaled[0.12216510862568487`], FontWeight -> 
                Plain, ScriptSizeMultipliers -> 0.8, ScriptMinSize -> 8, 
                StripOnInput -> False], TraditionalForm], {286.6, -75.}], 
+            
             LineBox[{{{281.6, -53.69275749052112}, {281.6, -25.}}, {{
              291.6, -53.69275749052112}, {291.6, -25.}}}], 
             RGBColor[0.4, 0.4, 0.4], 
@@ -1481,8 +1482,8 @@ Cell[BoxData[
             "]"}], "]"}], ",", 
           RowBox[{
            RowBox[{"#", "[", 
-            RowBox[{"[", "2", "]"}], "]"}], "~", "Magnify", "~", "3"}], ",", 
-          "\[IndentingNewLine]", 
+            RowBox[{"[", "2", "]"}], "]"}], "~", "Magnify", "~", "1.8"}], ",",
+           "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{
             RowBox[{"#", "[", 
@@ -1559,8 +1560,9 @@ Cell[BoxData[
    3.845104375029724*^9}, {3.8451044055028296`*^9, 3.8451044179239016`*^9}, {
    3.8451045031216297`*^9, 3.8451045225270925`*^9}, {3.8451046007789907`*^9, 
    3.8451046072235403`*^9}, 3.8451046411367817`*^9, {3.845104683011633*^9, 
-   3.845104936609709*^9}},
- CellLabel->"In[15]:=",ExpressionUUID->"448c73b8-046c-4423-ab0e-9939898b23dd"],
+   3.845104936609709*^9}, {3.9135338767688055`*^9, 3.913533877440016*^9}, {
+   3.913533908504733*^9, 3.9135339103033543`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"bf5d3126-1909-4b95-ba9e-9a6365c32182"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -1885,6 +1887,7 @@ bwy0JJUc0OMLAP2nya4=
                 DiskBox[11, 0.2], "15"], Annotation[#, 15, "Tooltip"]& ]}}}], {
            GeometricTransformationBox[{
              RGBColor[0.800498, 0.201504, 0.192061], {
+              
               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
                  3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
                 3}, {1, 3, 3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
@@ -1918,6 +1921,7 @@ bwy0JJUc0OMLAP2nya4=
               5.363251465424691, -0.49207699816156314`}}}], 
            GeometricTransformationBox[{
              RGBColor[0.433333, 0.466667, 0.466667], {
+              
               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0,
                 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                0}, {0, 1, 0}}}, {{{0.300781, 4.5}, {0.300781, 11.6582}, {
@@ -2084,6 +2088,7 @@ bwy0JJUc0OMLAP2nya4=
                 DiskBox[8, 0.2], "5"], Annotation[#, 5, "Tooltip"]& ]}}}], {
            GeometricTransformationBox[{
              RGBColor[0.800498, 0.201504, 0.192061], {
+              
               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
                  3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
                 3}, {1, 3, 3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
@@ -2138,7 +2143,6 @@ bwy0JJUc0OMLAP2nya4=
              RGBColor[0.800498, 0.201504, 0.192061], {
               LineBox[{{1, 2}, {3, 4}}]}}, {
              RGBColor[0.4, 0.4, 0.4], {
-              
               LineBox[{{5, 6}, {5, 7}, {5, 8}, {6, 9}, {9, 10}, {7, 11}, {4, 
                8}, {10, 12}}]}}, {
              RGBColor[0.433333, 0.466667, 0.466667], {
@@ -2811,7 +2815,6 @@ bwy0JJUc0OMLAP2nya4=
                 DiskBox[18, 0.2], "25"], Annotation[#, 25, "Tooltip"]& ]}}}], {
            GeometricTransformationBox[{
              RGBColor[0.800498, 0.201504, 0.192061], {
-              
               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
                  3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
                 3}, {1, 3, 3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
@@ -2973,6 +2976,7 @@ bwy0JJUc0OMLAP2nya4=
            0.25}, {9.7942, -0.25}, {2.866, -0.25}, {10.6603, 0.25}, {2., 
            0.25}}, {{}, {
              RGBColor[0.4, 0.4, 0.4], {
+              
               LineBox[{{1, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 7}, {6, 
                8}, {7, 9}, {8, 10}, {9, 11}}]}}, {
              Opacity[0], 
@@ -3051,34 +3055,34 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   TagBox[
-   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
-    Association["InitialData" -> {
-       Association[
-       "CompoundID" -> 9602988, "Title" -> "Oxime-, methoxy-phenyl-_"]}, 
-     "InitialShape" -> TypeSystem`PackageScope`HeaderShape[
-       Association[{All, "CompoundID"} -> 1, {All, "Title"} -> 1], 
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
+       "CompoundID" -> 9602988, "Title" -> "Oxime-, methoxy-phenyl-_"|>}, 
+     "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "CompoundID"} -> 
+        1, {All, "Title"} -> 1|>, 
        TypeSystem`PackageScope`Limited[
         TypeSystem`PackageScope`ColumnShape[
          TypeSystem`PackageScope`Limited[
-          TypeSystem`PackageScope`RowShape[
-           Association[
+          
+          TypeSystem`PackageScope`RowShape[<|
            "CompoundID" -> TypeSystem`PackageScope`AtomShape[34], "Title" -> 
-            TypeSystem`PackageScope`AtomShape[230.40000000000003`]]], 
+            TypeSystem`PackageScope`AtomShape[230.40000000000003`]|>], 
           DirectedInfinity[1], 2, {All}]], 1, 
         DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
        TypeSystem`Struct[{"CompoundID", "Title"}, {
          TypeSystem`Atom[Integer], 
-         TypeSystem`Atom[String]}], 1], "Meta" -> 
-     Association["ID" -> 245006656944540], "RowTarget" -> 20, "ColumnTarget" -> 
-     10, "Shape" -> TypeSystem`PackageScope`HeaderShape[
-       Association[{All, "CompoundID"} -> 1, {All, "Title"} -> 1], 
+         TypeSystem`Atom[String]}], 1], "Meta" -> <|"ID" -> 245006656944540|>,
+      "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "CompoundID"} -> 
+        1, {All, "Title"} -> 1|>, 
        TypeSystem`PackageScope`Limited[
         TypeSystem`PackageScope`ColumnShape[
          TypeSystem`PackageScope`Limited[
-          TypeSystem`PackageScope`RowShape[
-           Association[
+          
+          TypeSystem`PackageScope`RowShape[<|
            "CompoundID" -> TypeSystem`PackageScope`AtomShape[34], "Title" -> 
-            TypeSystem`PackageScope`AtomShape[230.40000000000003`]]], 
+            TypeSystem`PackageScope`AtomShape[230.40000000000003`]|>], 
           DirectedInfinity[1], 2, {All}]], 1, 
         DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
        TypeSystem`Struct[{"CompoundID", "Title"}, {
@@ -3086,7 +3090,7 @@ Cell[BoxData[
          TypeSystem`Atom[String]}], 1], "Path" -> {}, "BaseIndices" -> {}, 
      "DisplayedRowCount" -> 1, "DisplayedColumnCount" -> 2, "DataRowCount" -> 
      1, "DataColumnCount" -> 2, "SortPaths" -> {}, "SortDirections" -> {}, 
-     "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
+     "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
     TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
@@ -3230,14 +3234,13 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
                     MenuItem[
-                    StringJoin["Show ", 
-                    Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
-                    "ColumnHeader", "Column", True, ""]], 
+                    "ColumnHeader", "Column", True, ""], 
                     KernelExecute[
                     TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
@@ -3262,14 +3265,13 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
                     MenuItem[
-                    StringJoin["Hide ", 
-                    Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
-                    "ColumnHeader", "Column", True, ""]], 
+                    "ColumnHeader", "Column", True, ""], 
                     KernelExecute[
                     TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
@@ -3288,7 +3290,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     Alternatives["ColumnHeader", "KeyDummy"]], 
                     TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
                     Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
-                    If[TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
                     "Ascending", 
                     MenuItem["Sort", 
                     KernelExecute[
@@ -3465,13 +3468,15 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
         Hold[
           TypeSystem`NestedGrid`PackagePrivate`localHold[
           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
-      ImageSizeCache->{350., {38., 44.}},
+      ImageSizeCache->{
+       303.15000000000003`, {22.97552490234375, 27.27447509765625}},
       TrackedSymbols:>{
        TypeSystem`NestedGrid`PackagePrivate`$state$$, 
         TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
      TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
      MouseAnnotation[],
-     ImageSizeCache->{350., {38., 44.}}],
+     ImageSizeCache->{
+      303.15000000000003`, {22.97552490234375, 27.27447509765625}}],
     BaseStyle->{LineBreakWithin -> False},
     DynamicModuleValues:>{},
     Initialization:>
@@ -3506,46 +3511,47 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   TagBox[
-   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
-    Association["InitialData" -> {
-       Association[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
        "CompoundID" -> 9602988, 
         "Synonym" -> {
          "Oxime-, methoxy-phenyl-_", "methyl N-hydroxybenzenecarboximidate", 
           "SCHEMBL8530447", "DTXSID301016724", 
           "Methyl N-hydroxybenzenecarboximidoate #", 
-          "methyl (z)-N-hydroxybenzenecarboximidate", "67160-14-9"}]}, 
-     "InitialShape" -> TypeSystem`PackageScope`HeaderShape[
-       Association[{All, "CompoundID"} -> 1, {All, "Synonym"} -> 1], 
+          "methyl (z)-N-hydroxybenzenecarboximidate", "67160-14-9"}|>}, 
+     "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "CompoundID"} -> 
+        1, {All, "Synonym"} -> 1|>, 
        TypeSystem`PackageScope`Limited[
         TypeSystem`PackageScope`ColumnShape[
          TypeSystem`PackageScope`Limited[
-          TypeSystem`PackageScope`RowShape[
-           Association[
+          
+          TypeSystem`PackageScope`RowShape[<|
            "CompoundID" -> TypeSystem`PackageScope`AtomShape[34], "Synonym" -> 
             TypeSystem`PackageScope`Limited[
               TypeSystem`PackageScope`ColumnShape[
                TypeSystem`PackageScope`AtomShape[384.00000000000006`]], 7, 
-              DirectedInfinity[1], {All, "Synonym"}]]], 
+              DirectedInfinity[1], {All, "Synonym"}]|>], 
           DirectedInfinity[1], 2, {All}]], 1, 
         DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
        TypeSystem`Struct[{"CompoundID", "Synonym"}, {
          TypeSystem`Atom[Integer], 
          TypeSystem`Vector[
-          TypeSystem`Atom[String], 7]}], 1], "Meta" -> 
-     Association["ID" -> 165678610983876], "RowTarget" -> 20, "ColumnTarget" -> 
-     10, "Shape" -> TypeSystem`PackageScope`HeaderShape[
-       Association[{All, "CompoundID"} -> 1, {All, "Synonym"} -> 1], 
+          TypeSystem`Atom[String], 7]}], 1], 
+     "Meta" -> <|"ID" -> 165678610983876|>, "RowTarget" -> 20, "ColumnTarget" -> 
+     10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "CompoundID"} -> 
+        1, {All, "Synonym"} -> 1|>, 
        TypeSystem`PackageScope`Limited[
         TypeSystem`PackageScope`ColumnShape[
          TypeSystem`PackageScope`Limited[
-          TypeSystem`PackageScope`RowShape[
-           Association[
+          
+          TypeSystem`PackageScope`RowShape[<|
            "CompoundID" -> TypeSystem`PackageScope`AtomShape[34], "Synonym" -> 
             TypeSystem`PackageScope`Limited[
               TypeSystem`PackageScope`ColumnShape[
                TypeSystem`PackageScope`AtomShape[384.00000000000006`]], 7, 
-              DirectedInfinity[1], {All, "Synonym"}]]], 
+              DirectedInfinity[1], {All, "Synonym"}]|>], 
           DirectedInfinity[1], 2, {All}]], 1, 
         DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
        TypeSystem`Struct[{"CompoundID", "Synonym"}, {
@@ -3554,7 +3560,7 @@ Cell[BoxData[
           TypeSystem`Atom[String], 7]}], 1], "Path" -> {}, 
      "BaseIndices" -> {}, "DisplayedRowCount" -> 1, "DisplayedColumnCount" -> 
      2, "DataRowCount" -> 1, "DataColumnCount" -> 2, "SortPaths" -> {}, 
-     "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
+     "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
     TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
@@ -3758,14 +3764,13 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
                     MenuItem[
-                    StringJoin["Show ", 
-                    Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
-                    "ColumnHeader", "Column", True, ""]], 
+                    "ColumnHeader", "Column", True, ""], 
                     KernelExecute[
                     TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
@@ -3790,14 +3795,13 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
                     MenuItem[
-                    StringJoin["Hide ", 
-                    Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
-                    "ColumnHeader", "Column", True, ""]], 
+                    "ColumnHeader", "Column", True, ""], 
                     KernelExecute[
                     TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
@@ -3994,13 +3998,15 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
         Hold[
           TypeSystem`NestedGrid`PackagePrivate`localHold[
           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
-      ImageSizeCache->{504., {108., 114.}},
+      ImageSizeCache->{
+       456.75000000000006`, {79.22552490234375, 83.52447509765625}},
       TrackedSymbols:>{
        TypeSystem`NestedGrid`PackagePrivate`$state$$, 
         TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
      TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
      MouseAnnotation[],
-     ImageSizeCache->{504., {108., 114.}}],
+     ImageSizeCache->{
+      456.75000000000006`, {79.22552490234375, 83.52447509765625}}],
     BaseStyle->{LineBreakWithin -> False},
     DynamicModuleValues:>{},
     Initialization:>
@@ -4385,6 +4391,7 @@ Cell[BoxData[
                    171.39999999999998`}, {-43.301270189221896`, 
                    196.40000000000003`}}], 
                   RGBColor[0.800498, 0.201504, 0.192061], 
+                  
                   LineBox[{{-43.301270189221896`, 
                    196.40000000000003`}, {-63.527293494607434`, 
                    208.07750000000004`}}]}}, {{
@@ -5648,7 +5655,6 @@ carbon atoms"}, {}]}]}], Typeset`pod6$$ = XMLElement[
                     LineBox[{{-21.217622392718724`, 
                     183.65}, {-43.301270189221896`, 196.40000000000003`}}], 
                     GrayLevel[0], 
-                    
                     LineBox[{{-43.301270189221896`, 
                     196.40000000000003`}, {-63.527293494607434`, 
                     208.07750000000004`}}]}}, {{
@@ -5708,6 +5714,7 @@ carbon atoms"}, {}]}]}], Typeset`pod6$$ = XMLElement[
                     390.5143922588036}}]}}, {{
                     AbsoluteThickness[0.55], 
                     GrayLevel[0], 
+                    
                     LineBox[{{{23.71746678940411, 63.47973049110616}, {45.8, 
                     50.72999999999999}}, {{18.71746678940411, 
                     54.819730491106164`}, {40.8, 42.06999999999999}}}], 
@@ -6280,6 +6287,7 @@ carbon atoms"}, {}]}]}], Typeset`pod6$$ = XMLElement[
                     390.5143922588036}}]}}, {{
                     AbsoluteThickness[0.55], 
                     GrayLevel[0], 
+                    
                     LineBox[{{{23.71746678940411, 63.47973049110616}, {45.8, 
                     50.72999999999999}}, {{18.71746678940411, 
                     54.819730491106164`}, {40.8, 42.06999999999999}}}], 
@@ -6717,7 +6725,7 @@ MSPa9731387e0090c2905h900004g0e8290eh90340d8425416300398683128", "version" ->
         Typeset`elements$$, Typeset`q$$, Typeset`opts$$, Typeset`nonpods$$, 
         Typeset`queryinfo$$, Typeset`sessioninfo$$, Typeset`showpods$$, 
         Typeset`failedpods$$, Typeset`newq$$}]], StandardForm],
-    ImageSizeCache->{345., {31., 18.}},
+    ImageSizeCache->{248., {24., 15.}},
     TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
    DynamicModuleValues:>{},
    Initialization:>If[
@@ -6863,7 +6871,7 @@ molecule${separator}Use as ${desc} instead", "count" -> "2", "pulldown" ->
        Dynamic[Typeset`assumptions$$], 
        Dynamic[Typeset`open$$], 
        Dynamic[Typeset`querystate$$]], StandardForm],
-     ImageSizeCache->{411., {8.5, 16.5}},
+     ImageSizeCache->{316.5, {8., 14.5}},
      TrackedSymbols:>{
       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
@@ -6964,6 +6972,7 @@ Cell[BoxData[
                    
                    LineBox[{{0., 1.4289419162443238`}, {0.5, 
                     2.2949673200287624`}}], 
+                   
                    LineBox[{{{0.5, 2.2949673200287624`}, {1.5000000000000002`,
                      2.2949673200287624`}}, {{0.6, 2.1749673200287623`}, {
                     1.4000000000000004`, 2.1749673200287623`}}}], 
@@ -7217,7 +7226,6 @@ Cell[BoxData[
                    
                    LineBox[{{3.4136, 2.1453181302548114`}, {
                     3.2068000000000003`, 1.7871300232495675`}}], 
-                   
                    LineBox[{{3.998, 0.562916512459885}, {4.354, 
                     0.5629165124598852}}], 
                    
@@ -7399,8 +7407,7 @@ H]\"", ImageSize -> {{1, 300}, Automatic}, BaselinePosition -> Baseline,
                   "\"HUYDCTLGGLCUTE-UHFFFAOYSA-N\"", "SummaryItem"]}]}}, 
               GridBoxAlignment -> {
                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-              False, 
-              GridBoxItemSize -> {
+              False, GridBoxItemSize -> {
                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
               GridBoxSpacings -> {
                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -7446,10 +7453,10 @@ H]\"", ImageSize -> {{1, 300}, Automatic}, BaselinePosition -> Baseline,
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{818, 645},
-WindowMargins->{{Automatic, 43}, {Automatic, 10}},
-TaggingRules->Association["TryRealOnly" -> False],
-FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+WindowSize->{818.25, 600.75},
+WindowMargins->{{Automatic, 42.75}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"519c57b1-c88f-4744-9870-2521db123fe1"
 ]
@@ -7465,47 +7472,47 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 107, 0, 44, "Subsubsection",ExpressionUUID->"e0bd5d67-05e5-47b5-825c-5c910cbd08c3"],
-Cell[690, 24, 452, 9, 86, "Input",ExpressionUUID->"22e3d9d6-e7af-40ab-bd6b-f6a18ba82b2c"],
-Cell[1145, 35, 4924, 105, 314, "Input",ExpressionUUID->"e09548aa-2841-4b4e-80fe-2e325b68d6e0"],
-Cell[6072, 142, 452, 10, 34, "Text",ExpressionUUID->"09349bd4-5666-4359-9400-3a4664a0bc9b"],
+Cell[580, 22, 107, 0, 34, "Subsubsection",ExpressionUUID->"e0bd5d67-05e5-47b5-825c-5c910cbd08c3"],
+Cell[690, 24, 452, 9, 50, "Input",ExpressionUUID->"22e3d9d6-e7af-40ab-bd6b-f6a18ba82b2c"],
+Cell[1145, 35, 4924, 105, 236, "Input",ExpressionUUID->"e09548aa-2841-4b4e-80fe-2e325b68d6e0"],
+Cell[6072, 142, 452, 10, 27, "Text",ExpressionUUID->"09349bd4-5666-4359-9400-3a4664a0bc9b"],
 Cell[CellGroupData[{
-Cell[6549, 156, 525, 12, 28, "Input",ExpressionUUID->"399a87cc-c992-4ca0-970a-5136521cf3a7"],
-Cell[7077, 170, 53152, 1170, 1245, "Output",ExpressionUUID->"9d1c1f49-18ac-4de4-80c7-ec27623ff67a"]
+Cell[6549, 156, 525, 12, 21, "Input",ExpressionUUID->"399a87cc-c992-4ca0-970a-5136521cf3a7"],
+Cell[7077, 170, 53165, 1171, 909, "Output",ExpressionUUID->"9d1c1f49-18ac-4de4-80c7-ec27623ff67a"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60278, 1346, 187, 3, 44, "Subsubsection",ExpressionUUID->"c3ab7842-6629-4574-9765-14b9d36d8cf2"],
-Cell[60468, 1351, 2802, 68, 143, "Input",ExpressionUUID->"efc2c3ee-c03a-48c5-b42b-84cd74295f9b"],
-Cell[63273, 1421, 99, 1, 4, "PageBreak",ExpressionUUID->"6c6cf5fa-d152-4896-b75d-004302a06480",
+Cell[60291, 1347, 187, 3, 34, "Subsubsection",ExpressionUUID->"c3ab7842-6629-4574-9765-14b9d36d8cf2"],
+Cell[60481, 1352, 2802, 68, 107, "Input",ExpressionUUID->"efc2c3ee-c03a-48c5-b42b-84cd74295f9b"],
+Cell[63286, 1422, 99, 1, 3, "PageBreak",ExpressionUUID->"6c6cf5fa-d152-4896-b75d-004302a06480",
  PageBreakBelow->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63409, 1427, 454, 11, 44, "Subsubsection",ExpressionUUID->"820c7bf2-7883-4618-bb4f-cd0107aa4087"],
+Cell[63422, 1428, 454, 11, 34, "Subsubsection",ExpressionUUID->"820c7bf2-7883-4618-bb4f-cd0107aa4087"],
 Cell[CellGroupData[{
-Cell[63888, 1442, 4626, 120, 295, "Input",ExpressionUUID->"448c73b8-046c-4423-ab0e-9939898b23dd"],
-Cell[68517, 1564, 71739, 1467, 1429, "Output",ExpressionUUID->"dc50bfa1-9f57-4203-8d41-4509d311db3d"]
+Cell[63901, 1443, 4728, 121, 221, "Input",ExpressionUUID->"bf5d3126-1909-4b95-ba9e-9a6365c32182"],
+Cell[68632, 1566, 71769, 1469, 1069, "Output",ExpressionUUID->"dc50bfa1-9f57-4203-8d41-4509d311db3d"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[140293, 3036, 754, 12, 44, "Input",ExpressionUUID->"923cae29-2ca8-4f76-a984-4c062b7c3171"],
-Cell[141050, 3050, 25045, 442, 101, "Output",ExpressionUUID->"842b6117-45ee-4963-931c-ed8ba4bdc524"]
+Cell[140438, 3040, 754, 12, 19, "Input",ExpressionUUID->"923cae29-2ca8-4f76-a984-4c062b7c3171"],
+Cell[141195, 3054, 25040, 443, 65, "Output",ExpressionUUID->"842b6117-45ee-4963-931c-ed8ba4bdc524"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[166132, 3497, 413, 6, 28, "Input",ExpressionUUID->"deb7dfa6-d6c7-49ea-b09e-7db1d795b2e2"],
-Cell[166548, 3505, 28763, 513, 241, "Output",ExpressionUUID->"b4cfae05-8386-44a0-b825-c4ccb8a952f9"]
+Cell[166272, 3502, 413, 6, 21, "Input",ExpressionUUID->"deb7dfa6-d6c7-49ea-b09e-7db1d795b2e2"],
+Cell[166688, 3510, 28739, 514, 177, "Output",ExpressionUUID->"b4cfae05-8386-44a0-b825-c4ccb8a952f9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[195348, 4023, 557, 10, 28, "Input",ExpressionUUID->"01628d27-591e-4959-b2c7-9372cb9622cd"],
-Cell[195908, 4035, 3855, 73, 309, "Output",ExpressionUUID->"f8631ae2-ea17-4d87-b947-3c328bc95f71"]
+Cell[195464, 4029, 557, 10, 21, "Input",ExpressionUUID->"01628d27-591e-4959-b2c7-9372cb9622cd"],
+Cell[196024, 4041, 3855, 73, 231, "Output",ExpressionUUID->"f8631ae2-ea17-4d87-b947-3c328bc95f71"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[199800, 4113, 129587, 2625, 66, "WolframAlphaShortInput",ExpressionUUID->"6d89034e-638d-4112-82b8-a80528f8a23d"],
-Cell[329390, 6740, 3451, 88, 104, "Output",ExpressionUUID->"d60a1520-37fa-42ee-8150-7aa7f2f0b16f"]
+Cell[199916, 4119, 129627, 2627, 52, "WolframAlphaShortInput",ExpressionUUID->"6d89034e-638d-4112-82b8-a80528f8a23d"],
+Cell[329546, 6748, 3451, 88, 104, "Output",ExpressionUUID->"d60a1520-37fa-42ee-8150-7aa7f2f0b16f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[332878, 6833, 2143, 44, 41, "Input",ExpressionUUID->"839a94f6-2899-4707-bfba-92b16fc5aef0"],
-Cell[335024, 6879, 1999, 32, 95, "Message",ExpressionUUID->"2607e5c6-9f40-4fe9-95a3-2122cfba8d78"],
-Cell[337026, 6913, 24253, 531, 69, "Output",ExpressionUUID->"790ff8f7-bdf7-446d-bee3-6e9dd1c79890"]
+Cell[333034, 6841, 2143, 44, 41, "Input",ExpressionUUID->"839a94f6-2899-4707-bfba-92b16fc5aef0"],
+Cell[335180, 6887, 1999, 32, 95, "Message",ExpressionUUID->"2607e5c6-9f40-4fe9-95a3-2122cfba8d78"],
+Cell[337182, 6921, 24238, 530, 69, "Output",ExpressionUUID->"790ff8f7-bdf7-446d-bee3-6e9dd1c79890"]
 }, Open  ]]
 }, Open  ]]
 }
