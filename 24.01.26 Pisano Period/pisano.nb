@@ -1,0 +1,2017 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     70187,       2007]
+NotebookOptionsPosition[     69003,       1978]
+NotebookOutlinePosition[     69411,       1994]
+CellTagsIndexPosition[     69368,       1991]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"f", "=", 
+           RowBox[{"Fibonacci", "@", "#"}]}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"FontSize", "->", "12"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"#", ",", "1"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"f", ",", 
+               RowBox[{"FontSize", "->", "16"}], ",", 
+               RowBox[{"FontFamily", "->", "\"\<Cascadia Code\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"OddQ", "@", "f"}], ",", "Red", ",", "Blue"}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"#", ",", "0"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"f", "~", "Mod", "~", "2"}], ",", 
+               RowBox[{"FontSize", "->", "13"}], ",", "Gray"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"#", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "}"}]}], "]"}], "&"}], 
+      "/@", 
+      RowBox[{"Range", "@", "13"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"n", ",", 
+           RowBox[{"FontFamily", "->", "\"\<Times\>\""}], ",", 
+           RowBox[{"FontSize", "->", "14"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", ".1"}], ",", "1"}], "}"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<\!\(\*SubscriptBox[\(F\), \(n\)]\)\>\"", ",", 
+           RowBox[{"FontFamily", "->", "\"\<Times\>\""}], ",", 
+           RowBox[{"FontSize", "->", "16"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", ".1"}], ",", "0"}], "}"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<parity\>\"", ",", 
+           RowBox[{"FontFamily", "->", "\"\<Times\>\""}], ",", 
+           RowBox[{"FontSize", "->", "13"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", "1"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       "Thin", ",", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", ".1"}], ",", 
+            RowBox[{"-", ".5"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"13.5", ",", 
+            RowBox[{"-", ".5"}]}], "}"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", ".1"}], ",", ".5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"13.5", ",", ".5"}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+    "]"}], ",", 
+   RowBox[{"ImageSize", "->", "500"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.915268429405199*^9, 3.915268447138317*^9}, {
+   3.915268504778362*^9, 3.915268554478975*^9}, {3.915268613185917*^9, 
+   3.915268659193159*^9}, {3.9152687061729546`*^9, 3.915268879054306*^9}, {
+   3.915268953725466*^9, 3.915269079600687*^9}, {3.915269138935127*^9, 
+   3.91526944863109*^9}, {3.915269481727104*^9, 3.9152695409607944`*^9}, {
+   3.9152696279770184`*^9, 3.915269845079685*^9}, {3.9152698993467836`*^9, 
+   3.915269916971323*^9}, {3.9152699510470943`*^9, 3.9152699653899174`*^9}, {
+   3.915270038689857*^9, 3.91527026759923*^9}, {3.91527030175312*^9, 
+   3.915270466578773*^9}, {3.915270623010484*^9, 3.915270636389353*^9}, {
+   3.9152709878583927`*^9, 3.915271036210268*^9}, {3.915271107564741*^9, 
+   3.915271226296196*^9}, {3.91527125755279*^9, 3.915271313050962*^9}, {
+   3.915271404617489*^9, 3.915271514739258*^9}, {3.91527158203702*^9, 
+   3.9152715894740067`*^9}, 3.915271662999277*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"a700b200-174d-4803-a6c1-bb563eb34902"],
+
+Cell[BoxData[
+ GraphicsBox[{{InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      FontSize->12], {1, 1}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {1, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {1, -1}]}, {InsetBox[
+     StyleBox["2",
+      StripOnInput->False,
+      FontSize->12], {2, 1}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {2, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {2, -1}]}, {InsetBox[
+     StyleBox["3",
+      StripOnInput->False,
+      FontSize->12], {3, 1}], InsetBox[
+     StyleBox["2",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[0, 0, 1]], {3, 0}], InsetBox[
+     StyleBox["0",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {3, -1}]}, {InsetBox[
+     StyleBox["4",
+      StripOnInput->False,
+      FontSize->12], {4, 1}], InsetBox[
+     StyleBox["3",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {4, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {4, -1}]}, {InsetBox[
+     StyleBox["5",
+      StripOnInput->False,
+      FontSize->12], {5, 1}], InsetBox[
+     StyleBox["5",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {5, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {5, -1}]}, {InsetBox[
+     StyleBox["6",
+      StripOnInput->False,
+      FontSize->12], {6, 1}], InsetBox[
+     StyleBox["8",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[0, 0, 1]], {6, 0}], InsetBox[
+     StyleBox["0",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {6, -1}]}, {InsetBox[
+     StyleBox["7",
+      StripOnInput->False,
+      FontSize->12], {7, 1}], InsetBox[
+     StyleBox["13",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {7, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {7, -1}]}, {InsetBox[
+     StyleBox["8",
+      StripOnInput->False,
+      FontSize->12], {8, 1}], InsetBox[
+     StyleBox["21",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {8, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {8, -1}]}, {InsetBox[
+     StyleBox["9",
+      StripOnInput->False,
+      FontSize->12], {9, 1}], InsetBox[
+     StyleBox["34",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[0, 0, 1]], {9, 0}], InsetBox[
+     StyleBox["0",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {9, -1}]}, {InsetBox[
+     StyleBox["10",
+      StripOnInput->False,
+      FontSize->12], {10, 1}], InsetBox[
+     StyleBox["55",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {10, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {10, -1}]}, {InsetBox[
+     StyleBox["11",
+      StripOnInput->False,
+      FontSize->12], {11, 1}], InsetBox[
+     StyleBox["89",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {11, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {11, -1}]}, {InsetBox[
+     StyleBox["12",
+      StripOnInput->False,
+      FontSize->12], {12, 1}], InsetBox[
+     StyleBox["144",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[0, 0, 1]], {12, 0}], InsetBox[
+     StyleBox["0",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {12, -1}]}, {InsetBox[
+     StyleBox["13",
+      StripOnInput->False,
+      FontSize->12], {13, 1}], InsetBox[
+     StyleBox["233",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Cascadia Code",
+      FontSize->16,
+      FontColor->RGBColor[1, 0, 0]], {13, 0}], InsetBox[
+     StyleBox["1",
+      StripOnInput->False,
+      LineColor->GrayLevel[0.5],
+      FrontFaceColor->GrayLevel[0.5],
+      BackFaceColor->GrayLevel[0.5],
+      GraphicsColor->GrayLevel[0.5],
+      FontSize->13,
+      FontColor->GrayLevel[0.5]], {13, -1}]}, InsetBox[
+    StyleBox["n",
+     StripOnInput->False,
+     FontFamily->"Times",
+     FontSize->14], {-0.1, 1}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\)\"\>",
+     StripOnInput->False,
+     FontFamily->"Times",
+     FontSize->16], {-0.1, 0}], InsetBox[
+    StyleBox["\<\"parity\"\>",
+     StripOnInput->False,
+     FontFamily->"Times",
+     FontSize->13], {0, -1}], 
+   {Thickness[Tiny], LineBox[{{-0.1, -0.5}, {13.5, -0.5}}], 
+    LineBox[{{-0.1, 0.5}, {13.5, 0.5}}]}},
+  ImageSize->500]], "Output",
+ CellChangeTimes->{
+  3.9152684480913677`*^9, 3.915268515012907*^9, {3.915268636585314*^9, 
+   3.915268659755604*^9}, 3.9152687087039623`*^9, {3.9152687437763386`*^9, 
+   3.9152688286464863`*^9}, {3.915268862883539*^9, 3.9152688796636257`*^9}, {
+   3.9152689700681*^9, 3.91526907996002*^9}, {3.915269252120865*^9, 
+   3.9152692904179363`*^9}, 3.915269452271391*^9, 3.915269549507044*^9, 
+   3.9152698531780987`*^9, 3.9152699186274548`*^9, {3.9152699528125954`*^9, 
+   3.915269966014805*^9}, {3.915270116399124*^9, 3.915270189317848*^9}, {
+   3.91527022787768*^9, 3.915270267927353*^9}, {3.9152703160188313`*^9, 
+   3.915270418843611*^9}, {3.9152704599854755`*^9, 3.915270467328718*^9}, 
+   3.915270842080393*^9, {3.91527100137302*^9, 3.9152710373820534`*^9}, 
+   3.915271112064392*^9, {3.9152711585811024`*^9, 3.915271211031578*^9}, {
+   3.9152712604799023`*^9, 3.915271313738434*^9}, {3.9152714362168255`*^9, 
+   3.915271465896284*^9}, {3.9152715015682545`*^9, 3.9152715153954277`*^9}, {
+   3.9152715833806744`*^9, 3.915271590411457*^9}, 3.9152716765608253`*^9, 
+   3.9154178758371754`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"5f3f0170-3a50-4ae7-afe8-dffb6604d77d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r", "=", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4", ",", "11"}], "}"}]}], ",", 
+     RowBox[{"f", "=", 
+      RowBox[{"Fibonacci", "@", 
+       RowBox[{"Range", "@", "20"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"t1", "=", 
+      RowBox[{"Sequence", "[", 
+       RowBox[{
+        RowBox[{"FontSize", "->", "14"}], ",", 
+        RowBox[{"FontFamily", "->", "\"\<Times\>\""}], ",", "Bold", ",", 
+        "Gray"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"t2", "=", 
+      RowBox[{"Sequence", "[", 
+       RowBox[{
+        RowBox[{"FontSize", "->", "14"}], ",", 
+        RowBox[{"FontFamily", "->", "\"\<Cascadia Code\>\""}]}], "]"}]}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#2", "~", "Quotient", "~", "#"}], "//", "OddQ"}], ",", 
+         "Red", ",", "Blue"}], "]"}], "&"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"i", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "+", 
+        RowBox[{
+         RowBox[{"Ramp", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "-", "12"}], "]"}], ".5"}]}], 
+       "&"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"Join", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", "t2", ",", "Bold", ",", "Gray"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"i", "[", "#2", "]"}], ",", "0"}], "}"}]}], "]"}], 
+          "&"}], ",", "f"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "~", "Mod", "~", "2"}], ",", "t2", ",", 
+              RowBox[{"c", "[", 
+               RowBox[{"3", ",", 
+                RowBox[{
+                 RowBox[{"#2", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "-", "1"}]}], "]"}]}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"i", "[", "#2", "]"}], ",", 
+              RowBox[{"-", "1"}]}], "}"}]}], "]"}], "&"}], ",", "f"}], "]"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "~", "Mod", "~", "3"}], ",", "t2", ",", 
+              RowBox[{"c", "[", 
+               RowBox[{"8", ",", 
+                RowBox[{
+                 RowBox[{"#2", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "-", "1"}]}], "]"}]}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"i", "[", "#2", "]"}], ",", 
+              RowBox[{"-", "2"}]}], "}"}]}], "]"}], "&"}], ",", "f"}], "]"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "~", "Mod", "~", "4"}], ",", "t2", ",", 
+              RowBox[{"c", "[", 
+               RowBox[{"6", ",", 
+                RowBox[{
+                 RowBox[{"#2", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "-", "1"}]}], "]"}]}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"i", "[", "#2", "]"}], ",", 
+              RowBox[{"-", "3"}]}], "}"}]}], "]"}], "&"}], ",", "f"}], "]"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "~", "Mod", "~", "11"}], ",", "t2", ",", 
+              RowBox[{"c", "[", 
+               RowBox[{"10", ",", 
+                RowBox[{
+                 RowBox[{"#2", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "-", "1"}]}], "]"}]}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"i", "[", "#2", "]"}], ",", 
+              RowBox[{"-", "4"}]}], "}"}]}], "]"}], "&"}], ",", "f"}], "]"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"\"\<\!\(\*SubscriptBox[\(F\), \(n\)]\) mod \>\"", "<>", 
+               RowBox[{"ToString", "@", "#"}]}], ",", "t1"}], "]"}], ",", 
+            RowBox[{"-", 
+             RowBox[{"{", 
+              RowBox[{".8", ",", 
+               RowBox[{"First", "@", "#2"}]}], "}"}]}]}], "]"}], "&"}], ",", 
+         "r"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\!\(\*SubscriptBox[\(F\), \(n\)]\)\>\"", ",", "t1"}],
+             "]"}], ",", 
+           RowBox[{"-", 
+            RowBox[{"{", 
+             RowBox[{".5", ",", "0"}], "}"}]}]}], "]"}], ",", "Thin", ",", 
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "1.5"}], ",", 
+              RowBox[{"-", ".5"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"24.5", ",", 
+              RowBox[{"-", ".5"}]}], "}"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{".5", ",", ".2"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{".5", ",", 
+              RowBox[{"-", "4.2"}]}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], ",", 
+     RowBox[{"ImageSize", "->", "740"}], ",", 
+     RowBox[{"AspectRatio", "->", 
+      RowBox[{"2", "/", "7"}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.915272567395611*^9, 3.915272665333498*^9}, {
+   3.915272702336857*^9, 3.915272818527914*^9}, 3.9152729214934216`*^9, {
+   3.915273079087658*^9, 3.9152731710116825`*^9}, {3.9152732071954346`*^9, 
+   3.9152732429793224`*^9}, {3.915273275226652*^9, 3.9152733077961617`*^9}, {
+   3.915273350209934*^9, 3.9152733917154884`*^9}, {3.9152734525479736`*^9, 
+   3.9152735108769855`*^9}, {3.91527354656818*^9, 3.915273584423252*^9}, {
+   3.9152736777034073`*^9, 3.915273786280588*^9}, {3.9152738544317436`*^9, 
+   3.91527386770862*^9}, {3.915273902503763*^9, 3.9152741038838463`*^9}, {
+   3.915274134396267*^9, 3.915274204133404*^9}, {3.915274311037237*^9, 
+   3.9152743800335274`*^9}, {3.9152744185988827`*^9, 3.915274499672346*^9}, {
+   3.915274544813839*^9, 3.9152745884583244`*^9}, {3.915274620251093*^9, 
+   3.915274644481039*^9}, {3.915274691228956*^9, 3.915274735182247*^9}, {
+   3.9152747808516064`*^9, 3.9152748905791206`*^9}, {3.915274923943924*^9, 
+   3.9152749803811073`*^9}, {3.9152750139572544`*^9, 3.91527512233416*^9}, {
+   3.915275236953844*^9, 3.9152752451996784`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"78339b96-34af-4ab1-990d-ff90e4bf5927"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {1., 0}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {2., 0}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {3., 0}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {4., 0}], InsetBox[
+    StyleBox["5",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {5., 0}], InsetBox[
+    StyleBox["8",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {6., 0}], InsetBox[
+    StyleBox["13",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {7., 0}], InsetBox[
+    StyleBox["21",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {8., 0}], InsetBox[
+    StyleBox["34",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {9., 0}], InsetBox[
+    StyleBox["55",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {10., 0}], InsetBox[
+    StyleBox["89",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {11., 0}], InsetBox[
+    StyleBox["144",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {12., 0}], InsetBox[
+    StyleBox["233",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {13.5, 0}], InsetBox[
+    StyleBox["377",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {15., 0}], InsetBox[
+    StyleBox["610",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {16.5, 0}], InsetBox[
+    StyleBox["987",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {18., 0}], InsetBox[
+    StyleBox["1597",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {19.5, 0}], InsetBox[
+    StyleBox["2584",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {21., 0}], InsetBox[
+    StyleBox["4181",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {22.5, 0}], InsetBox[
+    StyleBox["6765",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {24., 0}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {1., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {2., -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {3., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {4., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {5., -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {6., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {7., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {8., -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {9., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {10., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {11., -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {12., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {13.5, -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {15., -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {16.5, -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {18., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {19.5, -1}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {21., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {22.5, -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {24., -1}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {1., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {2., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {3., -2}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {4., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {5., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {6., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {7., -2}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {8., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {9., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {10., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {11., -2}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {12., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {13.5, -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {15., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {16.5, -2}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {18., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {19.5, -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {21., -2}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {22.5, -2}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {24., -2}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {1., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {2., -3}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {3., -3}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {4., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {5., -3}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {6., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {7., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {8., -3}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {9., -3}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {10., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {11., -3}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {12., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {13.5, -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {15., -3}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {16.5, -3}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {18., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {19.5, -3}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {21., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {22.5, -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {24., -3}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {1., -4}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {2., -4}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {3., -4}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {4., -4}], InsetBox[
+    StyleBox["5",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {5., -4}], InsetBox[
+    StyleBox["8",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {6., -4}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {7., -4}], InsetBox[
+    StyleBox["10",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {8., -4}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {9., -4}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[0, 0, 1]], {10., -4}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {11., -4}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {12., -4}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {13.5, -4}], InsetBox[
+    StyleBox["3",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {15., -4}], InsetBox[
+    StyleBox["5",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {16.5, -4}], InsetBox[
+    StyleBox["8",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {18., -4}], InsetBox[
+    StyleBox["2",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {19.5, -4}], InsetBox[
+    StyleBox["10",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {21., -4}], InsetBox[
+    StyleBox["1",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {22.5, -4}], InsetBox[
+    StyleBox["0",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->14,
+     FontColor->RGBColor[1, 0, 0]], {24., -4}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\) mod 2\"\>",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Times",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {-0.8, -1}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\) mod 3\"\>",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Times",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {-0.8, -2}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\) mod 4\"\>",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Times",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {-0.8, -3}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\) mod 11\"\>",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Times",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {-0.8, -4}], InsetBox[
+    StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(F\\), \\(n\\)]\\)\"\>",
+     StripOnInput->False,
+     LineColor->GrayLevel[0.5],
+     FrontFaceColor->GrayLevel[0.5],
+     BackFaceColor->GrayLevel[0.5],
+     GraphicsColor->GrayLevel[0.5],
+     FontFamily->"Times",
+     FontSize->14,
+     FontWeight->Bold,
+     FontColor->GrayLevel[0.5]], {-0.5, 0}], 
+   {Thickness[Tiny], LineBox[{{-1.5, -0.5}, {24.5, -0.5}}], 
+    LineBox[{{0.5, 0.2}, {0.5, -4.2}}]}},
+  AspectRatio->NCache[
+    Rational[2, 7], 0.2857142857142857],
+  ImageSize->740]], "Output",
+ CellChangeTimes->{{3.915272767239317*^9, 3.915272818949772*^9}, {
+   3.9152731236445827`*^9, 3.9152731714504395`*^9}, {3.9152732081306267`*^9, 
+   3.9152732437437973`*^9}, 3.9152733087333736`*^9, 3.915273392670849*^9, {
+   3.915273490928358*^9, 3.9152735114295673`*^9}, {3.915273574007189*^9, 
+   3.9152735854531384`*^9}, 3.915273679749735*^9, {3.9152737108902397`*^9, 
+   3.915273786911873*^9}, {3.915273858948471*^9, 3.9152738681830673`*^9}, {
+   3.9152739045227146`*^9, 3.9152739184255276`*^9}, {3.9152739905399113`*^9, 
+   3.91527405380044*^9}, 3.915274105485958*^9, 3.9152741539965897`*^9, 
+   3.915274316176922*^9, {3.91527436386648*^9, 3.9152743810657177`*^9}, {
+   3.9152744346860027`*^9, 3.9152745000381145`*^9}, 3.9152745909359055`*^9, {
+   3.9152748695215034`*^9, 3.915274893039095*^9}, {3.915274955030384*^9, 
+   3.9152749814425735`*^9}, 3.915275136997734*^9, 3.915275177235832*^9, {
+   3.9152752380601864`*^9, 3.915275246087221*^9}, 3.9154178899087152`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"c57eecb4-133a-4f91-8d0a-ca7c9139c9ca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"cobweb", "[", 
+   RowBox[{"modulo_", ",", " ", "period_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Thick", ",", " ", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"len", " ", "=", " ", 
+          RowBox[{"period", " ", "+", " ", "2"}]}], "}"}], ",", "\n", " ", 
+        " ", " ", " ", 
+        RowBox[{"Line", "[", 
+         RowBox[{
+          RowBox[{"Partition", "[", 
+           RowBox[{
+            RowBox[{"Array", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Fibonacci", "@", "#"}], "~", "Mod", "~", "modulo"}], 
+               " ", "&"}], ",", " ", "len", ",", " ", "0"}], "]"}], ",", " ", 
+            "2", ",", " ", "1"}], "]"}], ",", "\n", " ", " ", " ", " ", " ", 
+          RowBox[{"VertexColors", " ", "\[Rule]", " ", 
+           RowBox[{"Array", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hue", "[", 
+               RowBox[{"#", "/", "len"}], "]"}], " ", "&"}], ",", " ", 
+             RowBox[{"period", " ", "+", " ", "1"}], ",", " ", "0"}], 
+            "]"}]}]}], "]"}]}], "]"}]}], "}"}], ",", "\n", 
+    "\[NonBreakingSpace]", "\[NonBreakingSpace]", "\[NonBreakingSpace]", 
+    "\[NonBreakingSpace]", "\[NonBreakingSpace]", 
+    RowBox[{"ImageSize", " ", "\[Rule]", " ", "Medium"}]}], "]"}]}], "\n", 
+ RowBox[{"Row", "@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"cobweb", "[", 
+     RowBox[{"5", ",", " ", "20"}], "]"}], ",", " ", 
+    RowBox[{"cobweb", "[", 
+     RowBox[{"10", ",", " ", "60"}], "]"}]}], "}"}]}]}], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"d0e1d777-b831-4ef3-a11c-0b5ae3911090"],
+
+Cell[BoxData[
+ TemplateBox[{
+   GraphicsBox[{
+     Thickness[Large], 
+     LineBox[{{0, 1}, {1, 1}, {1, 2}, {2, 3}, {3, 0}, {0, 3}, {3, 3}, {3, 
+      1}, {1, 4}, {4, 0}, {0, 4}, {4, 4}, {4, 3}, {3, 2}, {2, 0}, {0, 2}, {2, 
+      2}, {2, 4}, {4, 1}, {1, 0}, {0, 1}}, VertexColors -> {
+        Hue[0], 
+        Hue[
+         Rational[1, 22]], 
+        Hue[
+         Rational[1, 11]], 
+        Hue[
+         Rational[3, 22]], 
+        Hue[
+         Rational[2, 11]], 
+        Hue[
+         Rational[5, 22]], 
+        Hue[
+         Rational[3, 11]], 
+        Hue[
+         Rational[7, 22]], 
+        Hue[
+         Rational[4, 11]], 
+        Hue[
+         Rational[9, 22]], 
+        Hue[
+         Rational[5, 11]], 
+        Hue[
+         Rational[1, 2]], 
+        Hue[
+         Rational[6, 11]], 
+        Hue[
+         Rational[13, 22]], 
+        Hue[
+         Rational[7, 11]], 
+        Hue[
+         Rational[15, 22]], 
+        Hue[
+         Rational[8, 11]], 
+        Hue[
+         Rational[17, 22]], 
+        Hue[
+         Rational[9, 11]], 
+        Hue[
+         Rational[19, 22]], 
+        Hue[
+         Rational[10, 11]]}]}, ImageSize -> Medium], 
+   GraphicsBox[{
+     Thickness[Large], 
+     LineBox[{{0, 1}, {1, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 8}, {8, 3}, {3, 
+      1}, {1, 4}, {4, 5}, {5, 9}, {9, 4}, {4, 3}, {3, 7}, {7, 0}, {0, 7}, {7, 
+      7}, {7, 4}, {4, 1}, {1, 5}, {5, 6}, {6, 1}, {1, 7}, {7, 8}, {8, 5}, {5, 
+      3}, {3, 8}, {8, 1}, {1, 9}, {9, 0}, {0, 9}, {9, 9}, {9, 8}, {8, 7}, {7, 
+      5}, {5, 2}, {2, 7}, {7, 9}, {9, 6}, {6, 5}, {5, 1}, {1, 6}, {6, 7}, {7, 
+      3}, {3, 0}, {0, 3}, {3, 3}, {3, 6}, {6, 9}, {9, 5}, {5, 4}, {4, 9}, {9, 
+      3}, {3, 2}, {2, 5}, {5, 7}, {7, 2}, {2, 9}, {9, 1}, {1, 0}, {0, 1}}, 
+      VertexColors -> {
+        Hue[0], 
+        Hue[
+         Rational[1, 62]], 
+        Hue[
+         Rational[1, 31]], 
+        Hue[
+         Rational[3, 62]], 
+        Hue[
+         Rational[2, 31]], 
+        Hue[
+         Rational[5, 62]], 
+        Hue[
+         Rational[3, 31]], 
+        Hue[
+         Rational[7, 62]], 
+        Hue[
+         Rational[4, 31]], 
+        Hue[
+         Rational[9, 62]], 
+        Hue[
+         Rational[5, 31]], 
+        Hue[
+         Rational[11, 62]], 
+        Hue[
+         Rational[6, 31]], 
+        Hue[
+         Rational[13, 62]], 
+        Hue[
+         Rational[7, 31]], 
+        Hue[
+         Rational[15, 62]], 
+        Hue[
+         Rational[8, 31]], 
+        Hue[
+         Rational[17, 62]], 
+        Hue[
+         Rational[9, 31]], 
+        Hue[
+         Rational[19, 62]], 
+        Hue[
+         Rational[10, 31]], 
+        Hue[
+         Rational[21, 62]], 
+        Hue[
+         Rational[11, 31]], 
+        Hue[
+         Rational[23, 62]], 
+        Hue[
+         Rational[12, 31]], 
+        Hue[
+         Rational[25, 62]], 
+        Hue[
+         Rational[13, 31]], 
+        Hue[
+         Rational[27, 62]], 
+        Hue[
+         Rational[14, 31]], 
+        Hue[
+         Rational[29, 62]], 
+        Hue[
+         Rational[15, 31]], 
+        Hue[
+         Rational[1, 2]], 
+        Hue[
+         Rational[16, 31]], 
+        Hue[
+         Rational[33, 62]], 
+        Hue[
+         Rational[17, 31]], 
+        Hue[
+         Rational[35, 62]], 
+        Hue[
+         Rational[18, 31]], 
+        Hue[
+         Rational[37, 62]], 
+        Hue[
+         Rational[19, 31]], 
+        Hue[
+         Rational[39, 62]], 
+        Hue[
+         Rational[20, 31]], 
+        Hue[
+         Rational[41, 62]], 
+        Hue[
+         Rational[21, 31]], 
+        Hue[
+         Rational[43, 62]], 
+        Hue[
+         Rational[22, 31]], 
+        Hue[
+         Rational[45, 62]], 
+        Hue[
+         Rational[23, 31]], 
+        Hue[
+         Rational[47, 62]], 
+        Hue[
+         Rational[24, 31]], 
+        Hue[
+         Rational[49, 62]], 
+        Hue[
+         Rational[25, 31]], 
+        Hue[
+         Rational[51, 62]], 
+        Hue[
+         Rational[26, 31]], 
+        Hue[
+         Rational[53, 62]], 
+        Hue[
+         Rational[27, 31]], 
+        Hue[
+         Rational[55, 62]], 
+        Hue[
+         Rational[28, 31]], 
+        Hue[
+         Rational[57, 62]], 
+        Hue[
+         Rational[29, 31]], 
+        Hue[
+         Rational[59, 62]], 
+        Hue[
+         Rational[30, 31]]}]}, ImageSize -> Medium]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{3.9154178936517515`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"ef94077a-f5bd-4dac-a9f8-f04d84f4e596"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"m", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{"{", 
+       RowBox[{"m", ",", "w"}], "}"}], "]"}]}], ";", 
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{"Partition", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Fibonacci", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0", ",", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               RowBox[{"w", " ", "^", "2"}]}]}], " ", "]"}]}], ",", "m"}], 
+          "]"}], "/", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"h", "===", "Hue"}], ",", "m", ",", 
+           RowBox[{"m", "-", "1"}]}], "]"}]}], ",", "w"}], "]"}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
+      RowBox[{"ColorFunction", "\[Rule]", "h"}], ",", " ", 
+      RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+      RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"w", ",", "32", ",", "\"\<carpet size\>\""}], "}"}], ",", "2", 
+     ",", "64", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "6", ",", " ", "\"\<modulus m\>\""}], "}"}], ",", "2",
+      ",", "w", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"h", ",", "\"\<BrightBands\>\"", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<BrightBands\>\"", "\[Rule]", "\"\<color\>\""}], ",", 
+       RowBox[{"GrayLevel", "\[Rule]", "\"\<gray-level\>\""}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"LabelStyle", "->", "Medium"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.915267726038666*^9, 3.9152677503398514`*^9}, {
+  3.9152678555895424`*^9, 3.91526793539553*^9}, {3.915267981752306*^9, 
+  3.915268010390953*^9}, {3.915268113594713*^9, 3.9152681138447294`*^9}, {
+  3.915268316029855*^9, 3.915268333148573*^9}, {3.915417915696067*^9, 
+  3.915417926759615*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"f9c61e59-b1ac-4c64-a467-2eaacee4d000"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`h$$ = "BrightBands", $CellContext`m$$ = 
+    6, $CellContext`w$$ = 32, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`w$$], 32, "carpet size"}, 2, 64, 1}, {{
+       Hold[$CellContext`m$$], 6, "modulus m"}, 2, 
+      Dynamic[$CellContext`w$$], 1}, {{
+       Hold[$CellContext`h$$], "BrightBands", ""}, {
+      "BrightBands" -> "color", GrayLevel -> "gray-level"}}}, 
+    Typeset`size$$ = {300., {148., 152.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`h$$ = "BrightBands", $CellContext`m$$ = 
+        6, $CellContext`w$$ = 32}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`m$$ = Min[{$CellContext`m$$, $CellContext`w$$}]; 
+       ArrayPlot[
+         Partition[Mod[
+            Map[Fibonacci[#]& , 
+             Range[0, -1 + $CellContext`w$$^2]], $CellContext`m$$]/
+          If[$CellContext`h$$ === Hue, $CellContext`m$$, $CellContext`m$$ - 
+           1], $CellContext`w$$], ImageSize -> 400, 
+         ColorFunction -> $CellContext`h$$, ColorFunctionScaling -> False, 
+         AspectRatio -> 1]), 
+      "Specifications" :> {{{$CellContext`w$$, 32, "carpet size"}, 2, 64, 1, 
+         Appearance -> "Labeled"}, {{$CellContext`m$$, 6, "modulus m"}, 2, 
+         Dynamic[$CellContext`w$$], 1, Appearance -> 
+         "Labeled"}, {{$CellContext`h$$, "BrightBands", ""}, {
+         "BrightBands" -> "color", GrayLevel -> "gray-level"}, ControlType -> 
+         SetterBar}}, "Options" :> {LabelStyle -> Medium}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{338., {202.85052490234375`, 207.14947509765625`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.915267629277296*^9, 3.915267642307646*^9}, {
+   3.915267729678989*^9, 3.915267750813313*^9}, {3.915267877447359*^9, 
+   3.915267903429159*^9}, 3.915267935973612*^9, {3.91526799140789*^9, 
+   3.915268019249712*^9}, 3.915268115328982*^9, 3.9152683336027093`*^9, 
+   3.915417898143793*^9, 3.91541793019846*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"cc9c5b49-7e3d-47ea-98fa-195176031e69"]
+}, Open  ]]
+},
+WindowSize->{699, 501.75},
+WindowMargins->{{156.75, Automatic}, {Automatic, 14.25}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a7bbe9f5-1c41-46ef-9281-672c7991f376"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4598, 113, 136, "Input",ExpressionUUID->"a700b200-174d-4803-a6c1-bb563eb34902"],
+Cell[5181, 137, 10424, 293, 79, "Output",ExpressionUUID->"5f3f0170-3a50-4ae7-afe8-dffb6604d77d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15642, 435, 7590, 193, 207, "Input",ExpressionUUID->"78339b96-34af-4ab1-990d-ff90e4bf5927"],
+Cell[23235, 630, 34033, 990, 171, "Output",ExpressionUUID->"c57eecb4-133a-4f91-8d0a-ca7c9139c9ca"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57305, 1625, 1737, 43, 79, "Input",ExpressionUUID->"d0e1d777-b831-4ef3-a11c-0b5ae3911090"],
+Cell[59045, 1670, 4457, 181, 284, "Output",ExpressionUUID->"ef94077a-f5bd-4dac-a9f8-f04d84f4e596"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63539, 1856, 2460, 61, 107, "Input",ExpressionUUID->"f9c61e59-b1ac-4c64-a467-2eaacee4d000"],
+Cell[66002, 1919, 2985, 56, 424, "Output",ExpressionUUID->"cc9c5b49-7e3d-47ea-98fa-195176031e69"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
