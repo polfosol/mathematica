@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     70187,       2007]
-NotebookOptionsPosition[     69003,       1978]
-NotebookOutlinePosition[     69411,       1994]
-CellTagsIndexPosition[     69368,       1991]
+NotebookDataLength[    102537,       3268]
+NotebookOptionsPosition[    101122,       3235]
+NotebookOutlinePosition[    101530,       3251]
+CellTagsIndexPosition[    101487,       3248]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1855,6 +1855,1263 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
+ RowBox[{"Grid", "@", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{"cobweb", "@@@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"48", ",", "24"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"49", ",", "112"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"50", ",", "300"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"65", ",", "140"}], "}"}]}], "}"}]}], ",", "2"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.915419820402797*^9, 3.915419924903307*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"d571b3c9-f1aa-45fc-a58c-b632479614b9"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     GraphicsBox[
+      {Thickness[Large], 
+       LineBox[{{0, 1}, {1, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 8}, {8, 13}, {13, 
+        21}, {21, 34}, {34, 7}, {7, 41}, {41, 0}, {0, 41}, {41, 41}, {41, 
+        34}, {34, 27}, {27, 13}, {13, 40}, {40, 5}, {5, 45}, {45, 2}, {2, 
+        47}, {47, 1}, {1, 0}, {0, 1}},
+        VertexColors->{
+          Hue[0], 
+          Hue[
+           Rational[1, 26]], 
+          Hue[
+           Rational[1, 13]], 
+          Hue[
+           Rational[3, 26]], 
+          Hue[
+           Rational[2, 13]], 
+          Hue[
+           Rational[5, 26]], 
+          Hue[
+           Rational[3, 13]], 
+          Hue[
+           Rational[7, 26]], 
+          Hue[
+           Rational[4, 13]], 
+          Hue[
+           Rational[9, 26]], 
+          Hue[
+           Rational[5, 13]], 
+          Hue[
+           Rational[11, 26]], 
+          Hue[
+           Rational[6, 13]], 
+          Hue[
+           Rational[1, 2]], 
+          Hue[
+           Rational[7, 13]], 
+          Hue[
+           Rational[15, 26]], 
+          Hue[
+           Rational[8, 13]], 
+          Hue[
+           Rational[17, 26]], 
+          Hue[
+           Rational[9, 13]], 
+          Hue[
+           Rational[19, 26]], 
+          Hue[
+           Rational[10, 13]], 
+          Hue[
+           Rational[21, 26]], 
+          Hue[
+           Rational[11, 13]], 
+          Hue[
+           Rational[23, 26]], 
+          Hue[
+           Rational[12, 13]]}]},
+      ImageSize->Medium], 
+     GraphicsBox[
+      {Thickness[Large], 
+       LineBox[{{0, 1}, {1, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 8}, {8, 13}, {13, 
+        21}, {21, 34}, {34, 6}, {6, 40}, {40, 46}, {46, 37}, {37, 34}, {34, 
+        22}, {22, 7}, {7, 29}, {29, 36}, {36, 16}, {16, 3}, {3, 19}, {19, 
+        22}, {22, 41}, {41, 14}, {14, 6}, {6, 20}, {20, 26}, {26, 46}, {46, 
+        23}, {23, 20}, {20, 43}, {43, 14}, {14, 8}, {8, 22}, {22, 30}, {30, 
+        3}, {3, 33}, {33, 36}, {36, 20}, {20, 7}, {7, 27}, {27, 34}, {34, 
+        12}, {12, 46}, {46, 9}, {9, 6}, {6, 15}, {15, 21}, {21, 36}, {36, 
+        8}, {8, 44}, {44, 3}, {3, 47}, {47, 1}, {1, 48}, {48, 0}, {0, 48}, {
+        48, 48}, {48, 47}, {47, 46}, {46, 44}, {44, 41}, {41, 36}, {36, 28}, {
+        28, 15}, {15, 43}, {43, 9}, {9, 3}, {3, 12}, {12, 15}, {15, 27}, {27, 
+        42}, {42, 20}, {20, 13}, {13, 33}, {33, 46}, {46, 30}, {30, 27}, {27, 
+        8}, {8, 35}, {35, 43}, {43, 29}, {29, 23}, {23, 3}, {3, 26}, {26, 
+        29}, {29, 6}, {6, 35}, {35, 41}, {41, 27}, {27, 19}, {19, 46}, {46, 
+        16}, {16, 13}, {13, 29}, {29, 42}, {42, 22}, {22, 15}, {15, 37}, {37, 
+        3}, {3, 40}, {40, 43}, {43, 34}, {34, 28}, {28, 13}, {13, 41}, {41, 
+        5}, {5, 46}, {46, 2}, {2, 48}, {48, 1}, {1, 0}, {0, 1}},
+        VertexColors->{
+          Hue[0], 
+          Hue[
+           Rational[1, 114]], 
+          Hue[
+           Rational[1, 57]], 
+          Hue[
+           Rational[1, 38]], 
+          Hue[
+           Rational[2, 57]], 
+          Hue[
+           Rational[5, 114]], 
+          Hue[
+           Rational[1, 19]], 
+          Hue[
+           Rational[7, 114]], 
+          Hue[
+           Rational[4, 57]], 
+          Hue[
+           Rational[3, 38]], 
+          Hue[
+           Rational[5, 57]], 
+          Hue[
+           Rational[11, 114]], 
+          Hue[
+           Rational[2, 19]], 
+          Hue[
+           Rational[13, 114]], 
+          Hue[
+           Rational[7, 57]], 
+          Hue[
+           Rational[5, 38]], 
+          Hue[
+           Rational[8, 57]], 
+          Hue[
+           Rational[17, 114]], 
+          Hue[
+           Rational[3, 19]], 
+          Hue[
+           Rational[1, 6]], 
+          Hue[
+           Rational[10, 57]], 
+          Hue[
+           Rational[7, 38]], 
+          Hue[
+           Rational[11, 57]], 
+          Hue[
+           Rational[23, 114]], 
+          Hue[
+           Rational[4, 19]], 
+          Hue[
+           Rational[25, 114]], 
+          Hue[
+           Rational[13, 57]], 
+          Hue[
+           Rational[9, 38]], 
+          Hue[
+           Rational[14, 57]], 
+          Hue[
+           Rational[29, 114]], 
+          Hue[
+           Rational[5, 19]], 
+          Hue[
+           Rational[31, 114]], 
+          Hue[
+           Rational[16, 57]], 
+          Hue[
+           Rational[11, 38]], 
+          Hue[
+           Rational[17, 57]], 
+          Hue[
+           Rational[35, 114]], 
+          Hue[
+           Rational[6, 19]], 
+          Hue[
+           Rational[37, 114]], 
+          Hue[
+           Rational[1, 3]], 
+          Hue[
+           Rational[13, 38]], 
+          Hue[
+           Rational[20, 57]], 
+          Hue[
+           Rational[41, 114]], 
+          Hue[
+           Rational[7, 19]], 
+          Hue[
+           Rational[43, 114]], 
+          Hue[
+           Rational[22, 57]], 
+          Hue[
+           Rational[15, 38]], 
+          Hue[
+           Rational[23, 57]], 
+          Hue[
+           Rational[47, 114]], 
+          Hue[
+           Rational[8, 19]], 
+          Hue[
+           Rational[49, 114]], 
+          Hue[
+           Rational[25, 57]], 
+          Hue[
+           Rational[17, 38]], 
+          Hue[
+           Rational[26, 57]], 
+          Hue[
+           Rational[53, 114]], 
+          Hue[
+           Rational[9, 19]], 
+          Hue[
+           Rational[55, 114]], 
+          Hue[
+           Rational[28, 57]], 
+          Hue[
+           Rational[1, 2]], 
+          Hue[
+           Rational[29, 57]], 
+          Hue[
+           Rational[59, 114]], 
+          Hue[
+           Rational[10, 19]], 
+          Hue[
+           Rational[61, 114]], 
+          Hue[
+           Rational[31, 57]], 
+          Hue[
+           Rational[21, 38]], 
+          Hue[
+           Rational[32, 57]], 
+          Hue[
+           Rational[65, 114]], 
+          Hue[
+           Rational[11, 19]], 
+          Hue[
+           Rational[67, 114]], 
+          Hue[
+           Rational[34, 57]], 
+          Hue[
+           Rational[23, 38]], 
+          Hue[
+           Rational[35, 57]], 
+          Hue[
+           Rational[71, 114]], 
+          Hue[
+           Rational[12, 19]], 
+          Hue[
+           Rational[73, 114]], 
+          Hue[
+           Rational[37, 57]], 
+          Hue[
+           Rational[25, 38]], 
+          Hue[
+           Rational[2, 3]], 
+          Hue[
+           Rational[77, 114]], 
+          Hue[
+           Rational[13, 19]], 
+          Hue[
+           Rational[79, 114]], 
+          Hue[
+           Rational[40, 57]], 
+          Hue[
+           Rational[27, 38]], 
+          Hue[
+           Rational[41, 57]], 
+          Hue[
+           Rational[83, 114]], 
+          Hue[
+           Rational[14, 19]], 
+          Hue[
+           Rational[85, 114]], 
+          Hue[
+           Rational[43, 57]], 
+          Hue[
+           Rational[29, 38]], 
+          Hue[
+           Rational[44, 57]], 
+          Hue[
+           Rational[89, 114]], 
+          Hue[
+           Rational[15, 19]], 
+          Hue[
+           Rational[91, 114]], 
+          Hue[
+           Rational[46, 57]], 
+          Hue[
+           Rational[31, 38]], 
+          Hue[
+           Rational[47, 57]], 
+          Hue[
+           Rational[5, 6]], 
+          Hue[
+           Rational[16, 19]], 
+          Hue[
+           Rational[97, 114]], 
+          Hue[
+           Rational[49, 57]], 
+          Hue[
+           Rational[33, 38]], 
+          Hue[
+           Rational[50, 57]], 
+          Hue[
+           Rational[101, 114]], 
+          Hue[
+           Rational[17, 19]], 
+          Hue[
+           Rational[103, 114]], 
+          Hue[
+           Rational[52, 57]], 
+          Hue[
+           Rational[35, 38]], 
+          Hue[
+           Rational[53, 57]], 
+          Hue[
+           Rational[107, 114]], 
+          Hue[
+           Rational[18, 19]], 
+          Hue[
+           Rational[109, 114]], 
+          Hue[
+           Rational[55, 57]], 
+          Hue[
+           Rational[37, 38]], 
+          Hue[
+           Rational[56, 57]]}]},
+      ImageSize->Medium]},
+    {
+     GraphicsBox[
+      {Thickness[Large], LineBox[CompressedData["
+1:eJwV0lsCbioAQGG3kOSWEJLcQ2IqZwh7Amf+b/vf38uawJJ//v/vj2NZlrYt
+618t+8dxXBeAMMSY0mkCYN/vW8qui6J1NWaahEjT50EoCIqCsesqCoQ4Pw5C
+IOz7dU1Tx8lzQpYFAKWeZ12lLEvXreu2/T7Gmub76rqqtM7zOOZcqbJESIjz
+rOs03TbXVeq+55nzJLmuILCs4CdJKJ1n31fKmG2b57oOQyH2vSwh5Hzb8hyA
+quq672tbxmy7bbvOdYdBSoyfB0IAkoQQKR1nnte1qiAU4jgoRWgcr4uxorgu
+hDwvTQmZJtdd1+Poujy/b4QAyDJK1zUMtXbd97Xt77Os7+d9jdH6PNeV8yzT
+GiHfz/O6Pg6MXTfLCJlnz9v36xpHxoJgHPed0igSQqmqwnie31dKIZJEawg9
+D+M8HwZjuq5pbJuxtrXtrut7AKTcNkohHIZ9JyQMu26e49gYCH0/TSldliC4
+Lsu6fpaF8zS9bwhdN47TtOvOkxCEhkEpSuNYSq37vq5tu2kY+76mqWtjyjLP
+19XzlNJ6WYTI8/dNU4z7XilCoojzfS+KIGBsHINg359nnoXIMmMwjqK6ltL3
+913raeIc4/MEwBjH+T77N5f9F2JkO6o=
+        "],
+        VertexColors->{
+          Hue[0], 
+          Hue[
+           Rational[1, 302]], 
+          Hue[
+           Rational[1, 151]], 
+          Hue[
+           Rational[3, 302]], 
+          Hue[
+           Rational[2, 151]], 
+          Hue[
+           Rational[5, 302]], 
+          Hue[
+           Rational[3, 151]], 
+          Hue[
+           Rational[7, 302]], 
+          Hue[
+           Rational[4, 151]], 
+          Hue[
+           Rational[9, 302]], 
+          Hue[
+           Rational[5, 151]], 
+          Hue[
+           Rational[11, 302]], 
+          Hue[
+           Rational[6, 151]], 
+          Hue[
+           Rational[13, 302]], 
+          Hue[
+           Rational[7, 151]], 
+          Hue[
+           Rational[15, 302]], 
+          Hue[
+           Rational[8, 151]], 
+          Hue[
+           Rational[17, 302]], 
+          Hue[
+           Rational[9, 151]], 
+          Hue[
+           Rational[19, 302]], 
+          Hue[
+           Rational[10, 151]], 
+          Hue[
+           Rational[21, 302]], 
+          Hue[
+           Rational[11, 151]], 
+          Hue[
+           Rational[23, 302]], 
+          Hue[
+           Rational[12, 151]], 
+          Hue[
+           Rational[25, 302]], 
+          Hue[
+           Rational[13, 151]], 
+          Hue[
+           Rational[27, 302]], 
+          Hue[
+           Rational[14, 151]], 
+          Hue[
+           Rational[29, 302]], 
+          Hue[
+           Rational[15, 151]], 
+          Hue[
+           Rational[31, 302]], 
+          Hue[
+           Rational[16, 151]], 
+          Hue[
+           Rational[33, 302]], 
+          Hue[
+           Rational[17, 151]], 
+          Hue[
+           Rational[35, 302]], 
+          Hue[
+           Rational[18, 151]], 
+          Hue[
+           Rational[37, 302]], 
+          Hue[
+           Rational[19, 151]], 
+          Hue[
+           Rational[39, 302]], 
+          Hue[
+           Rational[20, 151]], 
+          Hue[
+           Rational[41, 302]], 
+          Hue[
+           Rational[21, 151]], 
+          Hue[
+           Rational[43, 302]], 
+          Hue[
+           Rational[22, 151]], 
+          Hue[
+           Rational[45, 302]], 
+          Hue[
+           Rational[23, 151]], 
+          Hue[
+           Rational[47, 302]], 
+          Hue[
+           Rational[24, 151]], 
+          Hue[
+           Rational[49, 302]], 
+          Hue[
+           Rational[25, 151]], 
+          Hue[
+           Rational[51, 302]], 
+          Hue[
+           Rational[26, 151]], 
+          Hue[
+           Rational[53, 302]], 
+          Hue[
+           Rational[27, 151]], 
+          Hue[
+           Rational[55, 302]], 
+          Hue[
+           Rational[28, 151]], 
+          Hue[
+           Rational[57, 302]], 
+          Hue[
+           Rational[29, 151]], 
+          Hue[
+           Rational[59, 302]], 
+          Hue[
+           Rational[30, 151]], 
+          Hue[
+           Rational[61, 302]], 
+          Hue[
+           Rational[31, 151]], 
+          Hue[
+           Rational[63, 302]], 
+          Hue[
+           Rational[32, 151]], 
+          Hue[
+           Rational[65, 302]], 
+          Hue[
+           Rational[33, 151]], 
+          Hue[
+           Rational[67, 302]], 
+          Hue[
+           Rational[34, 151]], 
+          Hue[
+           Rational[69, 302]], 
+          Hue[
+           Rational[35, 151]], 
+          Hue[
+           Rational[71, 302]], 
+          Hue[
+           Rational[36, 151]], 
+          Hue[
+           Rational[73, 302]], 
+          Hue[
+           Rational[37, 151]], 
+          Hue[
+           Rational[75, 302]], 
+          Hue[
+           Rational[38, 151]], 
+          Hue[
+           Rational[77, 302]], 
+          Hue[
+           Rational[39, 151]], 
+          Hue[
+           Rational[79, 302]], 
+          Hue[
+           Rational[40, 151]], 
+          Hue[
+           Rational[81, 302]], 
+          Hue[
+           Rational[41, 151]], 
+          Hue[
+           Rational[83, 302]], 
+          Hue[
+           Rational[42, 151]], 
+          Hue[
+           Rational[85, 302]], 
+          Hue[
+           Rational[43, 151]], 
+          Hue[
+           Rational[87, 302]], 
+          Hue[
+           Rational[44, 151]], 
+          Hue[
+           Rational[89, 302]], 
+          Hue[
+           Rational[45, 151]], 
+          Hue[
+           Rational[91, 302]], 
+          Hue[
+           Rational[46, 151]], 
+          Hue[
+           Rational[93, 302]], 
+          Hue[
+           Rational[47, 151]], 
+          Hue[
+           Rational[95, 302]], 
+          Hue[
+           Rational[48, 151]], 
+          Hue[
+           Rational[97, 302]], 
+          Hue[
+           Rational[49, 151]], 
+          Hue[
+           Rational[99, 302]], 
+          Hue[
+           Rational[50, 151]], 
+          Hue[
+           Rational[101, 302]], 
+          Hue[
+           Rational[51, 151]], 
+          Hue[
+           Rational[103, 302]], 
+          Hue[
+           Rational[52, 151]], 
+          Hue[
+           Rational[105, 302]], 
+          Hue[
+           Rational[53, 151]], 
+          Hue[
+           Rational[107, 302]], 
+          Hue[
+           Rational[54, 151]], 
+          Hue[
+           Rational[109, 302]], 
+          Hue[
+           Rational[55, 151]], 
+          Hue[
+           Rational[111, 302]], 
+          Hue[
+           Rational[56, 151]], 
+          Hue[
+           Rational[113, 302]], 
+          Hue[
+           Rational[57, 151]], 
+          Hue[
+           Rational[115, 302]], 
+          Hue[
+           Rational[58, 151]], 
+          Hue[
+           Rational[117, 302]], 
+          Hue[
+           Rational[59, 151]], 
+          Hue[
+           Rational[119, 302]], 
+          Hue[
+           Rational[60, 151]], 
+          Hue[
+           Rational[121, 302]], 
+          Hue[
+           Rational[61, 151]], 
+          Hue[
+           Rational[123, 302]], 
+          Hue[
+           Rational[62, 151]], 
+          Hue[
+           Rational[125, 302]], 
+          Hue[
+           Rational[63, 151]], 
+          Hue[
+           Rational[127, 302]], 
+          Hue[
+           Rational[64, 151]], 
+          Hue[
+           Rational[129, 302]], 
+          Hue[
+           Rational[65, 151]], 
+          Hue[
+           Rational[131, 302]], 
+          Hue[
+           Rational[66, 151]], 
+          Hue[
+           Rational[133, 302]], 
+          Hue[
+           Rational[67, 151]], 
+          Hue[
+           Rational[135, 302]], 
+          Hue[
+           Rational[68, 151]], 
+          Hue[
+           Rational[137, 302]], 
+          Hue[
+           Rational[69, 151]], 
+          Hue[
+           Rational[139, 302]], 
+          Hue[
+           Rational[70, 151]], 
+          Hue[
+           Rational[141, 302]], 
+          Hue[
+           Rational[71, 151]], 
+          Hue[
+           Rational[143, 302]], 
+          Hue[
+           Rational[72, 151]], 
+          Hue[
+           Rational[145, 302]], 
+          Hue[
+           Rational[73, 151]], 
+          Hue[
+           Rational[147, 302]], 
+          Hue[
+           Rational[74, 151]], 
+          Hue[
+           Rational[149, 302]], 
+          Hue[
+           Rational[75, 151]], 
+          Hue[
+           Rational[1, 2]], 
+          Hue[
+           Rational[76, 151]], 
+          Hue[
+           Rational[153, 302]], 
+          Hue[
+           Rational[77, 151]], 
+          Hue[
+           Rational[155, 302]], 
+          Hue[
+           Rational[78, 151]], 
+          Hue[
+           Rational[157, 302]], 
+          Hue[
+           Rational[79, 151]], 
+          Hue[
+           Rational[159, 302]], 
+          Hue[
+           Rational[80, 151]], 
+          Hue[
+           Rational[161, 302]], 
+          Hue[
+           Rational[81, 151]], 
+          Hue[
+           Rational[163, 302]], 
+          Hue[
+           Rational[82, 151]], 
+          Hue[
+           Rational[165, 302]], 
+          Hue[
+           Rational[83, 151]], 
+          Hue[
+           Rational[167, 302]], 
+          Hue[
+           Rational[84, 151]], 
+          Hue[
+           Rational[169, 302]], 
+          Hue[
+           Rational[85, 151]], 
+          Hue[
+           Rational[171, 302]], 
+          Hue[
+           Rational[86, 151]], 
+          Hue[
+           Rational[173, 302]], 
+          Hue[
+           Rational[87, 151]], 
+          Hue[
+           Rational[175, 302]], 
+          Hue[
+           Rational[88, 151]], 
+          Hue[
+           Rational[177, 302]], 
+          Hue[
+           Rational[89, 151]], 
+          Hue[
+           Rational[179, 302]], 
+          Hue[
+           Rational[90, 151]], 
+          Hue[
+           Rational[181, 302]], 
+          Hue[
+           Rational[91, 151]], 
+          Hue[
+           Rational[183, 302]], 
+          Hue[
+           Rational[92, 151]], 
+          Hue[
+           Rational[185, 302]], 
+          Hue[
+           Rational[93, 151]], 
+          Hue[
+           Rational[187, 302]], 
+          Hue[
+           Rational[94, 151]], 
+          Hue[
+           Rational[189, 302]], 
+          Hue[
+           Rational[95, 151]], 
+          Hue[
+           Rational[191, 302]], 
+          Hue[
+           Rational[96, 151]], 
+          Hue[
+           Rational[193, 302]], 
+          Hue[
+           Rational[97, 151]], 
+          Hue[
+           Rational[195, 302]], 
+          Hue[
+           Rational[98, 151]], 
+          Hue[
+           Rational[197, 302]], 
+          Hue[
+           Rational[99, 151]], 
+          Hue[
+           Rational[199, 302]], 
+          Hue[
+           Rational[100, 151]], 
+          Hue[
+           Rational[201, 302]], 
+          Hue[
+           Rational[101, 151]], 
+          Hue[
+           Rational[203, 302]], 
+          Hue[
+           Rational[102, 151]], 
+          Hue[
+           Rational[205, 302]], 
+          Hue[
+           Rational[103, 151]], 
+          Hue[
+           Rational[207, 302]], 
+          Hue[
+           Rational[104, 151]], 
+          Hue[
+           Rational[209, 302]], 
+          Hue[
+           Rational[105, 151]], 
+          Hue[
+           Rational[211, 302]], 
+          Hue[
+           Rational[106, 151]], 
+          Hue[
+           Rational[213, 302]], 
+          Hue[
+           Rational[107, 151]], 
+          Hue[
+           Rational[215, 302]], 
+          Hue[
+           Rational[108, 151]], 
+          Hue[
+           Rational[217, 302]], 
+          Hue[
+           Rational[109, 151]], 
+          Hue[
+           Rational[219, 302]], 
+          Hue[
+           Rational[110, 151]], 
+          Hue[
+           Rational[221, 302]], 
+          Hue[
+           Rational[111, 151]], 
+          Hue[
+           Rational[223, 302]], 
+          Hue[
+           Rational[112, 151]], 
+          Hue[
+           Rational[225, 302]], 
+          Hue[
+           Rational[113, 151]], 
+          Hue[
+           Rational[227, 302]], 
+          Hue[
+           Rational[114, 151]], 
+          Hue[
+           Rational[229, 302]], 
+          Hue[
+           Rational[115, 151]], 
+          Hue[
+           Rational[231, 302]], 
+          Hue[
+           Rational[116, 151]], 
+          Hue[
+           Rational[233, 302]], 
+          Hue[
+           Rational[117, 151]], 
+          Hue[
+           Rational[235, 302]], 
+          Hue[
+           Rational[118, 151]], 
+          Hue[
+           Rational[237, 302]], 
+          Hue[
+           Rational[119, 151]], 
+          Hue[
+           Rational[239, 302]], 
+          Hue[
+           Rational[120, 151]], 
+          Hue[
+           Rational[241, 302]], 
+          Hue[
+           Rational[121, 151]], 
+          Hue[
+           Rational[243, 302]], 
+          Hue[
+           Rational[122, 151]], 
+          Hue[
+           Rational[245, 302]], 
+          Hue[
+           Rational[123, 151]], 
+          Hue[
+           Rational[247, 302]], 
+          Hue[
+           Rational[124, 151]], 
+          Hue[
+           Rational[249, 302]], 
+          Hue[
+           Rational[125, 151]], 
+          Hue[
+           Rational[251, 302]], 
+          Hue[
+           Rational[126, 151]], 
+          Hue[
+           Rational[253, 302]], 
+          Hue[
+           Rational[127, 151]], 
+          Hue[
+           Rational[255, 302]], 
+          Hue[
+           Rational[128, 151]], 
+          Hue[
+           Rational[257, 302]], 
+          Hue[
+           Rational[129, 151]], 
+          Hue[
+           Rational[259, 302]], 
+          Hue[
+           Rational[130, 151]], 
+          Hue[
+           Rational[261, 302]], 
+          Hue[
+           Rational[131, 151]], 
+          Hue[
+           Rational[263, 302]], 
+          Hue[
+           Rational[132, 151]], 
+          Hue[
+           Rational[265, 302]], 
+          Hue[
+           Rational[133, 151]], 
+          Hue[
+           Rational[267, 302]], 
+          Hue[
+           Rational[134, 151]], 
+          Hue[
+           Rational[269, 302]], 
+          Hue[
+           Rational[135, 151]], 
+          Hue[
+           Rational[271, 302]], 
+          Hue[
+           Rational[136, 151]], 
+          Hue[
+           Rational[273, 302]], 
+          Hue[
+           Rational[137, 151]], 
+          Hue[
+           Rational[275, 302]], 
+          Hue[
+           Rational[138, 151]], 
+          Hue[
+           Rational[277, 302]], 
+          Hue[
+           Rational[139, 151]], 
+          Hue[
+           Rational[279, 302]], 
+          Hue[
+           Rational[140, 151]], 
+          Hue[
+           Rational[281, 302]], 
+          Hue[
+           Rational[141, 151]], 
+          Hue[
+           Rational[283, 302]], 
+          Hue[
+           Rational[142, 151]], 
+          Hue[
+           Rational[285, 302]], 
+          Hue[
+           Rational[143, 151]], 
+          Hue[
+           Rational[287, 302]], 
+          Hue[
+           Rational[144, 151]], 
+          Hue[
+           Rational[289, 302]], 
+          Hue[
+           Rational[145, 151]], 
+          Hue[
+           Rational[291, 302]], 
+          Hue[
+           Rational[146, 151]], 
+          Hue[
+           Rational[293, 302]], 
+          Hue[
+           Rational[147, 151]], 
+          Hue[
+           Rational[295, 302]], 
+          Hue[
+           Rational[148, 151]], 
+          Hue[
+           Rational[297, 302]], 
+          Hue[
+           Rational[149, 151]], 
+          Hue[
+           Rational[299, 302]], 
+          Hue[
+           Rational[150, 151]]}]},
+      ImageSize->Medium], 
+     GraphicsBox[
+      {Thickness[Large], 
+       LineBox[{{0, 1}, {1, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 8}, {8, 13}, {13, 
+        21}, {21, 34}, {34, 55}, {55, 24}, {24, 14}, {14, 38}, {38, 52}, {52, 
+        25}, {25, 12}, {12, 37}, {37, 49}, {49, 21}, {21, 5}, {5, 26}, {26, 
+        31}, {31, 57}, {57, 23}, {23, 15}, {15, 38}, {38, 53}, {53, 26}, {26, 
+        14}, {14, 40}, {40, 54}, {54, 29}, {29, 18}, {18, 47}, {47, 0}, {0, 
+        47}, {47, 47}, {47, 29}, {29, 11}, {11, 40}, {40, 51}, {51, 26}, {26, 
+        12}, {12, 38}, {38, 50}, {50, 23}, {23, 8}, {8, 31}, {31, 39}, {39, 
+        5}, {5, 44}, {44, 49}, {49, 28}, {28, 12}, {12, 40}, {40, 52}, {52, 
+        27}, {27, 14}, {14, 41}, {41, 55}, {55, 31}, {31, 21}, {21, 52}, {52, 
+        8}, {8, 60}, {60, 3}, {3, 63}, {63, 1}, {1, 64}, {64, 0}, {0, 64}, {
+        64, 64}, {64, 63}, {63, 62}, {62, 60}, {60, 57}, {57, 52}, {52, 44}, {
+        44, 31}, {31, 10}, {10, 41}, {41, 51}, {51, 27}, {27, 13}, {13, 40}, {
+        40, 53}, {53, 28}, {28, 16}, {16, 44}, {44, 60}, {60, 39}, {39, 34}, {
+        34, 8}, {8, 42}, {42, 50}, {50, 27}, {27, 12}, {12, 39}, {39, 51}, {
+        51, 25}, {25, 11}, {11, 36}, {36, 47}, {47, 18}, {18, 0}, {0, 18}, {
+        18, 18}, {18, 36}, {36, 54}, {54, 25}, {25, 14}, {14, 39}, {39, 53}, {
+        53, 27}, {27, 15}, {15, 42}, {42, 57}, {57, 34}, {34, 26}, {26, 60}, {
+        60, 21}, {21, 16}, {16, 37}, {37, 53}, {53, 25}, {25, 13}, {13, 38}, {
+        38, 51}, {51, 24}, {24, 10}, {10, 34}, {34, 44}, {44, 13}, {13, 57}, {
+        57, 5}, {5, 62}, {62, 2}, {2, 64}, {64, 1}, {1, 0}, {0, 1}},
+        VertexColors->{
+          Hue[0], 
+          Hue[
+           Rational[1, 142]], 
+          Hue[
+           Rational[1, 71]], 
+          Hue[
+           Rational[3, 142]], 
+          Hue[
+           Rational[2, 71]], 
+          Hue[
+           Rational[5, 142]], 
+          Hue[
+           Rational[3, 71]], 
+          Hue[
+           Rational[7, 142]], 
+          Hue[
+           Rational[4, 71]], 
+          Hue[
+           Rational[9, 142]], 
+          Hue[
+           Rational[5, 71]], 
+          Hue[
+           Rational[11, 142]], 
+          Hue[
+           Rational[6, 71]], 
+          Hue[
+           Rational[13, 142]], 
+          Hue[
+           Rational[7, 71]], 
+          Hue[
+           Rational[15, 142]], 
+          Hue[
+           Rational[8, 71]], 
+          Hue[
+           Rational[17, 142]], 
+          Hue[
+           Rational[9, 71]], 
+          Hue[
+           Rational[19, 142]], 
+          Hue[
+           Rational[10, 71]], 
+          Hue[
+           Rational[21, 142]], 
+          Hue[
+           Rational[11, 71]], 
+          Hue[
+           Rational[23, 142]], 
+          Hue[
+           Rational[12, 71]], 
+          Hue[
+           Rational[25, 142]], 
+          Hue[
+           Rational[13, 71]], 
+          Hue[
+           Rational[27, 142]], 
+          Hue[
+           Rational[14, 71]], 
+          Hue[
+           Rational[29, 142]], 
+          Hue[
+           Rational[15, 71]], 
+          Hue[
+           Rational[31, 142]], 
+          Hue[
+           Rational[16, 71]], 
+          Hue[
+           Rational[33, 142]], 
+          Hue[
+           Rational[17, 71]], 
+          Hue[
+           Rational[35, 142]], 
+          Hue[
+           Rational[18, 71]], 
+          Hue[
+           Rational[37, 142]], 
+          Hue[
+           Rational[19, 71]], 
+          Hue[
+           Rational[39, 142]], 
+          Hue[
+           Rational[20, 71]], 
+          Hue[
+           Rational[41, 142]], 
+          Hue[
+           Rational[21, 71]], 
+          Hue[
+           Rational[43, 142]], 
+          Hue[
+           Rational[22, 71]], 
+          Hue[
+           Rational[45, 142]], 
+          Hue[
+           Rational[23, 71]], 
+          Hue[
+           Rational[47, 142]], 
+          Hue[
+           Rational[24, 71]], 
+          Hue[
+           Rational[49, 142]], 
+          Hue[
+           Rational[25, 71]], 
+          Hue[
+           Rational[51, 142]], 
+          Hue[
+           Rational[26, 71]], 
+          Hue[
+           Rational[53, 142]], 
+          Hue[
+           Rational[27, 71]], 
+          Hue[
+           Rational[55, 142]], 
+          Hue[
+           Rational[28, 71]], 
+          Hue[
+           Rational[57, 142]], 
+          Hue[
+           Rational[29, 71]], 
+          Hue[
+           Rational[59, 142]], 
+          Hue[
+           Rational[30, 71]], 
+          Hue[
+           Rational[61, 142]], 
+          Hue[
+           Rational[31, 71]], 
+          Hue[
+           Rational[63, 142]], 
+          Hue[
+           Rational[32, 71]], 
+          Hue[
+           Rational[65, 142]], 
+          Hue[
+           Rational[33, 71]], 
+          Hue[
+           Rational[67, 142]], 
+          Hue[
+           Rational[34, 71]], 
+          Hue[
+           Rational[69, 142]], 
+          Hue[
+           Rational[35, 71]], 
+          Hue[
+           Rational[1, 2]], 
+          Hue[
+           Rational[36, 71]], 
+          Hue[
+           Rational[73, 142]], 
+          Hue[
+           Rational[37, 71]], 
+          Hue[
+           Rational[75, 142]], 
+          Hue[
+           Rational[38, 71]], 
+          Hue[
+           Rational[77, 142]], 
+          Hue[
+           Rational[39, 71]], 
+          Hue[
+           Rational[79, 142]], 
+          Hue[
+           Rational[40, 71]], 
+          Hue[
+           Rational[81, 142]], 
+          Hue[
+           Rational[41, 71]], 
+          Hue[
+           Rational[83, 142]], 
+          Hue[
+           Rational[42, 71]], 
+          Hue[
+           Rational[85, 142]], 
+          Hue[
+           Rational[43, 71]], 
+          Hue[
+           Rational[87, 142]], 
+          Hue[
+           Rational[44, 71]], 
+          Hue[
+           Rational[89, 142]], 
+          Hue[
+           Rational[45, 71]], 
+          Hue[
+           Rational[91, 142]], 
+          Hue[
+           Rational[46, 71]], 
+          Hue[
+           Rational[93, 142]], 
+          Hue[
+           Rational[47, 71]], 
+          Hue[
+           Rational[95, 142]], 
+          Hue[
+           Rational[48, 71]], 
+          Hue[
+           Rational[97, 142]], 
+          Hue[
+           Rational[49, 71]], 
+          Hue[
+           Rational[99, 142]], 
+          Hue[
+           Rational[50, 71]], 
+          Hue[
+           Rational[101, 142]], 
+          Hue[
+           Rational[51, 71]], 
+          Hue[
+           Rational[103, 142]], 
+          Hue[
+           Rational[52, 71]], 
+          Hue[
+           Rational[105, 142]], 
+          Hue[
+           Rational[53, 71]], 
+          Hue[
+           Rational[107, 142]], 
+          Hue[
+           Rational[54, 71]], 
+          Hue[
+           Rational[109, 142]], 
+          Hue[
+           Rational[55, 71]], 
+          Hue[
+           Rational[111, 142]], 
+          Hue[
+           Rational[56, 71]], 
+          Hue[
+           Rational[113, 142]], 
+          Hue[
+           Rational[57, 71]], 
+          Hue[
+           Rational[115, 142]], 
+          Hue[
+           Rational[58, 71]], 
+          Hue[
+           Rational[117, 142]], 
+          Hue[
+           Rational[59, 71]], 
+          Hue[
+           Rational[119, 142]], 
+          Hue[
+           Rational[60, 71]], 
+          Hue[
+           Rational[121, 142]], 
+          Hue[
+           Rational[61, 71]], 
+          Hue[
+           Rational[123, 142]], 
+          Hue[
+           Rational[62, 71]], 
+          Hue[
+           Rational[125, 142]], 
+          Hue[
+           Rational[63, 71]], 
+          Hue[
+           Rational[127, 142]], 
+          Hue[
+           Rational[64, 71]], 
+          Hue[
+           Rational[129, 142]], 
+          Hue[
+           Rational[65, 71]], 
+          Hue[
+           Rational[131, 142]], 
+          Hue[
+           Rational[66, 71]], 
+          Hue[
+           Rational[133, 142]], 
+          Hue[
+           Rational[67, 71]], 
+          Hue[
+           Rational[135, 142]], 
+          Hue[
+           Rational[68, 71]], 
+          Hue[
+           Rational[137, 142]], 
+          Hue[
+           Rational[69, 71]], 
+          Hue[
+           Rational[139, 142]], 
+          Hue[
+           Rational[70, 71]]}]},
+      ImageSize->Medium]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.9154199977844973`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"1bd01cd4-6fbc-4275-aac9-73141e1d4973"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
  RowBox[{"Manipulate", "[", 
   RowBox[{
    RowBox[{
@@ -2006,12 +3263,14 @@ Cell[57305, 1625, 1737, 43, 79, "Input",ExpressionUUID->"d0e1d777-b831-4ef3-a11c
 Cell[59045, 1670, 4457, 181, 284, "Output",ExpressionUUID->"ef94077a-f5bd-4dac-a9f8-f04d84f4e596"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63539, 1856, 2460, 61, 107, "Input",ExpressionUUID->"f9c61e59-b1ac-4c64-a467-2eaacee4d000"],
-Cell[66002, 1919, 2985, 56, 424, "Output",ExpressionUUID->"cc9c5b49-7e3d-47ea-98fa-195176031e69"]
+Cell[63539, 1856, 605, 17, 21, "Input",ExpressionUUID->"d571b3c9-f1aa-45fc-a58c-b632479614b9"],
+Cell[64147, 1875, 31474, 1233, 557, "Output",ExpressionUUID->"1bd01cd4-6fbc-4275-aac9-73141e1d4973"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95658, 3113, 2460, 61, 107, "Input",ExpressionUUID->"f9c61e59-b1ac-4c64-a467-2eaacee4d000"],
+Cell[98121, 3176, 2985, 56, 424, "Output",ExpressionUUID->"cc9c5b49-7e3d-47ea-98fa-195176031e69"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

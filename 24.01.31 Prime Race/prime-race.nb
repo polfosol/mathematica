@@ -1,0 +1,620 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21851,        612]
+NotebookOptionsPosition[     20686,        583]
+NotebookOutlinePosition[     21094,        599]
+CellTagsIndexPosition[     21051,        596]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "=", 
+      RowBox[{"Sequence", "[", 
+       RowBox[{
+        RowBox[{"FontSize", "->", "16"}], ",", 
+        RowBox[{"FontFamily", "->", "\"\<Cascadia Code\>\""}], ",", "Bold"}], 
+       "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"s", "=", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"TraditionalForm", "[", "#", "]"}], ",", 
+         RowBox[{"FontSize", "->", "18"}], ",", 
+         RowBox[{"FontFamily", "->", "\"\<Times\>\""}], ",", "Bold", ",", 
+         RowBox[{"Darker", "@", "Gray"}]}], "]"}], "&"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"p", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Prime", "@", 
+         RowBox[{"Range", "@", 
+          RowBox[{"PrimePi", "@", "100"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "~", "Mod", "~", "6"}], "==", "1"}], "&"}]}], "]"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"q", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Prime", "@", 
+         RowBox[{"Range", "@", 
+          RowBox[{"PrimePi", "@", "100"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "~", "Mod", "~", "6"}], "==", "5"}], "&"}]}], 
+       "]"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Array", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"p", "[", 
+              RowBox[{"[", "#", "]"}], "]"}], ",", "t", ",", "Red"}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"#", ",", "0"}], "}"}]}], "]"}], "&"}], ",", 
+        RowBox[{"Length", "@", "p"}]}], "]"}], "~", "Join", "~", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Array", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"q", "[", 
+              RowBox[{"[", "#", "]"}], "]"}], ",", "t", ",", "Blue"}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"#", ",", 
+             RowBox[{"-", "1"}]}], "}"}]}], "]"}], "&"}], ",", 
+        RowBox[{"Length", "@", "q"}]}], "]"}], "~", "Join", "~", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"s", "[", 
+           RowBox[{
+            RowBox[{"6", "k"}], "+", "1"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", ".5"}], ",", "0"}], "}"}]}], "]"}], ",", 
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"s", "[", 
+           RowBox[{
+            RowBox[{"6", "k"}], "-", "1"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", ".5"}], ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+       "}"}]}], ",", 
+     RowBox[{"ImageSize", "->", "500"}], ",", 
+     RowBox[{"AspectRatio", "->", 
+      RowBox[{"1", "/", "6"}]}], ",", 
+     RowBox[{"ImageMargins", "->", "15"}], ",", 
+     RowBox[{"Background", "->", "LightBlue"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.915697579811082*^9, 3.915697726953595*^9}, {
+  3.9156977570860367`*^9, 3.9156978708268027`*^9}, {3.915697902612486*^9, 
+  3.915698002256255*^9}, {3.91569803566591*^9, 3.9156982903082423`*^9}, {
+  3.9156983262632976`*^9, 3.915698343137287*^9}, {3.915698471898814*^9, 
+  3.915698604557514*^9}, {3.915698670336018*^9, 3.915698697871852*^9}, {
+  3.915699015679962*^9, 3.915699069356391*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"2a2cd57f-5eec-496e-b79a-f57f6bbc0d88"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["7",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {1, 0}], InsetBox[
+    StyleBox["13",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {2, 0}], InsetBox[
+    StyleBox["19",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {3, 0}], InsetBox[
+    StyleBox["31",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {4, 0}], InsetBox[
+    StyleBox["37",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {5, 0}], InsetBox[
+    StyleBox["43",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {6, 0}], InsetBox[
+    StyleBox["61",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {7, 0}], InsetBox[
+    StyleBox["67",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {8, 0}], InsetBox[
+    StyleBox["73",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {9, 0}], InsetBox[
+    StyleBox["79",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {10, 0}], InsetBox[
+    StyleBox["97",
+     StripOnInput->False,
+     LineColor->RGBColor[1, 0, 0],
+     FrontFaceColor->RGBColor[1, 0, 0],
+     BackFaceColor->RGBColor[1, 0, 0],
+     GraphicsColor->RGBColor[1, 0, 0],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[1, 0, 0]], {11, 0}], InsetBox[
+    StyleBox["5",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {1, -1}], InsetBox[
+    StyleBox["11",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {2, -1}], InsetBox[
+    StyleBox["17",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {3, -1}], InsetBox[
+    StyleBox["23",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {4, -1}], InsetBox[
+    StyleBox["29",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {5, -1}], InsetBox[
+    StyleBox["41",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {6, -1}], InsetBox[
+    StyleBox["47",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {7, -1}], InsetBox[
+    StyleBox["53",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {8, -1}], InsetBox[
+    StyleBox["59",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {9, -1}], InsetBox[
+    StyleBox["71",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {10, -1}], InsetBox[
+    StyleBox["83",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {11, -1}], InsetBox[
+    StyleBox["89",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 1],
+     FrontFaceColor->RGBColor[0, 0, 1],
+     BackFaceColor->RGBColor[0, 0, 1],
+     GraphicsColor->RGBColor[0, 0, 1],
+     FontFamily->"Cascadia Code",
+     FontSize->16,
+     FontWeight->Bold,
+     FontColor->RGBColor[0, 0, 1]], {12, -1}], InsetBox[
+    StyleBox[
+     RowBox[{
+      RowBox[{"6", " ", "k"}], "+", "1"}],
+     StripOnInput->False,
+     LineColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     FrontFaceColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     BackFaceColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     GraphicsColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     FontFamily->"Times",
+     FontSize->18,
+     FontWeight->Bold,
+     FontColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 
+       0.33333333333333337`]], {-0.5, 0}], InsetBox[
+    StyleBox[
+     RowBox[{
+      RowBox[{"6", " ", "k"}], "-", "1"}],
+     StripOnInput->False,
+     LineColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     FrontFaceColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     BackFaceColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     GraphicsColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`],
+     FontFamily->"Times",
+     FontSize->18,
+     FontWeight->Bold,
+     FontColor->RGBColor[
+      0.33333333333333337`, 0.33333333333333337`, 
+       0.33333333333333337`]], {-0.5, -1}]},
+  AspectRatio->NCache[
+    Rational[1, 6], 0.16666666666666666`],
+  Background->RGBColor[0.87, 0.94, 1],
+  ImageMargins->15,
+  ImageSize->500]], "Output",
+ CellChangeTimes->{
+  3.915697728119857*^9, {3.915697855090394*^9, 3.915697871921978*^9}, 
+   3.9156979462292147`*^9, {3.9156981745169907`*^9, 3.9156982248161716`*^9}, 
+   3.91569830059153*^9, 3.915698375404088*^9, {3.9156984765415573`*^9, 
+   3.9156986055457153`*^9}, {3.9156986771591473`*^9, 
+   3.9156987159257417`*^9}, {3.9156990210070124`*^9, 3.9156990506514645`*^9}, 
+   3.9156990828899126`*^9, 3.915711006779258*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"0772cb5a-80e3-444a-9fbc-737aa057905a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"p", "=", 
+     RowBox[{"Accumulate", "@", 
+      RowBox[{"Rest", "[", 
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{
+          RowBox[{"Prime", "@", 
+           RowBox[{"Range", "[", "1500", "]"}]}], ",", "6"}], "]"}], "/.", 
+        RowBox[{"{", 
+         RowBox[{"5", "->", 
+          RowBox[{"-", "1"}]}], "}"}]}], "]"}]}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Show", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{"3", ",", 
+              RowBox[{"Min", "[", 
+               RowBox[{"100", ",", 
+                RowBox[{"s", "+", "5"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"p", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"Max", "[", 
+               RowBox[{
+                RowBox[{"s", "-", "100"}], ",", "1"}], "]"}], ";;", "s"}], 
+             "\[RightDoubleBracket]"}]}], "}"}], ",", 
+          RowBox[{"Axes", "->", "False"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Prime", "[", 
+               RowBox[{"s", "+", "1"}], "]"}], ",", "Bold", ",", 
+              RowBox[{"FontSize", "->", "16"}]}], "]"}], ",", "Center"}], 
+           "]"}], ",", 
+          RowBox[{"ImageMargins", "->", "20"}]}], "]"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"s", ",", "10"}], "}"}], ",", "1", ",", "1490", ",", "1"}], 
+      "}"}], ",", 
+     RowBox[{"LabelStyle", "->", "Tiny"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9157018681811075`*^9, 3.915701912828931*^9}, {
+  3.9157019477767115`*^9, 3.915702019473033*^9}, {3.9157114483108177`*^9, 
+  3.9157114846454306`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"63cb0c97-0256-4d0c-80c0-9e1e7082d83a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`s$$ = 10, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`s$$], 10}, 1, 1490, 1}}, Typeset`size$$ = {
+    270., {82., 84.86917696247156}}, Typeset`update$$ = 0, Typeset`initDone$$,
+     Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`s$$ = 10}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         ListLinePlot[{
+           Table[3, 
+            Min[100, $CellContext`s$$ + 5]], 
+           Part[CompressedData["
+1:eJytV4tNQzEMTEEMwkqM0AFgYJYopR9Kgcd7opGs43y+FCo9WXEd23Hss3O/
+fnp4XLXWnu9au53pTcvpSvBb+B/lkM9oI3qYfiXH7C2/af59TT+/vlYU7UR+
+5Y8jx+wu/n0SP5Hf1x+E7+iNa6RVHJT/f6Xoz3K+M5wznhv56hwqvm68WLyZ
+XxUfz8Xomchl99bl3ole1HMm8gs9wZrZd/zrcXTqQOEAi28VZ6yD7P6qc7D8
+Uv5U+cf2Z2vcx/x07ovxUT7qQVrli8qrzP6If4sfb4EeAz3M396kR6GH0RPY
+d+TjvtH4V/cwci9OHrt5PRE60r+c+hjFT+e8GQ46uDqCx1V+oz8sT1SeZfmf
+5UPmb9YnmB8qL7N8zvTgeVUeO3adOmN+Zvnj1HnHkd38vV7oPtBDkMN9DKd2
+U45PDr4wvGHxZnnm5GGFRwqP8bxsrfZVcczi4sSf3V9cMztOnCt+FWdn/nD6
+rDsfqDxhOJPFl/0f8xvzPOOze8rkWD+v/K7mBuVvVu8jfo7Ejdnr/O38vVwo
+Wzv+olzUswn6Mr24T/3P6krde1X/zhxWzXFVPx2pnwoPXfwdwRf2zsreGTin
+XTvfOPOEozeLV9Unsnp35olqHlfzkDq/+x6v3vnOe9x99zDcqHDlv/ZFPNhO
+v+s/m39U/bM8GJkrnLnAnTfU/OX2UfXuy+5b1cs1c+EIXuI+hdNOXWdzVvVu
+H5nrWH+K/SzSzcT7HvJZX8Q+rOxm+rvcN9WpE/A=
+            "], 
+            Span[
+             Max[$CellContext`s$$ - 100, 1], $CellContext`s$$]]}, Axes -> 
+          False], 
+         Graphics[
+          Text[
+           Style[
+            Prime[$CellContext`s$$ + 1], Bold, FontSize -> 16], Center], 
+          ImageMargins -> 20]}], 
+      "Specifications" :> {{{$CellContext`s$$, 10}, 1, 1490, 1}}, 
+      "Options" :> {LabelStyle -> Tiny}, "DefaultOptions" :> {}],
+     ImageSizeCache->{308., {114.85052490234375`, 119.14947509765625`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.915701936402068*^9, {3.9157019669256926`*^9, 3.915702021373769*^9}, {
+   3.9157110261340027`*^9, 3.915711044707686*^9}, {3.9157114542446604`*^9, 
+   3.915711485012456*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"63a1d9bf-3767-46f0-adb5-1e4f1c758841"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FactorInteger", "[", 
+  RowBox[{"13", ",", 
+   RowBox[{"GaussianIntegers", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9157060616139317`*^9, 3.9157060919399548`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"6263b63d-acb0-4531-9a2e-a4b874d07248"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", "+", 
+      RowBox[{"3", " ", "\[ImaginaryI]"}]}], ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"3", "+", 
+      RowBox[{"2", " ", "\[ImaginaryI]"}]}], ",", "1"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.915706092474681*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"a438e78d-2e56-49d9-b2a5-20540cc88707"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ramp", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Prime", "@", 
+      RowBox[{"Range", "@", 
+       RowBox[{"PrimePi", "@", "1000"}]}]}], "~", "Mod", "~", "4"}], "-", 
+    "2"}], "]"}], "~", "FromDigits", "~", "2", "~", "IntegerString", "~", 
+  "\"\<Base64\>\""}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"a024104f-4b3b-4667-bd6b-d32a3b7c3fcf"],
+
+Cell[BoxData["\<\"Waa2M1anlUspsKx/KqptGbhLTPi2\"\>"], "Output",
+ CellChangeTimes->{3.915712845002904*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"98d411ec-cd4a-404e-9aec-04d5a8a8fc63"]
+}, Open  ]]
+},
+WindowSize->{684, 549.75},
+WindowMargins->{{Automatic, -934.5}, {Automatic, 24.75}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8e8dfba2-622b-4139-9c9f-1075fe7a719c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3798, 102, 136, "Input",ExpressionUUID->"2a2cd57f-5eec-496e-b79a-f57f6bbc0d88"],
+Cell[4381, 126, 9676, 280, 96, "Output",ExpressionUUID->"0772cb5a-80e3-444a-9fbc-737aa057905a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14094, 411, 2163, 59, 64, "Input",ExpressionUUID->"63cb0c97-0256-4d0c-80c0-9e1e7082d83a"],
+Cell[16260, 472, 2954, 61, 248, "Output",ExpressionUUID->"63a1d9bf-3767-46f0-adb5-1e4f1c758841"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19251, 538, 287, 5, 21, "Input",ExpressionUUID->"6263b63d-acb0-4531-9a2e-a4b874d07248"],
+Cell[19541, 545, 517, 16, 24, "Output",ExpressionUUID->"a438e78d-2e56-49d9-b2a5-20540cc88707"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20095, 566, 389, 10, 21, "Input",ExpressionUUID->"a024104f-4b3b-4667-bd6b-d32a3b7c3fcf"],
+Cell[20487, 578, 183, 2, 24, "Output",ExpressionUUID->"98d411ec-cd4a-404e-9aec-04d5a8a8fc63"]
+}, Open  ]]
+}
+]
+*)
+
